@@ -16,7 +16,6 @@ summary: |
   }
 fullName: AppMetadataEntity
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 properties:
@@ -26,7 +25,6 @@ properties:
     summary: ''
     fullName: clientId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'clientId: string'
@@ -39,7 +37,6 @@ properties:
     summary: ''
     fullName: environment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'environment: string'
@@ -52,7 +49,6 @@ properties:
     summary: ''
     fullName: familyId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'familyId?: string'
@@ -65,7 +61,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates AppMetadataEntity
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -90,7 +85,6 @@ methods:
     package: '@azure/msal-common'
     summary: Generate AppMetadata Cache Key
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -113,7 +107,6 @@ methods:
       Generate AppMetadata Cache Key as per the schema:
       appmetadata-<environment>-<client_id>
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateAppMetadataKey(): string'
@@ -125,7 +118,6 @@ methods:
     package: '@azure/msal-common'
     summary: 'Validates an entity: checks for all expected params'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

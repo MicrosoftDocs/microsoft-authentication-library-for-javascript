@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Region Discovery Outcomes
 fullName: RegionDiscoveryOutcomes
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: AUTO_DETECTION_REQUESTED_FAILED

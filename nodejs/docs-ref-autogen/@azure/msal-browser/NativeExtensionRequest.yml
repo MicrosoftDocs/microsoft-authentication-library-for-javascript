@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: Browser extension request
 fullName: NativeExtensionRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type NativeExtensionRequest = {

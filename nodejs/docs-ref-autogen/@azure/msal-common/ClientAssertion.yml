@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Client Assertion credential for Confidential Clients
 fullName: ClientAssertion
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type ClientAssertion = { assertion: string, assertionType: string }

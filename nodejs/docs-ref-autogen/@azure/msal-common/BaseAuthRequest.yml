@@ -47,9 +47,11 @@ summary: >-
   - requestedClaimsHash     - SHA 256 hash string of the requested claims
   string, used as part of an access token cache key so tokens can be filtered by
   requested claims
+
+  - tokenQueryParameters    - String to string map of custom query parameters
+  added to the /token call
 fullName: BaseAuthRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type BaseAuthRequest = {
@@ -67,4 +69,5 @@ syntax: |
     shrNonce?: string,
     sshJwk?: string,
     sshKid?: string,
+    tokenQueryParameters?: StringDict,
   }

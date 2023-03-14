@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: ''
 fullName: CacheOutcome
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: CACHED_ACCESS_TOKEN_EXPIRED

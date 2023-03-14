@@ -9,11 +9,9 @@ summary: >
   token before expiry
 fullName: SystemOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type SystemOptions = {
     preventCorsPreflight?: boolean,
-    proxyUrl?: string,
     tokenRenewalOffsetSeconds?: number,
   }

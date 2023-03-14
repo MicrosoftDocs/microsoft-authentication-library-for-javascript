@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: EventHandler
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new EventHandler(logger: Logger, browserCrypto: ICrypto)'
@@ -31,7 +29,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Adds event callbacks to array
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -52,7 +49,6 @@ methods:
       Removes event listener that emits an event when a user account is added or
       removed from localstorage in a different browser tab or window
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function disableAccountStorageEvents()
@@ -61,7 +57,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Emits events by calling callback with event message
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -88,7 +83,6 @@ methods:
       Adds event listener that emits an event when a user account is added or
       removed from localstorage in a different browser tab or window
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function enableAccountStorageEvents()
@@ -97,7 +91,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Removes callback with provided id from callback array
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeEventCallback(callbackId: string)'

@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Region Discovery Sources
 fullName: RegionDiscoverySources
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: ENVIRONMENT_VARIABLE

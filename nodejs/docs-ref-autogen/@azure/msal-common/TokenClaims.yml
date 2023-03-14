@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Type which describes Id Token claims known by MSAL.
 fullName: TokenClaims
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type TokenClaims = {

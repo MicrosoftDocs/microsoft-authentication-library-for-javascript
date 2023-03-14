@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: ''
 fullName: AuthorityMetadataEntity
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: new AuthorityMetadataEntity()
@@ -25,7 +23,6 @@ properties:
     summary: ''
     fullName: aliases
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'aliases: Array<string>'
@@ -38,7 +35,6 @@ properties:
     summary: ''
     fullName: aliasesFromNetwork
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'aliasesFromNetwork: boolean'
@@ -51,7 +47,6 @@ properties:
     summary: ''
     fullName: authorization_endpoint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authorization_endpoint: string'
@@ -64,7 +59,6 @@ properties:
     summary: ''
     fullName: canonical_authority
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'canonical_authority: string'
@@ -77,7 +71,6 @@ properties:
     summary: ''
     fullName: endpointsFromNetwork
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'endpointsFromNetwork: boolean'
@@ -90,7 +83,6 @@ properties:
     summary: ''
     fullName: end_session_endpoint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'end_session_endpoint?: string'
@@ -103,7 +95,6 @@ properties:
     summary: ''
     fullName: expiresAt
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'expiresAt: number'
@@ -116,7 +107,6 @@ properties:
     summary: ''
     fullName: issuer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'issuer: string'
@@ -129,7 +119,6 @@ properties:
     summary: ''
     fullName: jwks_uri
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'jwks_uri: string'
@@ -142,7 +131,6 @@ properties:
     summary: ''
     fullName: preferred_cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'preferred_cache: string'
@@ -155,7 +143,6 @@ properties:
     summary: ''
     fullName: preferred_network
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'preferred_network: string'
@@ -168,7 +155,6 @@ properties:
     summary: ''
     fullName: token_endpoint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'token_endpoint: string'
@@ -181,7 +167,6 @@ methods:
     package: '@azure/msal-common'
     summary: 'Validates an entity: checks for all expected params'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -203,7 +188,6 @@ methods:
     package: '@azure/msal-common'
     summary: Returns whether or not the data needs to be refreshed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function isExpired(): boolean'
@@ -215,7 +199,6 @@ methods:
     package: '@azure/msal-common'
     summary: Reset the exiresAt value
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function resetExpiresAt()
@@ -224,7 +207,6 @@ methods:
     package: '@azure/msal-common'
     summary: Save the authority that was used to create this cache entry
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function updateCanonicalAuthority(authority: string)'
@@ -240,7 +222,6 @@ methods:
       Update the entity with new aliases, preferred_cache and preferred_network
       values
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -259,7 +240,6 @@ methods:
     package: '@azure/msal-common'
     summary: Update the entity with new endpoints
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

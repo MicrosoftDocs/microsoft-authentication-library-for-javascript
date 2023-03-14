@@ -5,7 +5,6 @@ package: '@azure/msal'
 summary: ''
 fullName: HttpEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new HttpEvent(correlationId: string, eventLabel: string)'
@@ -32,7 +30,6 @@ properties:
     summary: ''
     fullName: apiVersion
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'apiVersion: string'
@@ -45,7 +42,6 @@ properties:
     summary: ''
     fullName: httpMethod
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'httpMethod: string'
@@ -58,7 +54,6 @@ properties:
     summary: ''
     fullName: httpPath
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'httpPath: string'
@@ -71,7 +66,6 @@ properties:
     summary: ''
     fullName: httpResponseStatus
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'httpResponseStatus: number'
@@ -84,7 +78,6 @@ properties:
     summary: ''
     fullName: oAuthErrorCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'oAuthErrorCode: string'
@@ -97,7 +90,6 @@ properties:
     summary: ''
     fullName: queryParams
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queryParams: any'
@@ -110,7 +102,6 @@ properties:
     summary: ''
     fullName: requestIdHeader
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'requestIdHeader: string'
@@ -123,7 +114,6 @@ properties:
     summary: ''
     fullName: serverErrorCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'serverErrorCode: string'
@@ -136,7 +126,6 @@ properties:
     summary: ''
     fullName: serverSubErrorCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'serverSubErrorCode: string'
@@ -155,7 +144,6 @@ properties:
       indicates the request occurred on the inner ring
     fullName: speInfo
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'speInfo: string'
@@ -168,7 +156,6 @@ properties:
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
@@ -181,7 +168,6 @@ properties:
     summary: ''
     fullName: userAgent
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'userAgent: string'
@@ -195,7 +181,6 @@ inheritedProperties:
     summary: ''
     fullName: displayName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'displayName: string'
@@ -211,7 +196,6 @@ inheritedProperties:
     summary: ''
     fullName: eventId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'eventId: string'
@@ -227,7 +211,6 @@ inheritedProperties:
     summary: ''
     fullName: eventName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'eventName: string'
@@ -243,7 +226,6 @@ inheritedProperties:
     summary: ''
     fullName: key
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'key: string'
@@ -259,7 +241,6 @@ inheritedProperties:
     summary: ''
     fullName: telemetryCorrelationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'telemetryCorrelationId: string'
@@ -275,7 +256,6 @@ inheritedMethods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function get(): object'
@@ -290,7 +270,6 @@ inheritedMethods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function start()
@@ -302,7 +281,6 @@ inheritedMethods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function stop()

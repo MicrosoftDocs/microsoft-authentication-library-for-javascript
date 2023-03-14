@@ -5,13 +5,12 @@ package: '@azure/msal-common'
 summary: ''
 fullName: AuthorityFactory
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 methods:
   - name: >-
       createDiscoveredInstance(string, INetworkModule, ICacheManager,
-      AuthorityOptions, Logger, string)
+      AuthorityOptions, Logger, IPerformanceClient, string)
     uid: '@azure/msal-common.AuthorityFactory.createDiscoveredInstance'
     package: '@azure/msal-common'
     summary: >
@@ -22,14 +21,13 @@ methods:
 
       Also performs endpoint discovery.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         static function createDiscoveredInstance(authorityUri: string,
         networkClient: INetworkModule, cacheManager: ICacheManager,
-        authorityOptions: AuthorityOptions, logger: Logger, proxyUrl?: string):
-        Promise<Authority>
+        authorityOptions: AuthorityOptions, logger: Logger, performanceClient?:
+        IPerformanceClient, correlationId?: string): Promise<Authority>
       parameters:
         - id: authorityUri
           type: string
@@ -46,7 +44,10 @@ methods:
         - id: logger
           type: <xref uid="@azure/msal-common.Logger" />
           description: ''
-        - id: proxyUrl
+        - id: performanceClient
+          type: <xref uid="@azure/msal-common.IPerformanceClient" />
+          description: ''
+        - id: correlationId
           type: string
           description: ''
       return:
@@ -54,7 +55,7 @@ methods:
         type: Promise&lt;<xref uid="@azure/msal-common.Authority" />&gt;
   - name: >-
       createInstance(string, INetworkModule, ICacheManager, AuthorityOptions,
-      Logger, string)
+      Logger, IPerformanceClient, string)
     uid: '@azure/msal-common.AuthorityFactory.createInstance'
     package: '@azure/msal-common'
     summary: >
@@ -65,13 +66,13 @@ methods:
 
       Does not perform endpoint discovery.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         static function createInstance(authorityUrl: string, networkInterface:
         INetworkModule, cacheManager: ICacheManager, authorityOptions:
-        AuthorityOptions, logger: Logger, proxyUrl?: string): Authority
+        AuthorityOptions, logger: Logger, performanceClient?:
+        IPerformanceClient, correlationId?: string): Authority
       parameters:
         - id: authorityUrl
           type: string
@@ -88,7 +89,10 @@ methods:
         - id: logger
           type: <xref uid="@azure/msal-common.Logger" />
           description: ''
-        - id: proxyUrl
+        - id: performanceClient
+          type: <xref uid="@azure/msal-common.IPerformanceClient" />
+          description: ''
+        - id: correlationId
           type: string
           description: ''
       return:

@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Class which facilitates logging of messages to a specific place.
 fullName: Logger
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -36,7 +34,6 @@ methods:
     package: '@azure/msal-common'
     summary: Create new Logger with existing configurations.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -60,7 +57,6 @@ methods:
     package: '@azure/msal-common'
     summary: Logs error messages.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function error(message: string, correlationId?: string)'
@@ -76,7 +72,6 @@ methods:
     package: '@azure/msal-common'
     summary: Logs error messages with PII.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function errorPii(message: string, correlationId?: string)'
@@ -92,7 +87,6 @@ methods:
     package: '@azure/msal-common'
     summary: Execute callback with message.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -113,7 +107,6 @@ methods:
     package: '@azure/msal-common'
     summary: Logs info messages.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function info(message: string, correlationId?: string)'
@@ -129,7 +122,6 @@ methods:
     package: '@azure/msal-common'
     summary: Logs info messages with PII.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function infoPii(message: string, correlationId?: string)'
@@ -145,7 +137,6 @@ methods:
     package: '@azure/msal-common'
     summary: Returns whether PII Logging is enabled or not.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function isPiiLoggingEnabled(): boolean'
@@ -157,7 +148,6 @@ methods:
     package: '@azure/msal-common'
     summary: Logs trace messages.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function trace(message: string, correlationId?: string)'
@@ -173,7 +163,6 @@ methods:
     package: '@azure/msal-common'
     summary: Logs trace messages with PII.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function tracePii(message: string, correlationId?: string)'
@@ -189,7 +178,6 @@ methods:
     package: '@azure/msal-common'
     summary: Logs verbose messages.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function verbose(message: string, correlationId?: string)'
@@ -205,7 +193,6 @@ methods:
     package: '@azure/msal-common'
     summary: Logs verbose messages with PII.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function verbosePii(message: string, correlationId?: string)'
@@ -221,7 +208,6 @@ methods:
     package: '@azure/msal-common'
     summary: Logs warning messages.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function warning(message: string, correlationId?: string)'
@@ -237,7 +223,6 @@ methods:
     package: '@azure/msal-common'
     summary: Logs warning messages with PII.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function warningPii(message: string, correlationId?: string)'

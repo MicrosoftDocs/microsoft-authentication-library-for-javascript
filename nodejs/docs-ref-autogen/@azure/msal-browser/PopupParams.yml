@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: PopupParams
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type PopupParams = InteractionParams & {

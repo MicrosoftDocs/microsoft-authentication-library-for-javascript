@@ -7,26 +7,29 @@ summary: >-
   request and application.
 fullName: PerformanceEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
-  type PerformanceEvent = StaticFields & {
-    authority: string,
-    clientId: string,
-    correlationId: string,
-    durationMs?: number,
-    endPageVisibility?: string | null,
-    errorCode?: string,
-    eventId: string,
-    fromCache?: boolean | null,
-    isNativeBroker?: boolean,
-    libraryName: string,
-    libraryVersion: string,
-    name: PerformanceEvents,
-    requestId?: string,
-    startPageVisibility?: string | null,
-    startTimeMs: number,
-    status: PerformanceEventStatus,
-    subErrorCode?: string,
-    success?: boolean | null,
-  }
+  type PerformanceEvent = StaticFields &
+    Counters & {
+      authority: string,
+      cacheLookupPolicy?: number | undefined,
+      clientId: string,
+      correlationId: string,
+      durationMs?: number,
+      endPageVisibility?: string | null,
+      errorCode?: string,
+      eventId: string,
+      fromCache?: boolean | null,
+      incompleteSubMeasurements?: Map<string, SubMeasurement>,
+      isNativeBroker?: boolean,
+      libraryName: string,
+      libraryVersion: string,
+      name: PerformanceEvents,
+      queuedTimeMs?: number,
+      requestId?: string,
+      startPageVisibility?: string | null,
+      startTimeMs: number,
+      status: PerformanceEventStatus,
+      subErrorCode?: string,
+      success?: boolean | null,
+    }

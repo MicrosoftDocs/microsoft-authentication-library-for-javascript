@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Client network interface to send backend requests.
 fullName: INetworkModule
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
@@ -16,7 +15,6 @@ methods:
       Interface function for async network "GET" requests. Based on the Fetch
       standard: https://fetch.spec.whatwg.org/
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -45,7 +43,6 @@ methods:
       Interface function for async network "POST" requests. Based on the Fetch
       standard: https://fetch.spec.whatwg.org/
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Error thrown when there is an error in the client code running on the browser.
 fullName: ClientAuthError
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new ClientAuthError(errorCode: string, errorMessage?: string)'
@@ -32,7 +30,6 @@ inheritedProperties:
     summary: CorrelationId associated with the error
     fullName: correlationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'correlationId: string'
@@ -48,7 +45,6 @@ inheritedProperties:
     summary: Short string denoting error
     fullName: errorCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorCode: string'
@@ -64,7 +60,6 @@ inheritedProperties:
     summary: Detailed description of error
     fullName: errorMessage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorMessage: string'
@@ -80,7 +75,6 @@ inheritedProperties:
     summary: ''
     fullName: message
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'message: string'
@@ -94,7 +88,6 @@ inheritedProperties:
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -108,7 +101,6 @@ inheritedProperties:
     summary: ''
     fullName: stack
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stack?: string'
@@ -122,7 +114,6 @@ inheritedProperties:
     summary: Describes the subclass of an error
     fullName: subError
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subError: string'
@@ -138,7 +129,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Creates an error for post request failures.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createPostRequestFailed(errDesc: string): AuthError'
@@ -159,7 +149,6 @@ inheritedMethods:
       Creates an error that is thrown when something unexpected happens in the
       library.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUnexpectedError(errDesc: string): AuthError'
@@ -179,7 +168,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setCorrelationId(correlationId: string)'
@@ -198,7 +186,6 @@ methods:
       Throws error when attempting to append a null, undefined or empty scope to
       a set
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -217,7 +204,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error when attempting to append null or empty ScopeSet.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -238,7 +224,6 @@ methods:
       Creates an error thrown when max_age was provided in the request, but
       auth_time is not in the token claims
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createAuthTimeNotFoundError(): ClientAuthError'
@@ -250,7 +235,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createBindingKeyNotRemovedError(): ClientAuthError'
@@ -262,7 +246,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error if ICachePlugin not set on CacheManager.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createCachePluginError(): ClientAuthError'
@@ -274,7 +257,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates an error thrown when client info object doesn't decode correctly.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -293,7 +275,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates an error thrown if the client info is empty.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createClientInfoEmptyError(): ClientAuthError'
@@ -307,7 +288,6 @@ methods:
       Throws error if user sets CancellationToken.cancel = true during polling
       of token endpoint during device code flow
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createDeviceCodeCancelledError(): ClientAuthError'
@@ -319,7 +299,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error if device code is expired
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createDeviceCodeExpiredError(): ClientAuthError'
@@ -331,7 +310,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error if device code is expired
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createDeviceCodeUnknownError(): ClientAuthError'
@@ -343,7 +321,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error if ScopeSet is null or undefined.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createEmptyInputScopeSetError(): ClientAuthError'
@@ -357,7 +334,6 @@ methods:
       Creates an error thrown when the endpoint discovery doesn't complete
       correctly.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -375,7 +351,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates an error thrown when the hash cannot be deserialized.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -394,7 +369,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error if client assertion is not valid.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createInvalidAssertionError(): ClientAuthError'
@@ -408,7 +382,6 @@ methods:
       Throws error when provided environment is not part of the
       CloudDiscoveryMetadata object
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createInvalidCacheEnvironmentError(): ClientAuthError'
@@ -420,7 +393,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error if cache type is invalid.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createInvalidCacheTypeError(): ClientAuthError'
@@ -432,7 +404,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error if client assertion is not valid.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createInvalidCredentialError(): ClientAuthError'
@@ -444,7 +415,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates an error thrown when the state cannot be parsed.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -468,7 +438,6 @@ methods:
       Create an error when kid attribute is missing from a PoP token's cache
       record
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createKeyIdMissingError(): ClientAuthError'
@@ -482,7 +451,6 @@ methods:
       Thrown when logout is attempted for an authority that doesnt have an
       end_session_endpoint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createLogoutNotSupportedError(): ClientAuthError'
@@ -496,7 +464,6 @@ methods:
       Creates an error thrown when too much time has elapsed since the last
       end-user authentication
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createMaxAgeTranspiredError(): ClientAuthError'
@@ -509,7 +476,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error when multiple accounts are in cache for the given params
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -524,7 +490,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error when multiple appMetada are in cache for the given clientId.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -539,7 +504,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error when multiple tokens are in cache.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -553,7 +517,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates an error thrown when the fetch client throws
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -574,7 +537,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error when account is not found in cache.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createNoAccountFoundError(): ClientAuthError'
@@ -586,7 +548,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error when silent requests are made without an account object
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createNoAccountInSilentRequestError(): ClientAuthError'
@@ -600,7 +561,6 @@ methods:
       Throws error when the authorization code is missing from the server
       response
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createNoAuthCodeInServerResponseError(): ClientAuthError'
@@ -612,7 +572,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error if crypto object not found.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -631,7 +590,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates an error thrown when the nonce does not match.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createNonceMismatchError(): ClientAuthError'
@@ -643,7 +601,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates an error thrown when the mnonce is not present
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -657,12 +614,22 @@ methods:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.ClientAuthError" />
+  - name: createNoNetworkConnectivityError()
+    uid: '@azure/msal-common.ClientAuthError.createNoNetworkConnectivityError'
+    package: '@azure/msal-common'
+    summary: Create an error when the client does not have network connectivity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function createNoNetworkConnectivityError(): ClientAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.ClientAuthError" />
   - name: createNullOrUndefinedCacheRecord()
     uid: '@azure/msal-common.ClientAuthError.createNullOrUndefinedCacheRecord'
     package: '@azure/msal-common'
     summary: Throws error when cache record is null or undefined.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createNullOrUndefinedCacheRecord(): ClientAuthError'
@@ -676,7 +643,6 @@ methods:
       Throws error if token cannot be retrieved from cache due to refresh being
       required.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createRefreshRequiredError(): ClientAuthError'
@@ -690,7 +656,6 @@ methods:
       Throws error when attempting to append a null, undefined or empty scope to
       a set
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -709,7 +674,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates an error thrown when two states do not match.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createStateMismatchError(): ClientAuthError'
@@ -721,7 +685,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates an error thrown when the state is not present
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -740,7 +703,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createTokenClaimsRequiredError(): ClientAuthError'
@@ -752,7 +714,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates an error thrown when the id token string is null or empty.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -771,7 +732,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates an error thrown when the id token extraction errors out.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -791,7 +751,6 @@ methods:
       Throws error when no auth code or refresh token is given to
       ServerTokenRequestParameters.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createTokenRequestCannotBeMadeError(): ClientAuthError'
@@ -805,7 +764,6 @@ methods:
       Creates an error thrown when the openid-configuration endpoint cannot be
       reached or does not contain the required data
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -823,7 +781,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error if unexpected account type.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUnexpectedAccountTypeError(): ClientAuthError'
@@ -835,10 +792,20 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error if unexpected credential type.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUnexpectedCredentialTypeError(): ClientAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.ClientAuthError" />
+  - name: createUserCanceledError()
+    uid: '@azure/msal-common.ClientAuthError.createUserCanceledError'
+    package: '@azure/msal-common'
+    summary: Create an error when the user cancels the flow
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function createUserCanceledError(): ClientAuthError'
       return:
         description: ''
         type: <xref uid="@azure/msal-common.ClientAuthError" />
@@ -847,7 +814,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws error if the user defined timeout is reached.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUserTimeoutReachedError(): ClientAuthError'

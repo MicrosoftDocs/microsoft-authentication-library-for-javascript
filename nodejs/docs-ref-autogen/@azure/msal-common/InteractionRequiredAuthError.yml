@@ -5,21 +5,22 @@ package: '@azure/msal-common'
 summary: Error thrown when user interaction is required.
 fullName: InteractionRequiredAuthError
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: 'InteractionRequiredAuthError(string, string, string)'
+  - name: >-
+      InteractionRequiredAuthError(string, string, string, string, string,
+      string, string)
     uid: '@azure/msal-common.InteractionRequiredAuthError.constructor'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         new InteractionRequiredAuthError(errorCode?: string, errorMessage?:
-        string, subError?: string)
+        string, subError?: string, timestamp?: string, traceId?: string,
+        correlationId?: string, claims?: string)
       parameters:
         - id: errorCode
           type: string
@@ -30,6 +31,71 @@ constructors:
         - id: subError
           type: string
           description: ''
+        - id: timestamp
+          type: string
+          description: ''
+        - id: traceId
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+        - id: claims
+          type: string
+          description: ''
+properties:
+  - name: claims
+    uid: '@azure/msal-common.InteractionRequiredAuthError.claims'
+    package: '@azure/msal-common'
+    summary: >
+      https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/claims-challenge.md
+
+      A string with extra claims needed for the token request to succeed
+
+      web site: redirect the user to the authorization page and set the extra
+      claims
+
+      web api: include the claims in the WWW-Authenticate header that are sent
+      back to the client so that it knows to request a token with the extra
+      claims
+
+      desktop application or browser context: include the claims when acquiring
+      the token interactively
+
+      app to app context (client_credentials): include the claims in the
+      AcquireTokenByClientCredential request
+    fullName: claims
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'claims: string'
+      return:
+        description: ''
+        type: string
+  - name: timestamp
+    uid: '@azure/msal-common.InteractionRequiredAuthError.timestamp'
+    package: '@azure/msal-common'
+    summary: The time the error occured at
+    fullName: timestamp
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timestamp: string'
+      return:
+        description: ''
+        type: string
+  - name: traceId
+    uid: '@azure/msal-common.InteractionRequiredAuthError.traceId'
+    package: '@azure/msal-common'
+    summary: TraceId associated with the error
+    fullName: traceId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'traceId: string'
+      return:
+        description: ''
+        type: string
 inheritedProperties:
   - name: correlationId
     uid: '@azure/msal-common.InteractionRequiredAuthError.correlationId'
@@ -37,7 +103,6 @@ inheritedProperties:
     summary: CorrelationId associated with the error
     fullName: correlationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'correlationId: string'
@@ -53,7 +118,6 @@ inheritedProperties:
     summary: Short string denoting error
     fullName: errorCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorCode: string'
@@ -69,7 +133,6 @@ inheritedProperties:
     summary: Detailed description of error
     fullName: errorMessage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorMessage: string'
@@ -85,7 +148,6 @@ inheritedProperties:
     summary: ''
     fullName: message
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'message: string'
@@ -99,7 +161,6 @@ inheritedProperties:
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -113,7 +174,6 @@ inheritedProperties:
     summary: ''
     fullName: stack
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stack?: string'
@@ -127,7 +187,6 @@ inheritedProperties:
     summary: Describes the subclass of an error
     fullName: subError
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subError: string'
@@ -143,7 +202,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Creates an error for post request failures.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createPostRequestFailed(errDesc: string): AuthError'
@@ -164,7 +222,6 @@ inheritedMethods:
       Creates an error that is thrown when something unexpected happens in the
       library.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUnexpectedError(errDesc: string): AuthError'
@@ -184,7 +241,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setCorrelationId(correlationId: string)'
@@ -205,7 +261,6 @@ methods:
       status, indicating that the account was removed and interactive sign-in is
       required
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -221,7 +276,6 @@ methods:
       Creates an error thrown when the authorization code required for a token
       request is null or empty.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createNoTokensFoundError(): InteractionRequiredAuthError'
@@ -235,7 +289,6 @@ methods:
       Helper function used to determine if an error thrown by the server
       requires interaction to resolve
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

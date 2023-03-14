@@ -19,6 +19,5 @@ summary: >-
   meant for Azure SDK to enhance Managed Identity support.
 fullName: IAppTokenProvider
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface

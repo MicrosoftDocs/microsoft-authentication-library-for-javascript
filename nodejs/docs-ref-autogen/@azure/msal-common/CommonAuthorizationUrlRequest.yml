@@ -86,7 +86,6 @@ summary: >
   proof-of-possession flows.
 fullName: CommonAuthorizationUrlRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type CommonAuthorizationUrlRequest = BaseAuthRequest & {
@@ -104,5 +103,4 @@ syntax: |
     responseMode: ResponseMode,
     sid?: string,
     state?: string,
-    tokenQueryParameters?: StringDict,
   }

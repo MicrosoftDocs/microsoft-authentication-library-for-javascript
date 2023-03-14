@@ -1,4 +1,4 @@
-- name: 'MSAL'
+- name: '@azure/msal'
   items:
     - name: Overview
       uid: '@azure/msal'
@@ -23,9 +23,6 @@
     - uid: '@azure/msal.AuthOptions'
       name: AuthOptions
       items: []
-    - uid: '@azure/msal.AuthorityFactory'
-      name: AuthorityFactory
-      items: []
     - uid: '@azure/msal.AuthResponse'
       name: AuthResponse
       items: []
@@ -49,9 +46,6 @@
       items: []
     - uid: '@azure/msal.Configuration'
       name: Configuration
-      items: []
-    - uid: '@azure/msal.DefaultEvent'
-      name: DefaultEvent
       items: []
     - uid: '@azure/msal.ErrorCacheKeys'
       name: ErrorCacheKeys
@@ -86,9 +80,6 @@
     - uid: '@azure/msal.InteractionType'
       name: InteractionType
       items: []
-    - uid: '@azure/msal.LibraryStateObject'
-      name: LibraryStateObject
-      items: []
     - uid: '@azure/msal.Logger'
       name: Logger
       items: []
@@ -103,9 +94,6 @@
       items: []
     - uid: '@azure/msal.PersistentCacheKeys'
       name: PersistentCacheKeys
-      items: []
-    - uid: '@azure/msal.ScopeSet'
-      name: ScopeSet
       items: []
     - uid: '@azure/msal.ServerError'
       name: ServerError
@@ -140,19 +128,13 @@
     - uid: '@azure/msal.tokenReceivedCallback'
       name: tokenReceivedCallback
       items: []
-    - uid: '@azure/msal.TrustedAuthority'
-      name: TrustedAuthority
-      items: []
     - uid: '@azure/msal.UserAgentApplication'
       name: UserAgentApplication
       items: []
     - uid: '@azure/msal.WindowUtils'
       name: WindowUtils
       items: []
-    - uid: '@azure/msal.XhrResponse'
-      name: XhrResponse
-      items: []
-- name: 'MSAL Angular'
+- name: '@azure/msal-angular'
   items:
     - name: Overview
       uid: '@azure/msal-angular'
@@ -201,27 +183,18 @@
     - uid: '@azure/msal-angular.ProtectedResourceScopes'
       name: ProtectedResourceScopes
       items: []
-- name: 'MSAL Browser'
+- name: '@azure/msal-browser'
   items:
     - name: Overview
       uid: '@azure/msal-browser'
     - uid: '@azure/msal-browser.ApiId'
       name: ApiId
       items: []
-    - uid: '@azure/msal-browser.AsyncMemoryStorage'
-      name: AsyncMemoryStorage
-      items: []
     - uid: '@azure/msal-browser.AuthorizationCodeRequest'
       name: AuthorizationCodeRequest
       items: []
     - uid: '@azure/msal-browser.AuthorizationUrlRequest'
       name: AuthorizationUrlRequest
-      items: []
-    - uid: '@azure/msal-browser.Base64Decode'
-      name: Base64Decode
-      items: []
-    - uid: '@azure/msal-browser.Base64Encode'
-      name: Base64Encode
       items: []
     - uid: '@azure/msal-browser.BaseInteractionClient'
       name: BaseInteractionClient
@@ -244,9 +217,6 @@
     - uid: '@azure/msal-browser.BrowserConfigurationAuthError'
       name: BrowserConfigurationAuthError
       items: []
-    - uid: '@azure/msal-browser.BrowserCrypto'
-      name: BrowserCrypto
-      items: []
     - uid: '@azure/msal-browser.BrowserPerformanceClient'
       name: BrowserPerformanceClient
       items: []
@@ -258,12 +228,6 @@
       items: []
     - uid: '@azure/msal-browser.BrowserStateObject'
       name: BrowserStateObject
-      items: []
-    - uid: '@azure/msal-browser.BrowserStorage'
-      name: BrowserStorage
-      items: []
-    - uid: '@azure/msal-browser.BrowserStringUtils'
-      name: BrowserStringUtils
       items: []
     - uid: '@azure/msal-browser.BrowserSystemOptions'
       name: BrowserSystemOptions
@@ -289,20 +253,11 @@
     - uid: '@azure/msal-browser.Configuration'
       name: Configuration
       items: []
-    - uid: '@azure/msal-browser.CryptoKeyStore'
-      name: CryptoKeyStore
-      items: []
-    - uid: '@azure/msal-browser.CryptoKeyStoreNames'
-      name: CryptoKeyStoreNames
-      items: []
     - uid: '@azure/msal-browser.CryptoOps'
       name: CryptoOps
       items: []
     - uid: '@azure/msal-browser.CryptoOptions'
       name: CryptoOptions
-      items: []
-    - uid: '@azure/msal-browser.DatabaseStorage'
-      name: DatabaseStorage
       items: []
     - uid: '@azure/msal-browser.EndSessionPopupRequest'
       name: EndSessionPopupRequest
@@ -331,20 +286,8 @@
     - uid: '@azure/msal-browser.EventType'
       name: EventType
       items: []
-    - uid: '@azure/msal-browser.FetchClient'
-      name: FetchClient
-      items: []
-    - uid: '@azure/msal-browser.GuidGenerator'
-      name: GuidGenerator
-      items: []
     - uid: '@azure/msal-browser.HTTP_REQUEST_TYPE'
       name: HTTP_REQUEST_TYPE
-      items: []
-    - uid: '@azure/msal-browser.HybridSpaAuthorizationCodeClient'
-      name: HybridSpaAuthorizationCodeClient
-      items: []
-    - uid: '@azure/msal-browser.IAsyncStorage'
-      name: IAsyncStorage
       items: []
     - uid: '@azure/msal-browser.INavigationClient'
       name: INavigationClient
@@ -367,9 +310,6 @@
     - uid: '@azure/msal-browser.IPublicClientApplication'
       name: IPublicClientApplication
       items: []
-    - uid: '@azure/msal-browser.ISubtleCrypto'
-      name: ISubtleCrypto
-      items: []
     - uid: '@azure/msal-browser.ITokenCache'
       name: ITokenCache
       items: []
@@ -379,23 +319,11 @@
     - uid: '@azure/msal-browser.LoadTokenOptions'
       name: LoadTokenOptions
       items: []
-    - uid: '@azure/msal-browser.MathUtils'
-      name: MathUtils
-      items: []
     - uid: '@azure/msal-browser.MATS'
       name: MATS
       items: []
     - uid: '@azure/msal-browser.MemoryStorage'
       name: MemoryStorage
-      items: []
-    - uid: '@azure/msal-browser.ModernBrowserCrypto'
-      name: ModernBrowserCrypto
-      items: []
-    - uid: '@azure/msal-browser.MsBrowserCrypto'
-      name: MsBrowserCrypto
-      items: []
-    - uid: '@azure/msal-browser.MsrBrowserCrypto'
-      name: MsrBrowserCrypto
       items: []
     - uid: '@azure/msal-browser.NativeAccountInfo'
       name: NativeAccountInfo
@@ -438,9 +366,6 @@
       items: []
     - uid: '@azure/msal-browser.OSError'
       name: OSError
-      items: []
-    - uid: '@azure/msal-browser.PkceGenerator'
-      name: PkceGenerator
       items: []
     - uid: '@azure/msal-browser.PopupClient'
       name: PopupClient
@@ -490,9 +415,6 @@
     - uid: '@azure/msal-browser.SilentCacheClient'
       name: SilentCacheClient
       items: []
-    - uid: '@azure/msal-browser.SilentHandler'
-      name: SilentHandler
-      items: []
     - uid: '@azure/msal-browser.SilentIframeClient'
       name: SilentIframeClient
       items: []
@@ -517,10 +439,7 @@
     - uid: '@azure/msal-browser.WrapperSKU'
       name: WrapperSKU
       items: []
-    - uid: '@azure/msal-browser.XhrClient'
-      name: XhrClient
-      items: []
-- name: 'MSAL Common'
+- name: '@azure/msal-common'
   items:
     - name: Overview
       uid: '@azure/msal-common'
@@ -680,9 +599,6 @@
     - uid: '@azure/msal-common.CloudDiscoveryMetadata'
       name: CloudDiscoveryMetadata
       items: []
-    - uid: '@azure/msal-common.CloudInstanceDiscoveryResponse'
-      name: CloudInstanceDiscoveryResponse
-      items: []
     - uid: '@azure/msal-common.CommonAuthorizationCodeRequest'
       name: CommonAuthorizationCodeRequest
       items: []
@@ -712,6 +628,9 @@
       items: []
     - uid: '@azure/msal-common.CommonUsernamePasswordRequest'
       name: CommonUsernamePasswordRequest
+      items: []
+    - uid: '@azure/msal-common.Counters'
+      name: Counters
       items: []
     - uid: '@azure/msal-common.CredentialCache'
       name: CredentialCache
@@ -770,11 +689,8 @@
     - uid: '@azure/msal-common.ILoggerCallback'
       name: ILoggerCallback
       items: []
-    - uid: '@azure/msal-common.IMDSBadResponse'
-      name: IMDSBadResponse
-      items: []
-    - uid: '@azure/msal-common.ImdsOptions'
-      name: ImdsOptions
+    - uid: '@azure/msal-common.INativeBrokerPlugin'
+      name: INativeBrokerPlugin
       items: []
     - uid: '@azure/msal-common.INetworkModule'
       name: INetworkModule
@@ -799,9 +715,6 @@
       items: []
     - uid: '@azure/msal-common.JoseHeader'
       name: JoseHeader
-      items: []
-    - uid: '@azure/msal-common.JoseHeaderError'
-      name: JoseHeaderError
       items: []
     - uid: '@azure/msal-common.JoseHeaderOptions'
       name: JoseHeaderOptions
@@ -829,6 +742,12 @@
       items: []
     - uid: '@azure/msal-common.LogLevel'
       name: LogLevel
+      items: []
+    - uid: '@azure/msal-common.NativeRequest'
+      name: NativeRequest
+      items: []
+    - uid: '@azure/msal-common.NativeSignOutRequest'
+      name: NativeSignOutRequest
       items: []
     - uid: '@azure/msal-common.NetworkManager'
       name: NetworkManager
@@ -872,11 +791,17 @@
     - uid: '@azure/msal-common.PopTokenGenerator'
       name: PopTokenGenerator
       items: []
+    - uid: '@azure/msal-common.PreQueueEvent'
+      name: PreQueueEvent
+      items: []
     - uid: '@azure/msal-common.ProtocolMode'
       name: ProtocolMode
       items: []
     - uid: '@azure/msal-common.ProtocolUtils'
       name: ProtocolUtils
+      items: []
+    - uid: '@azure/msal-common.QueueMeasurement'
+      name: QueueMeasurement
       items: []
     - uid: '@azure/msal-common.RefreshTokenCache'
       name: RefreshTokenCache
@@ -886,9 +811,6 @@
       items: []
     - uid: '@azure/msal-common.RefreshTokenEntity'
       name: RefreshTokenEntity
-      items: []
-    - uid: '@azure/msal-common.RegionDiscovery'
-      name: RegionDiscovery
       items: []
     - uid: '@azure/msal-common.RegionDiscoveryMetadata'
       name: RegionDiscoveryMetadata
@@ -905,23 +827,14 @@
     - uid: '@azure/msal-common.ReqCnfData'
       name: ReqCnfData
       items: []
-    - uid: '@azure/msal-common.RequestParameterBuilder'
-      name: RequestParameterBuilder
-      items: []
     - uid: '@azure/msal-common.RequestStateObject'
       name: RequestStateObject
       items: []
     - uid: '@azure/msal-common.RequestThumbprint'
       name: RequestThumbprint
       items: []
-    - uid: '@azure/msal-common.RequestValidator'
-      name: RequestValidator
-      items: []
     - uid: '@azure/msal-common.ResponseCodes'
       name: ResponseCodes
-      items: []
-    - uid: '@azure/msal-common.ResponseHandler'
-      name: ResponseHandler
       items: []
     - uid: '@azure/msal-common.ResponseMode'
       name: ResponseMode
@@ -977,6 +890,9 @@
     - uid: '@azure/msal-common.StubPerformanceMeasurement'
       name: StubPerformanceMeasurement
       items: []
+    - uid: '@azure/msal-common.SubMeasurement'
+      name: SubMeasurement
+      items: []
     - uid: '@azure/msal-common.SystemOptions'
       name: SystemOptions
       items: []
@@ -1001,6 +917,9 @@
     - uid: '@azure/msal-common.UrlString'
       name: UrlString
       items: []
+    - uid: '@azure/msal-common.UrlToHttpRequestOptions'
+      name: UrlToHttpRequestOptions
+      items: []
     - uid: '@azure/msal-common.UsernamePasswordClient'
       name: UsernamePasswordClient
       items: []
@@ -1010,18 +929,18 @@
     - uid: '@azure/msal-common.ValidCredentialType'
       name: ValidCredentialType
       items: []
-- name: 'MSAL Node'
+- name: '@azure/msal-node'
   items:
     - name: Overview
       uid: '@azure/msal-node'
-    - uid: '@azure/msal-node.ApiId'
-      name: ApiId
-      items: []
     - uid: '@azure/msal-node.AuthorizationCodeRequest'
       name: AuthorizationCodeRequest
       items: []
     - uid: '@azure/msal-node.AuthorizationUrlRequest'
       name: AuthorizationUrlRequest
+      items: []
+    - uid: '@azure/msal-node.BrokerOptions'
+      name: BrokerOptions
       items: []
     - uid: '@azure/msal-node.CacheKVStore'
       name: CacheKVStore
@@ -1047,38 +966,20 @@
     - uid: '@azure/msal-node.CryptoProvider'
       name: CryptoProvider
       items: []
-    - uid: '@azure/msal-node.Deserializer'
-      name: Deserializer
-      items: []
     - uid: '@azure/msal-node.DeviceCodeRequest'
       name: DeviceCodeRequest
       items: []
     - uid: '@azure/msal-node.DistributedCachePlugin'
       name: DistributedCachePlugin
       items: []
-    - uid: '@azure/msal-node.EncodingUtils'
-      name: EncodingUtils
-      items: []
-    - uid: '@azure/msal-node.GuidGenerator'
-      name: GuidGenerator
-      items: []
-    - uid: '@azure/msal-node.HashUtils'
-      name: HashUtils
-      items: []
-    - uid: '@azure/msal-node.HttpClient'
-      name: HttpClient
-      items: []
-    - uid: '@azure/msal-node.HttpMethod'
-      name: HttpMethod
-      items: []
-    - uid: '@azure/msal-node.HttpStatus'
-      name: HttpStatus
-      items: []
     - uid: '@azure/msal-node.ICacheClient'
       name: ICacheClient
       items: []
     - uid: '@azure/msal-node.IConfidentialClientApplication'
       name: IConfidentialClientApplication
+      items: []
+    - uid: '@azure/msal-node.ILoopbackClient'
+      name: ILoopbackClient
       items: []
     - uid: '@azure/msal-node.InMemoryCache'
       name: InMemoryCache
@@ -1098,15 +999,6 @@
     - uid: '@azure/msal-node.JsonCache'
       name: JsonCache
       items: []
-    - uid: '@azure/msal-node.LoopbackClient'
-      name: LoopbackClient
-      items: []
-    - uid: '@azure/msal-node.NetworkUtils'
-      name: NetworkUtils
-      items: []
-    - uid: '@azure/msal-node.NodeAuthError'
-      name: NodeAuthError
-      items: []
     - uid: '@azure/msal-node.NodeAuthOptions'
       name: NodeAuthOptions
       items: []
@@ -1124,12 +1016,6 @@
       items: []
     - uid: '@azure/msal-node.OnBehalfOfRequest'
       name: OnBehalfOfRequest
-      items: []
-    - uid: '@azure/msal-node.PkceGenerator'
-      name: PkceGenerator
-      items: []
-    - uid: '@azure/msal-node.ProxyStatus'
-      name: ProxyStatus
       items: []
     - uid: '@azure/msal-node.PublicClientApplication'
       name: PublicClientApplication
@@ -1152,8 +1038,8 @@
     - uid: '@azure/msal-node.SerializedRefreshTokenEntity'
       name: SerializedRefreshTokenEntity
       items: []
-    - uid: '@azure/msal-node.Serializer'
-      name: Serializer
+    - uid: '@azure/msal-node.SignOutRequest'
+      name: SignOutRequest
       items: []
     - uid: '@azure/msal-node.SilentFlowRequest'
       name: SilentFlowRequest
@@ -1164,7 +1050,7 @@
     - uid: '@azure/msal-node.UsernamePasswordRequest'
       name: UsernamePasswordRequest
       items: []
-- name: 'MSAL React'
+- name: '@azure/msal-react'
   items:
     - name: Overview
       uid: '@azure/msal-react'
@@ -1188,9 +1074,6 @@
       items: []
     - uid: '@azure/msal-react.MsalProviderProps'
       name: MsalProviderProps
-      items: []
-    - uid: '@azure/msal-react.ReactAuthError'
-      name: ReactAuthError
       items: []
     - uid: '@azure/msal-react.SetComplement'
       name: SetComplement

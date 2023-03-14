@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: NativeAuthError
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -37,7 +35,6 @@ properties:
     summary: ''
     fullName: ext
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'ext: OSError | undefined'
@@ -51,7 +48,6 @@ inheritedProperties:
     summary: CorrelationId associated with the error
     fullName: correlationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'correlationId: string'
@@ -65,7 +61,6 @@ inheritedProperties:
     summary: Short string denoting error
     fullName: errorCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorCode: string'
@@ -79,7 +74,6 @@ inheritedProperties:
     summary: Detailed description of error
     fullName: errorMessage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorMessage: string'
@@ -93,7 +87,6 @@ inheritedProperties:
     summary: ''
     fullName: message
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'message: string'
@@ -107,7 +100,6 @@ inheritedProperties:
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -121,7 +113,6 @@ inheritedProperties:
     summary: ''
     fullName: stack
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stack?: string'
@@ -135,7 +126,6 @@ inheritedProperties:
     summary: Describes the subclass of an error
     fullName: subError
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subError: string'
@@ -149,7 +139,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Creates an error for post request failures.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createPostRequestFailed(errDesc: string): AuthError'
@@ -168,7 +157,6 @@ inheritedMethods:
       Creates an error that is thrown when something unexpected happens in the
       library.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUnexpectedError(errDesc: string): AuthError'
@@ -186,7 +174,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setCorrelationId(correlationId: string)'
@@ -201,7 +188,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Create the appropriate error object based on the WAM status code.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -225,7 +211,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Creates a tokens not found error when the internal cache look up fails
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createTokensNotFoundInCacheError(): NativeAuthError'
@@ -239,7 +224,6 @@ methods:
       Creates user switch error when the user chooses a different account in the
       native broker prompt
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUserSwitchError(): NativeAuthError'
@@ -253,7 +237,6 @@ methods:
       These errors should result in a fallback to the 'standard' browser based
       auth flow.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function isFatal(): boolean'

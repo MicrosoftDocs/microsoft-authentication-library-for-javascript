@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: ''
 fullName: CacheRecord
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -16,7 +15,6 @@ constructors:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -47,7 +45,6 @@ properties:
     summary: ''
     fullName: accessToken
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'accessToken: AccessTokenEntity | null'
@@ -60,7 +57,6 @@ properties:
     summary: ''
     fullName: account
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'account: AccountEntity | null'
@@ -73,7 +69,6 @@ properties:
     summary: ''
     fullName: appMetadata
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'appMetadata: AppMetadataEntity | null'
@@ -86,7 +81,6 @@ properties:
     summary: ''
     fullName: idToken
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'idToken: IdTokenEntity | null'
@@ -99,7 +93,6 @@ properties:
     summary: ''
     fullName: refreshToken
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'refreshToken: RefreshTokenEntity | null'

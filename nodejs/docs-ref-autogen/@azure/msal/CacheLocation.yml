@@ -8,7 +8,6 @@ summary: |-
   - session storage: MSAL uses the browsers session storage to store its cache
 fullName: CacheLocation
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type CacheLocation = "localStorage" | "sessionStorage"

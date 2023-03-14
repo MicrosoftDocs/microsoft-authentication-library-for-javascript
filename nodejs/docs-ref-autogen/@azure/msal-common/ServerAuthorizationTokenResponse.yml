@@ -48,11 +48,11 @@ summary: >
   diagnostics across components.
 fullName: ServerAuthorizationTokenResponse
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type ServerAuthorizationTokenResponse = {
     access_token?: string,
+    claims?: string,
     client_info?: string,
     correlation_id?: string,
     error?: string,
@@ -66,6 +66,7 @@ syntax: |
     refresh_in?: number,
     refresh_token?: string,
     scope?: string,
+    spa_accountid?: string,
     spa_code?: string,
     suberror?: string,
     timestamp?: string,

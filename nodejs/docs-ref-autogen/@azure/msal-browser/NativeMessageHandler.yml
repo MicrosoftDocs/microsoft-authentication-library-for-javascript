@@ -5,21 +5,19 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: NativeMessageHandler
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: 'NativeMessageHandler(Logger, number, string)'
+  - name: 'NativeMessageHandler(Logger, number, IPerformanceClient, string)'
     uid: '@azure/msal-browser.NativeMessageHandler.constructor'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         new NativeMessageHandler(logger: Logger, handshakeTimeoutMs: number,
-        extensionId?: string)
+        performanceClient: IPerformanceClient, extensionId?: string)
       parameters:
         - id: logger
           type: Logger
@@ -27,29 +25,35 @@ constructors:
         - id: handshakeTimeoutMs
           type: number
           description: ''
+        - id: performanceClient
+          type: IPerformanceClient
+          description: ''
         - id: extensionId
           type: string
           description: ''
 methods:
-  - name: 'createProvider(Logger, number)'
+  - name: 'createProvider(Logger, number, IPerformanceClient)'
     uid: '@azure/msal-browser.NativeMessageHandler.createProvider'
     package: '@azure/msal-browser'
     summary: >-
       Returns an instance of the MessageHandler that has successfully
       established a connection with an extension
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         static function createProvider(logger: Logger, handshakeTimeoutMs:
-        number): Promise<NativeMessageHandler>
+        number, performanceClient: IPerformanceClient):
+        Promise<NativeMessageHandler>
       parameters:
         - id: logger
           type: Logger
           description: ''
         - id: handshakeTimeoutMs
           type: number
+          description: ''
+        - id: performanceClient
+          type: IPerformanceClient
           description: |+
 
       return:
@@ -62,7 +66,6 @@ methods:
       Returns the Id for the browser extension this handler is communicating
       with
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getExtensionId(): string | undefined'
@@ -76,7 +79,6 @@ methods:
       Returns the version for the browser extension this handler is
       communicating with
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getExtensionVersion(): string | undefined'
@@ -92,7 +94,6 @@ methods:
       Returns boolean indicating whether or not the request should attempt to
       use native broker
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -123,7 +124,6 @@ methods:
       Sends a given message to the extension and resolves with the extension
       response
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function sendMessage(body: NativeExtensionRequestBody): Promise<object>'

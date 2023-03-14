@@ -7,7 +7,6 @@ summary: >-
   unavailability.
 fullName: ServerError
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -16,7 +15,6 @@ constructors:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new ServerError(errorCode: string, errorMessage?: string)'
@@ -34,7 +32,6 @@ inheritedProperties:
     summary: ''
     fullName: errorCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorCode: string'
@@ -50,7 +47,6 @@ inheritedProperties:
     summary: ''
     fullName: errorMessage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorMessage: string'
@@ -66,7 +62,6 @@ inheritedProperties:
     summary: ''
     fullName: message
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'message: string'
@@ -80,7 +75,6 @@ inheritedProperties:
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -94,7 +88,6 @@ inheritedProperties:
     summary: ''
     fullName: stack
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stack?: string'
@@ -108,7 +101,6 @@ inheritedMethods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createNoWindowObjectError(errDesc: string): AuthError'
@@ -127,7 +119,6 @@ inheritedMethods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUnexpectedError(errDesc: string): AuthError'
@@ -147,7 +138,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createServerUnavailableError(): ServerError'
@@ -159,7 +149,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUnknownServerError(errorDesc: string): ServerError'

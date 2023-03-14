@@ -12,7 +12,6 @@ summary: |-
   environment             idtoken.issuer (the authority that issues the token)
 fullName: Account
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -21,7 +20,6 @@ constructors:
     package: '@azure/msal'
     summary: Creates an Account Object
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -58,7 +56,6 @@ properties:
     summary: ''
     fullName: accountIdentifier
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'accountIdentifier: string'
@@ -71,7 +68,6 @@ properties:
     summary: ''
     fullName: environment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'environment: string'
@@ -84,7 +80,6 @@ properties:
     summary: ''
     fullName: homeAccountIdentifier
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'homeAccountIdentifier: string'
@@ -97,7 +92,6 @@ properties:
     summary: ''
     fullName: idToken
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'idToken: StringDict'
@@ -110,7 +104,6 @@ properties:
     summary: ''
     fullName: idTokenClaims
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'idTokenClaims: StringDict'
@@ -123,7 +116,6 @@ properties:
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -136,7 +128,6 @@ properties:
     summary: ''
     fullName: sid
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sid: string'
@@ -149,7 +140,6 @@ properties:
     summary: ''
     fullName: userName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'userName: string'
@@ -164,7 +154,6 @@ methods:
       Utils function to compare two Account objects - used to check if the same
       user account is logged in
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function compareAccounts(a1: Account, a2: Account): boolean'

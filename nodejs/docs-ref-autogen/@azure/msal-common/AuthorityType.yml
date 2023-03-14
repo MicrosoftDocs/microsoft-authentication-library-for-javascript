@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Authority types supported by MSAL.
 fullName: AuthorityType
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: Default

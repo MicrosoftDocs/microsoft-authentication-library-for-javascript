@@ -6,17 +6,13 @@ type: package
 classes:
   - '@azure/msal.Account'
   - '@azure/msal.Logger'
-  - '@azure/msal.ScopeSet'
   - '@azure/msal.UserAgentApplication'
-  - '@azure/msal.AuthorityFactory'
-  - '@azure/msal.TrustedAuthority'
   - '@azure/msal.AuthError'
   - '@azure/msal.ClientAuthError'
   - '@azure/msal.ClientConfigurationError'
   - '@azure/msal.InteractionRequiredAuthError'
   - '@azure/msal.ServerError'
   - '@azure/msal.ApiEvent'
-  - '@azure/msal.DefaultEvent'
   - '@azure/msal.HttpEvent'
   - '@azure/msal.TelemetryEvent'
   - '@azure/msal.TelemetryManager'
@@ -35,18 +31,15 @@ typeAliases:
   - '@azure/msal.authResponseCallback'
   - '@azure/msal.errorReceivedCallback'
   - '@azure/msal.tokenReceivedCallback'
-  - '@azure/msal.XhrResponse'
   - '@azure/msal.OpenIdConfiguration'
   - '@azure/msal.TelemetryEmitter'
   - '@azure/msal.InteractionType'
-  - '@azure/msal.LibraryStateObject'
 functions:
   - name: buildResponseStateOnly(string)
     uid: '@azure/msal.buildResponseStateOnly'
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function buildResponseStateOnly(state: string): AuthResponse'
@@ -62,7 +55,6 @@ functions:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function validateClaimsRequest(request: AuthenticationParameters)'
@@ -87,7 +79,6 @@ functions:
       MSAL function that sets the default options when not explicitly configured
       from app developer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -124,7 +115,6 @@ functions:
     package: '@azure/msal'
     summary: MSAL JS Library Version
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function libraryVersion(): string'

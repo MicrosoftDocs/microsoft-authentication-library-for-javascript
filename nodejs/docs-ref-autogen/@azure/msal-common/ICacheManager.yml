@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: ''
 fullName: ICacheManager
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
@@ -14,7 +13,6 @@ methods:
     package: '@azure/msal-common'
     summary: given an authority generates the cache key for authorityMetadata
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateAuthorityMetadataCacheKey(authority: string): string'
@@ -31,7 +29,6 @@ methods:
     package: '@azure/msal-common'
     summary: fetch the idToken entity from the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -50,7 +47,6 @@ methods:
     package: '@azure/msal-common'
     summary: fetch the account entity from the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAccount(accountKey: string): AccountEntity | null'
@@ -69,7 +65,6 @@ methods:
       retrieve accounts matching all provided filters; if no filter is set, get
       all accounts
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAccountsFilteredBy(filter: AccountFilter): AccountCache'
@@ -85,7 +80,6 @@ methods:
     package: '@azure/msal-common'
     summary: Returns all accounts in cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAllAccounts(): AccountInfo[]'
@@ -97,7 +91,6 @@ methods:
     package: '@azure/msal-common'
     summary: fetch appMetadata entity from the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -116,7 +109,6 @@ methods:
     package: '@azure/msal-common'
     summary: fetch cloud discovery metadata entity from the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -135,7 +127,6 @@ methods:
     package: '@azure/msal-common'
     summary: Provide an alias to find a matching AuthorityMetadataEntity in cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -154,7 +145,6 @@ methods:
     package: '@azure/msal-common'
     summary: Get cache keys for authority metadata
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAuthorityMetadataKeys(): Array<string>'
@@ -168,7 +158,6 @@ methods:
       retrieve credentials matching all provided filters; if no filter is set,
       get all credentials
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -186,7 +175,6 @@ methods:
     package: '@azure/msal-common'
     summary: fetch the idToken entity from the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getIdTokenCredential(idTokenKey: string): IdTokenEntity | null'
@@ -203,7 +191,6 @@ methods:
     package: '@azure/msal-common'
     summary: fetch the idToken entity from the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -222,7 +209,6 @@ methods:
     package: '@azure/msal-common'
     summary: fetch server telemetry entity from the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -241,7 +227,6 @@ methods:
     package: '@azure/msal-common'
     summary: fetch throttling entity from the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -260,7 +245,6 @@ methods:
     package: '@azure/msal-common'
     summary: returns a boolean if the given account is removed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeAccount(accountKey: string): Promise<boolean>'
@@ -276,7 +260,6 @@ methods:
     package: '@azure/msal-common'
     summary: returns a boolean if the given account is removed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeAccountContext(account: AccountEntity): Promise<boolean>'
@@ -293,7 +276,6 @@ methods:
     package: '@azure/msal-common'
     summary: Removes all accounts and related tokens from cache.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeAllAccounts(): Promise<boolean>'
@@ -305,7 +287,6 @@ methods:
     package: '@azure/msal-common'
     summary: returns a boolean if the given credential is removed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -324,7 +305,6 @@ methods:
     package: '@azure/msal-common'
     summary: saves a cache record
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function saveCacheRecord(cacheRecord: CacheRecord): Promise<void>'
@@ -341,7 +321,6 @@ methods:
     package: '@azure/msal-common'
     summary: set idToken entity to the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setAccessTokenCredential(accessToken: AccessTokenEntity)'
@@ -355,7 +334,6 @@ methods:
     package: '@azure/msal-common'
     summary: set account entity in the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setAccount(account: AccountEntity)'
@@ -369,7 +347,6 @@ methods:
     package: '@azure/msal-common'
     summary: set appMetadata entity to the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setAppMetadata(appMetadata: AppMetadataEntity)'
@@ -383,7 +360,6 @@ methods:
     package: '@azure/msal-common'
     summary: set cloud discovery metadata entity to the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -402,7 +378,6 @@ methods:
     package: '@azure/msal-common'
     summary: set idToken entity to the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setIdTokenCredential(idToken: IdTokenEntity)'
@@ -416,7 +391,6 @@ methods:
     package: '@azure/msal-common'
     summary: set idToken entity to the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setRefreshTokenCredential(refreshToken: RefreshTokenEntity)'
@@ -430,7 +404,6 @@ methods:
     package: '@azure/msal-common'
     summary: set server telemetry entity to the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -449,7 +422,6 @@ methods:
     package: '@azure/msal-common'
     summary: set throttling entity to the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

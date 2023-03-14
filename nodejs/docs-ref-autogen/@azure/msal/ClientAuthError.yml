@@ -5,7 +5,6 @@ package: '@azure/msal'
 summary: Error thrown when there is an error in the client code running on the browser.
 fullName: ClientAuthError
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new ClientAuthError(errorCode: string, errorMessage?: string)'
@@ -32,7 +30,6 @@ inheritedProperties:
     summary: ''
     fullName: errorCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorCode: string'
@@ -48,7 +45,6 @@ inheritedProperties:
     summary: ''
     fullName: errorMessage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorMessage: string'
@@ -64,7 +60,6 @@ inheritedProperties:
     summary: ''
     fullName: message
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'message: string'
@@ -78,7 +73,6 @@ inheritedProperties:
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -92,7 +86,6 @@ inheritedProperties:
     summary: ''
     fullName: stack
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stack?: string'
@@ -106,7 +99,6 @@ inheritedMethods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createNoWindowObjectError(errDesc: string): AuthError'
@@ -125,7 +117,6 @@ inheritedMethods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUnexpectedError(errDesc: string): AuthError'
@@ -145,7 +136,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createAcquireTokenInProgressError(): ClientAuthError'
@@ -157,7 +147,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -171,7 +160,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createCacheParseError(key: string): ClientAuthError'
@@ -187,7 +175,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -205,7 +192,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -223,7 +209,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -241,7 +226,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -259,7 +243,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -277,7 +260,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -295,7 +277,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -313,7 +294,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createInvalidInteractionTypeError(): ClientAuthError'
@@ -325,7 +305,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -346,7 +325,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createLoginInProgressError(): ClientAuthError'
@@ -358,7 +336,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -376,7 +353,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -397,7 +373,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -415,7 +390,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -433,7 +407,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createTokenRenewalTimeoutError(): ClientAuthError'
@@ -445,7 +418,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUserCancelledError(): ClientAuthError'
@@ -457,7 +429,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUserDoesNotExistError(): ClientAuthError'
@@ -469,7 +440,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUserLoginRequiredError(): ClientAuthError'

@@ -16,7 +16,6 @@ summary: >
   response.
 fullName: AppTokenProviderResult
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AppTokenProviderResult = {

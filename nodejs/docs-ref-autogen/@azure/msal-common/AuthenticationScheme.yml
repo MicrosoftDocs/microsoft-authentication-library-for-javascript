@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Type of the authentication request
 fullName: AuthenticationScheme
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: BEARER

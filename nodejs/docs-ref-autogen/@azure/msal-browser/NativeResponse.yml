@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: Token response returned by Native Platform e.g. WAM
 fullName: NativeResponse
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type NativeResponse = {

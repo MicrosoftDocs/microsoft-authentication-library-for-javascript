@@ -5,7 +5,6 @@ package: '@azure/msal'
 summary: ''
 fullName: AuthOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AuthOptions = {

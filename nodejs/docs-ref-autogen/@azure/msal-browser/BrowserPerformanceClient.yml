@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: BrowserPerformanceClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -16,7 +15,6 @@ constructors:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -52,7 +50,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Registers a callback function to receive performance events.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -71,7 +68,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Saves extra information to be emitted when the measurements are flushed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function addStaticFields(fields: StaticFields, correlationId: string)'
@@ -84,12 +80,37 @@ inheritedMethods:
           description: |+
 
     inheritanceDescription: <b>Inherited From</b> PerformanceClient.addStaticFields
+  - name: 'calculateQueuedTime(number, number)'
+    uid: '@azure/msal-browser.BrowserPerformanceClient.calculateQueuedTime'
+    package: '@azure/msal-browser'
+    summary: >-
+      Calculates the difference between current time and time when function was
+      queued.
+
+      Note: It is possible to have 0 as the queue time if the current time and
+      the queued time was the same.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function calculateQueuedTime(preQueueTime: number, currentTime: number):
+        number
+      parameters:
+        - id: preQueueTime
+          type: number
+          description: ''
+        - id: currentTime
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> PerformanceClient.calculateQueuedTime
   - name: discardMeasurements(string)
     uid: '@azure/msal-browser.BrowserPerformanceClient.discardMeasurements'
     package: '@azure/msal-browser'
     summary: Removes measurements for a given correlation id.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function discardMeasurements(correlationId: string)'
@@ -104,7 +125,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Emits events to all registered callbacks.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function emitEvents(events: PerformanceEvent[], correlationId: string)'
@@ -116,7 +136,7 @@ inheritedMethods:
           type: string
           description: ''
     inheritanceDescription: <b>Inherited From</b> PerformanceClient.emitEvents
-  - name: endMeasurement(PerformanceEvent)
+  - name: 'endMeasurement(PerformanceEvent, IPerformanceMeasurement)'
     uid: '@azure/msal-browser.BrowserPerformanceClient.endMeasurement'
     package: '@azure/msal-browser'
     summary: >-
@@ -124,49 +144,85 @@ inheritedMethods:
       directly by PerformanceClient classes,
 
       as consumers should instead use the function returned by startMeasurement.
+
+      Adds a new field named as "[event name]DurationMs" for sub-measurements,
+      completes and emits an event
+
+      otherwise.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function endMeasurement(event: PerformanceEvent): PerformanceEvent |
-        null
+        function endMeasurement(event: PerformanceEvent, measurement?:
+        IPerformanceMeasurement): PerformanceEvent | null
       parameters:
         - id: event
           type: PerformanceEvent
+          description: ''
+        - id: measurement
+          type: IPerformanceMeasurement
           description: ''
       return:
         description: ''
         type: PerformanceEvent | null
     inheritanceDescription: <b>Inherited From</b> PerformanceClient.endMeasurement
-  - name: 'flushMeasurements(PerformanceEvents, string)'
-    uid: '@azure/msal-browser.BrowserPerformanceClient.flushMeasurements'
+  - name: getIntFields()
+    uid: '@azure/msal-browser.BrowserPerformanceClient.getIntFields'
     package: '@azure/msal-browser'
-    summary: >-
-      Gathers and emits performance events for measurements taked for the given
-      top-level API and correlation ID.
+    summary: |-
+      Get integral fields.
+      Override to change the set.
     remarks: ''
-    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getIntFields(): ReadonlySet<string>'
+      return:
+        description: ''
+        type: ReadonlySet&lt;string&gt;
+    inheritanceDescription: <b>Inherited From</b> PerformanceClient.getIntFields
+  - name: 'getPreQueueTime(PerformanceEvents, string)'
+    uid: '@azure/msal-browser.BrowserPerformanceClient.getPreQueueTime'
+    package: '@azure/msal-browser'
+    summary: Gets map of pre-queue times by correlation Id
+    remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function flushMeasurements(measureName: PerformanceEvents,
-        correlationId: string)
+        function getPreQueueTime(eventName: PerformanceEvents, correlationId:
+        string): number | void
       parameters:
-        - id: measureName
+        - id: eventName
           type: PerformanceEvents
           description: ''
         - id: correlationId
           type: string
-          description: |+
-
-    inheritanceDescription: <b>Inherited From</b> PerformanceClient.flushMeasurements
+          description: ''
+      return:
+        description: ''
+        type: number | void
+    inheritanceDescription: <b>Inherited From</b> PerformanceClient.getPreQueueTime
+  - name: 'increment(Counters, string)'
+    uid: '@azure/msal-browser.BrowserPerformanceClient.increment'
+    package: '@azure/msal-browser'
+    summary: Increment counters to be emitted when the measurements are flushed
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function increment(counters: Counters, correlationId: string)'
+      parameters:
+        - id: counters
+          type: Counters
+          description: ''
+        - id: correlationId
+          type: string
+          description: |
+            correlation identifier
+    inheritanceDescription: <b>Inherited From</b> PerformanceClient.increment
   - name: removePerformanceCallback(string)
     uid: '@azure/msal-browser.BrowserPerformanceClient.removePerformanceCallback'
     package: '@azure/msal-browser'
     summary: Removes a callback registered with addPerformanceCallback.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removePerformanceCallback(callbackId: string): boolean'
@@ -178,19 +234,84 @@ inheritedMethods:
         description: ''
         type: boolean
     inheritanceDescription: <b>Inherited From</b> PerformanceClient.removePerformanceCallback
+  - name: 'startPerformanceMeasurement(string, string)'
+    uid: '@azure/msal-browser.BrowserPerformanceClient.startPerformanceMeasurement'
+    package: '@azure/msal-browser'
+    summary: >-
+      Starts and returns an platform-specific implementation of
+      IPerformanceMeasurement.
+
+      Note: this function can be changed to abstract at the next major version
+      bump.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function startPerformanceMeasurement(measureName: string, correlationId:
+        string): IPerformanceMeasurement
+      parameters:
+        - id: measureName
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: IPerformanceMeasurement
+    inheritanceDescription: <b>Inherited From</b> PerformanceClient.startPerformanceMeasurement
 methods:
+  - name: 'addQueueMeasurement(PerformanceEvents, string, number, boolean)'
+    uid: '@azure/msal-browser.BrowserPerformanceClient.addQueueMeasurement'
+    package: '@azure/msal-browser'
+    summary: Calculates and adds queue time measurement for given performance event.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addQueueMeasurement(eventName: PerformanceEvents,
+        correlationId?: string, queueTime?: number, manuallyCompleted?: boolean)
+      parameters:
+        - id: eventName
+          type: PerformanceEvents
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+        - id: queueTime
+          type: number
+          description: ''
+        - id: manuallyCompleted
+          type: boolean
+          description: indicator for manually completed queue measurements
   - name: generateId()
     uid: '@azure/msal-browser.BrowserPerformanceClient.generateId'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateId(): string'
       return:
         description: ''
         type: string
+  - name: 'setPreQueueTime(PerformanceEvents, string)'
+    uid: '@azure/msal-browser.BrowserPerformanceClient.setPreQueueTime'
+    package: '@azure/msal-browser'
+    summary: Adds pre-queue time to preQueueTimeByCorrelationId map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function setPreQueueTime(eventName: PerformanceEvents, correlationId?:
+        string)
+      parameters:
+        - id: eventName
+          type: PerformanceEvents
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
   - name: 'startMeasurement(PerformanceEvents, string)'
     uid: '@azure/msal-browser.BrowserPerformanceClient.startMeasurement'
     package: '@azure/msal-browser'
@@ -200,7 +321,6 @@ methods:
 
       Also captures browser page visibilityState.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -221,7 +341,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -237,4 +356,15 @@ methods:
       return:
         description: ''
         type: IPerformanceMeasurement
+  - name: supportsBrowserPerformanceNow()
+    uid: '@azure/msal-browser.BrowserPerformanceClient.supportsBrowserPerformanceNow'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function supportsBrowserPerformanceNow(): boolean'
+      return:
+        description: ''
+        type: boolean
 extends: PerformanceClient

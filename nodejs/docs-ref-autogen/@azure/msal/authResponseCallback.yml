@@ -7,7 +7,6 @@ summary: |-
   <xref:(authResponseCallback%3Atype)>
 fullName: authResponseCallback
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type authResponseCallback = (

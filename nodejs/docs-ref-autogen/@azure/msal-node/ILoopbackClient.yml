@@ -1,29 +1,28 @@
 ### YamlMime:TSType
-name: LoopbackClient
-uid: '@azure/msal-node.LoopbackClient'
+name: ILoopbackClient
+uid: '@azure/msal-node.ILoopbackClient'
 package: '@azure/msal-node'
-summary: ''
-fullName: LoopbackClient
+summary: >-
+  Interface for LoopbackClient allowing to replace the default loopback server
+  with a custom implementation.
+fullName: ILoopbackClient
 remarks: ''
-isPreview: false
 isDeprecated: false
-type: class
+type: interface
 methods:
   - name: closeServer()
-    uid: '@azure/msal-node.LoopbackClient.closeServer'
+    uid: '@azure/msal-node.ILoopbackClient.closeServer'
     package: '@azure/msal-node'
-    summary: Close the loopback server
+    summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function closeServer()
   - name: getRedirectUri()
-    uid: '@azure/msal-node.LoopbackClient.getRedirectUri'
+    uid: '@azure/msal-node.ILoopbackClient.getRedirectUri'
     package: '@azure/msal-node'
-    summary: Get the port that the loopback server is running on
+    summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getRedirectUri(): string'
@@ -31,13 +30,10 @@ methods:
         description: ''
         type: string
   - name: 'listenForAuthCode(string, string)'
-    uid: '@azure/msal-node.LoopbackClient.listenForAuthCode'
+    uid: '@azure/msal-node.ILoopbackClient.listenForAuthCode'
     package: '@azure/msal-node'
-    summary: >-
-      Spins up a loopback server which returns the server response when the
-      localhost redirectUri is hit
+    summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

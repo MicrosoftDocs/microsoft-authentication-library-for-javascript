@@ -5,24 +5,23 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: RedirectHandler
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
   - name: >-
       RedirectHandler(AuthorizationCodeClient, BrowserCacheManager,
-      CommonAuthorizationCodeRequest, Logger, ICrypto)
+      CommonAuthorizationCodeRequest, Logger, ICrypto, IPerformanceClient)
     uid: '@azure/msal-browser.RedirectHandler.constructor'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         new RedirectHandler(authCodeModule: AuthorizationCodeClient,
         storageImpl: BrowserCacheManager, authCodeRequest:
-        CommonAuthorizationCodeRequest, logger: Logger, browserCrypto: ICrypto)
+        CommonAuthorizationCodeRequest, logger: Logger, browserCrypto: ICrypto,
+        performanceClient: IPerformanceClient)
       parameters:
         - id: authCodeModule
           type: AuthorizationCodeClient
@@ -39,6 +38,9 @@ constructors:
         - id: browserCrypto
           type: ICrypto
           description: ''
+        - id: performanceClient
+          type: IPerformanceClient
+          description: ''
 inheritedMethods:
   - name: >-
       handleCodeResponseFromServer(AuthorizationCodePayload, string, Authority,
@@ -47,7 +49,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Process auth code response from AAD
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -83,7 +84,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Handle authorization code response in the window.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -111,7 +111,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Redirects window to given URL.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

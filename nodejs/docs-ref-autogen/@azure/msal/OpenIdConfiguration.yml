@@ -5,7 +5,6 @@ package: '@azure/msal'
 summary: Response type for openid-configuration endpoints
 fullName: OpenIdConfiguration
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type OpenIdConfiguration = {

@@ -7,7 +7,6 @@ summary: >-
   responses from the Microsoft STS using the authorization code flow.
 fullName: BaseClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 properties:
@@ -17,7 +16,6 @@ properties:
     summary: ''
     fullName: authority
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authority: Authority'
@@ -30,7 +28,6 @@ properties:
     summary: ''
     fullName: logger
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'logger: Logger'
@@ -38,6 +35,22 @@ properties:
         description: ''
         type: <xref uid="@azure/msal-common.Logger" />
 methods:
+  - name: createTokenQueryParameters(BaseAuthRequest)
+    uid: '@azure/msal-common.BaseClient.createTokenQueryParameters'
+    package: '@azure/msal-common'
+    summary: Creates query string for the /token request
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function createTokenQueryParameters(request: BaseAuthRequest): string'
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.BaseAuthRequest" />
+          description: |+
+
+      return:
+        description: ''
+        type: string
   - name: updateAuthority(Authority)
     uid: '@azure/msal-common.BaseClient.updateAuthority'
     package: '@azure/msal-common'
@@ -45,7 +58,6 @@ methods:
       Updates the authority object of the client. Endpoint discovery must be
       completed.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function updateAuthority(updatedAuthority: Authority)'

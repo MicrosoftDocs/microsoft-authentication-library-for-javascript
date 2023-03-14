@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: NativeInteractionClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -18,7 +17,6 @@ constructors:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -71,7 +69,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Use to get the redirect uri configured in MSAL or null.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getRedirectUri(requestRedirectUri?: string): string'
@@ -91,7 +88,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Acquire token from native platform via browser extension
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -115,7 +111,6 @@ methods:
       Acquires a token from native platform then redirects to the redirectUri
       instead of returning the response
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function acquireTokenRedirect(request: RedirectRequest): Promise<void>'
@@ -127,6 +122,99 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: cacheAccount(AccountEntity)
+    uid: '@azure/msal-browser.NativeInteractionClient.cacheAccount'
+    package: '@azure/msal-browser'
+    summary: cache the account entity in browser storage
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function cacheAccount(accountEntity: AccountEntity)'
+      parameters:
+        - id: accountEntity
+          type: AccountEntity
+          description: |+
+
+  - name: >-
+      cacheNativeTokens(NativeResponse, NativeTokenRequest, string, AuthToken,
+      string, string, number)
+    uid: '@azure/msal-browser.NativeInteractionClient.cacheNativeTokens'
+    package: '@azure/msal-browser'
+    summary: Stores the access_token and id_token in inmemory storage
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function cacheNativeTokens(response: NativeResponse, request:
+        NativeTokenRequest, homeAccountIdentifier: string, idTokenObj:
+        AuthToken, responseAccessToken: string, tenantId: string, reqTimestamp:
+        number)
+      parameters:
+        - id: response
+          type: <xref uid="@azure/msal-browser.NativeResponse" />
+          description: ''
+        - id: request
+          type: <xref uid="@azure/msal-browser.NativeTokenRequest" />
+          description: ''
+        - id: homeAccountIdentifier
+          type: string
+          description: ''
+        - id: idTokenObj
+          type: AuthToken
+          description: ''
+        - id: responseAccessToken
+          type: string
+          description: ''
+        - id: tenantId
+          type: string
+          description: ''
+        - id: reqTimestamp
+          type: number
+          description: |+
+
+  - name: 'generatePopAccessToken(NativeResponse, NativeTokenRequest)'
+    uid: '@azure/msal-browser.NativeInteractionClient.generatePopAccessToken'
+    package: '@azure/msal-browser'
+    summary: >-
+      If PoP token is requesred, records the PoP token if returned from the WAM,
+      else generates one in the browser
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generatePopAccessToken(response: NativeResponse, request:
+        NativeTokenRequest): Promise<string>
+      parameters:
+        - id: response
+          type: <xref uid="@azure/msal-browser.NativeResponse" />
+          description: |+
+
+        - id: request
+          type: <xref uid="@azure/msal-browser.NativeTokenRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
+  - name: 'generateScopes(NativeResponse, NativeTokenRequest)'
+    uid: '@azure/msal-browser.NativeInteractionClient.generateScopes'
+    package: '@azure/msal-browser'
+    summary: Helper to generate scopes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateScopes(response: NativeResponse, request:
+        NativeTokenRequest): ScopeSet
+      parameters:
+        - id: response
+          type: <xref uid="@azure/msal-browser.NativeResponse" />
+          description: ''
+        - id: request
+          type: <xref uid="@azure/msal-browser.NativeTokenRequest" />
+          description: ''
+      return:
+        description: ''
+        type: ScopeSet
   - name: handleRedirectPromise()
     uid: '@azure/msal-browser.NativeInteractionClient.handleRedirectPromise'
     package: '@azure/msal-browser'
@@ -134,7 +222,6 @@ methods:
       If the previous page called native platform for a token using redirect
       APIs, send the same request again and return the response
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function handleRedirectPromise(): Promise<AuthenticationResult | null>'
@@ -146,7 +233,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Logout from native platform via browser extension
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function logout(): Promise<void>'

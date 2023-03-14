@@ -5,7 +5,6 @@ package: '@azure/msal-react'
 summary: ''
 fullName: MsalAuthenticationResult
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type MsalAuthenticationResult = {

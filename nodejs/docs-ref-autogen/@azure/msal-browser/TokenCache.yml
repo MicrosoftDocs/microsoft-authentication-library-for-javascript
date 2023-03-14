@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: Token cache manager
 fullName: TokenCache
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -40,7 +38,6 @@ properties:
     summary: ''
     fullName: isBrowserEnvironment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isBrowserEnvironment: boolean'
@@ -53,7 +50,6 @@ methods:
     package: '@azure/msal-browser'
     summary: API to load tokens to msal-browser cache.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

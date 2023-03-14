@@ -5,7 +5,6 @@ package: '@azure/msal-react'
 summary: ''
 fullName: MsalAuthenticationProps
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type MsalAuthenticationProps = PropsWithChildren<

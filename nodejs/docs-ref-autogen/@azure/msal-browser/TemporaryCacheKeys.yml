@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: 'Temporary cache keys for MSAL, deleted after any request.'
 fullName: TemporaryCacheKeys
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: ACQUIRE_TOKEN_ACCOUNT
@@ -38,6 +37,10 @@ fields:
     summary: ''
   - name: ORIGIN_URI
     uid: '@azure/msal-browser.TemporaryCacheKeys.ORIGIN_URI'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: REDIRECT_CONTEXT
+    uid: '@azure/msal-browser.TemporaryCacheKeys.REDIRECT_CONTEXT'
     package: '@azure/msal-browser'
     summary: ''
   - name: RENEW_STATUS

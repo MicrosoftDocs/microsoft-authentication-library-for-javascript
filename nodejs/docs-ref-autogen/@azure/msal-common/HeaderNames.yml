@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Request header names
 fullName: HeaderNames
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: AuthenticationInfo
@@ -26,6 +25,10 @@ fields:
     summary: ''
   - name: WWWAuthenticate
     uid: '@azure/msal-common.HeaderNames.WWWAuthenticate'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: X_MS_HTTP_VERSION
+    uid: '@azure/msal-common.HeaderNames.X_MS_HTTP_VERSION'
     package: '@azure/msal-common'
     summary: ''
   - name: X_MS_REQUEST_ID

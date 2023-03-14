@@ -5,22 +5,25 @@ package: '@azure/msal-common'
 summary: Oauth2.0 Authorization Code client
 fullName: AuthorizationCodeClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: AuthorizationCodeClient(ClientConfiguration)
+  - name: 'AuthorizationCodeClient(ClientConfiguration, IPerformanceClient)'
     uid: '@azure/msal-common.AuthorizationCodeClient.constructor'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'new AuthorizationCodeClient(configuration: ClientConfiguration)'
+      content: >-
+        new AuthorizationCodeClient(configuration: ClientConfiguration,
+        performanceClient?: IPerformanceClient)
       parameters:
         - id: configuration
           type: <xref uid="@azure/msal-common.ClientConfiguration" />
+          description: ''
+        - id: performanceClient
+          type: <xref uid="@azure/msal-common.IPerformanceClient" />
           description: ''
 inheritedProperties:
   - name: authority
@@ -29,7 +32,6 @@ inheritedProperties:
     summary: ''
     fullName: authority
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authority: Authority'
@@ -45,7 +47,6 @@ inheritedProperties:
     summary: ''
     fullName: logger
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'logger: Logger'
@@ -56,6 +57,25 @@ inheritedProperties:
       <b>Inherited From</b>
       [BaseClient.logger](xref:@azure/msal-common.BaseClient.logger)
 inheritedMethods:
+  - name: createTokenQueryParameters(BaseAuthRequest)
+    uid: '@azure/msal-common.AuthorizationCodeClient.createTokenQueryParameters'
+    package: '@azure/msal-common'
+    summary: Creates query string for the /token request
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function createTokenQueryParameters(request: BaseAuthRequest): string'
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.BaseAuthRequest" />
+          description: |+
+
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseClient.createTokenQueryParameters](xref:@azure/msal-common.BaseClient.createTokenQueryParameters)
   - name: updateAuthority(Authority)
     uid: '@azure/msal-common.AuthorizationCodeClient.updateAuthority'
     package: '@azure/msal-common'
@@ -63,7 +83,6 @@ inheritedMethods:
       Updates the authority object of the client. Endpoint discovery must be
       completed.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function updateAuthority(updatedAuthority: Authority)'
@@ -85,7 +104,6 @@ methods:
 
       authorization_code_grant
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -123,7 +141,6 @@ methods:
 
       acquireToken(AuthorizationCodeRequest)
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -146,7 +163,6 @@ methods:
 
       Default behaviour is to redirect the user to `window.location.href`.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getLogoutUri(logoutRequest: CommonEndSessionRequest): string'
@@ -166,7 +182,6 @@ methods:
 
       the client to exchange for a token in acquireToken.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Separators used in cache
 fullName: Separators
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: CACHE_KEY_SEPARATOR

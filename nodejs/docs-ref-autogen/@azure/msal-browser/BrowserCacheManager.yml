@@ -11,7 +11,6 @@ summary: >-
   parameters such as state and nonce, generally.
 fullName: BrowserCacheManager
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -20,7 +19,6 @@ constructors:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -45,7 +43,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: returns cache key used for cloud instance metadata
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateAuthorityMetadataCacheKey(authority: string): string'
@@ -67,7 +64,6 @@ inheritedMethods:
       not checking for casing as keys are all generated in lower case, remember
       to convert to lower case if object properties are compared
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -86,7 +82,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Returns all accounts in cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAllAccounts(): AccountInfo[]'
@@ -101,7 +96,6 @@ inheritedMethods:
       retrieve appMetadata matching all provided filters; if no filter is set,
       get all appMetadata
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -121,7 +115,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: retrieve authorityMetadata that contains a matching alias
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -142,7 +135,6 @@ inheritedMethods:
       retrieve credentails matching all provided filters; if no filter is set,
       get all credentials
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -161,7 +153,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Return the family_id value associated  with FOCI
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -184,7 +175,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Retrieve AccessTokenEntity from cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -209,7 +199,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Retrieve AccountEntity from cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -230,7 +219,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Retrieve AccountEntity from cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -249,7 +237,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Retrieve AppMetadataEntity from cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -271,7 +258,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Retrieve the cached credentials into a cacherecord
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -299,7 +285,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Retrieve IdTokenEntity from cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -321,7 +306,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Helper to retrieve the appropriate refresh token from cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -347,7 +331,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: returns a boolean if the given account is removed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeAccount(accountKey: string): Promise<boolean>'
@@ -364,7 +347,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Removes credentials associated with the provided account
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeAccountContext(account: AccountEntity): Promise<boolean>'
@@ -382,7 +364,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Removes all accounts and related tokens from cache.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeAllAccounts(): Promise<boolean>'
@@ -395,7 +376,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Removes all app metadata objects from cache.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeAppMetadata(): boolean'
@@ -408,7 +388,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: returns a boolean if the given credential is removed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -428,7 +407,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: saves a cache record
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function saveCacheRecord(cacheRecord: CacheRecord): Promise<void>'
@@ -446,7 +424,6 @@ inheritedMethods:
     package: '@azure/msal-browser'
     summary: Helper to convert serialized data to object
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function toObject<T>(obj: T, json: object): T'
@@ -468,7 +445,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -491,7 +467,6 @@ methods:
       Used in scenarios where temp cache needs to be cleaned but state is not
       known, such as clicking browser back button.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function cleanRequestByInteractionType(interactionType: InteractionType)'
@@ -505,7 +480,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Removes temporary cache for the provided state
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function cleanRequestByState(stateString: string)'
@@ -519,7 +493,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Clears all cache entries created by MSAL.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function clear(): Promise<void>'
@@ -531,7 +504,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Clear an item in the cookies by key
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function clearItemCookie(cookieName: string)'
@@ -547,7 +519,6 @@ methods:
       Clear all msal-related cookies currently set in the browser. Should only
       be used to clear temporary cache items.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function clearMsalCookies()
@@ -556,7 +527,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Checks whether key is in cache.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function containsKey(key: string): boolean'
@@ -573,7 +543,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Create authorityKey to cache authority
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateAuthorityKey(stateString: string): string'
@@ -592,7 +561,6 @@ methods:
       (defined schemas do not need the key appended: AccessToken Keys or the
       upcoming schema)
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateCacheKey(key: string): string'
@@ -608,7 +576,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Create Nonce key to cache nonce
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateNonceKey(stateString: string): string'
@@ -624,7 +591,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Creates full cache key for the request state
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateStateKey(stateString: string): string'
@@ -641,7 +607,6 @@ methods:
     package: '@azure/msal-browser'
     summary: generates accessToken entity from a string
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -659,7 +624,6 @@ methods:
     package: '@azure/msal-browser'
     summary: fetch the account entity from the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAccount(accountKey: string): AccountEntity | null'
@@ -678,7 +642,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Gets a list of accounts that match all of the filters provided
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -696,7 +659,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Checks the cache for accounts matching loginHint or SID
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -718,7 +680,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Gets the active account
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getActiveAccount(): AccountInfo | null'
@@ -730,7 +691,6 @@ methods:
     package: '@azure/msal-browser'
     summary: fetch appMetadata entity from the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -749,7 +709,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -767,7 +726,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAuthorityMetadataKeys(): Array<string>'
@@ -779,7 +737,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Gets the cache object referenced by the browser
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCache(): object'
@@ -793,7 +750,6 @@ methods:
       Gets the cached authority based on the cached state. Returns empty if no
       cached state found.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCachedAuthority(cachedState: string): string | null'
@@ -809,7 +765,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Gets cached native request for redirect flows
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCachedNativeRequest(): NativeTokenRequest | null'
@@ -823,7 +778,6 @@ methods:
       Gets the token exchange parameters from the cache. Throws an error if
       nothing is found.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -844,7 +798,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Get cookie expiration time
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCookieExpirationTime(cookieLifeDays: number): string'
@@ -861,7 +814,6 @@ methods:
     package: '@azure/msal-browser'
     summary: generates idToken entity from a string
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getIdTokenCredential(idTokenKey: string): IdTokenEntity | null'
@@ -878,7 +830,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getInteractionInProgress(): string | null'
@@ -890,7 +841,6 @@ methods:
     package: '@azure/msal-browser'
     summary: fetches the entry from the browser storage based off the key
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getItem(key: string): string | null'
@@ -907,7 +857,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Get one item by key from cookies
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getItemCookie(cookieName: string): string'
@@ -924,7 +873,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Gets all keys in window.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getKeys(): string[]'
@@ -936,10 +884,22 @@ methods:
     package: '@azure/msal-browser'
     summary: Returns username retrieved from ADAL or MSAL v1 idToken
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getLegacyLoginHint(): string | null'
+      return:
+        description: ''
+        type: string | null
+  - name: getRedirectRequestContext()
+    uid: '@azure/msal-browser.BrowserCacheManager.getRedirectRequestContext'
+    package: '@azure/msal-browser'
+    summary: >-
+      Returns application id as redirect context during AcquireTokenRedirect
+      flow.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getRedirectRequestContext(): string | null'
       return:
         description: ''
         type: string | null
@@ -948,7 +908,6 @@ methods:
     package: '@azure/msal-browser'
     summary: generates refreshToken entity from a string
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -967,7 +926,6 @@ methods:
     package: '@azure/msal-browser'
     summary: fetch server telemetry entity from the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -988,7 +946,6 @@ methods:
       Gets cache item with given key.
       Will retrieve from cookies if storeAuthStateInCookie is set to true.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1009,7 +966,6 @@ methods:
     package: '@azure/msal-browser'
     summary: fetch throttling entity from the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1028,7 +984,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Returns wrapper metadata from in-memory storage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getWrapperMetadata(): [string, string]'
@@ -1040,7 +995,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function isInteractionInProgress(matchClientId?: boolean): boolean'
@@ -1058,7 +1012,6 @@ methods:
       Removes the cache item with the given key.
       Will also clear the cookie item if storeAuthStateInCookie is set to true.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeItem(key: string): boolean'
@@ -1075,7 +1028,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Reset all temporary cache items
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function resetRequestCache(state: string)'
@@ -1089,7 +1041,6 @@ methods:
     package: '@azure/msal-browser'
     summary: set accessToken credential to the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setAccessTokenCredential(accessToken: AccessTokenEntity)'
@@ -1103,7 +1054,6 @@ methods:
     package: '@azure/msal-browser'
     summary: set account entity in the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setAccount(account: AccountEntity)'
@@ -1116,7 +1066,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Sets the active account's localAccountId in cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setActiveAccount(account: AccountInfo | null)'
@@ -1130,7 +1079,6 @@ methods:
     package: '@azure/msal-browser'
     summary: set appMetadata entity to the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setAppMetadata(appMetadata: AppMetadataEntity)'
@@ -1144,7 +1092,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1165,7 +1112,6 @@ methods:
       interface compat, we cannot overwrite browser cache; Functionality is
       supported by individual entities in browser
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function setCache()
@@ -1174,7 +1120,6 @@ methods:
     package: '@azure/msal-browser'
     summary: set IdToken credential to the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setIdTokenCredential(idToken: IdTokenEntity)'
@@ -1188,7 +1133,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setInteractionInProgress(inProgress: boolean)'
@@ -1201,7 +1145,6 @@ methods:
     package: '@azure/msal-browser'
     summary: sets the entry in the browser storage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setItem(key: string, value: string)'
@@ -1218,7 +1161,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Add value to cookies
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1235,12 +1177,26 @@ methods:
           type: number
           description: |+
 
+  - name: setRedirectRequestContext(string)
+    uid: '@azure/msal-browser.BrowserCacheManager.setRedirectRequestContext'
+    package: '@azure/msal-browser'
+    summary: >-
+      Sets application id as the redirect context during AcquireTokenRedirect
+      flow.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setRedirectRequestContext(value: string)'
+      parameters:
+        - id: value
+          type: string
+          description: |+
+
   - name: setRefreshTokenCredential(RefreshTokenEntity)
     uid: '@azure/msal-browser.BrowserCacheManager.setRefreshTokenCredential'
     package: '@azure/msal-browser'
     summary: set refreshToken credential to the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setRefreshTokenCredential(refreshToken: RefreshTokenEntity)'
@@ -1254,7 +1210,6 @@ methods:
     package: '@azure/msal-browser'
     summary: set server telemetry entity to the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1276,7 +1231,6 @@ methods:
       Stores in cookie if storeAuthStateInCookie is set to true.
       This can cause cookie overflow if used incorrectly.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1298,7 +1252,6 @@ methods:
     package: '@azure/msal-browser'
     summary: set throttling entity to the platform cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1317,7 +1270,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Sets wrapper metadata in memory
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setWrapperMetadata(wrapperSKU: string, wrapperVersion: string)'
@@ -1334,7 +1286,6 @@ methods:
     package: '@azure/msal-browser'
     summary: 'Updates account, authority, and state in cache'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1363,7 +1314,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Updates a credential's cache key if the current cache key is outdated
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Protocol modes supported by MSAL.
 fullName: ProtocolMode
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: AAD

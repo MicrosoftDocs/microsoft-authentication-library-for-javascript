@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: EventMessage
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type EventMessage = {

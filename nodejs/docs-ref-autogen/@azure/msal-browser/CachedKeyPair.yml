@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: CachedKeyPair
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type CachedKeyPair = {

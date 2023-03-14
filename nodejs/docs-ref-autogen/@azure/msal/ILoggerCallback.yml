@@ -5,6 +5,5 @@ package: '@azure/msal'
 summary: ''
 fullName: ILoggerCallback
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface

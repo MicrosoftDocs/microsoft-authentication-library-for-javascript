@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: Properties returned under "properties" of the NativeResponse
 fullName: NativeResponseProperties
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type NativeResponseProperties = { MATS?: string }

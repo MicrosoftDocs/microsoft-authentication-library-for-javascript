@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: Utility class for browser specific functions
 fullName: BrowserUtils
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 methods:
@@ -14,7 +13,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Block redirectUri loaded in popup from calling AcquireToken APIs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: static function blockAcquireTokenInPopups()
@@ -25,7 +23,6 @@ methods:
       Throws error if native brokering is enabled but initialize hasn't been
       called
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -45,7 +42,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Throws error if token requests are made in non-browser environment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -61,7 +57,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Block redirect operations in iframes unless explicitly allowed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -82,7 +77,6 @@ methods:
       Throws error if we have completed an auth and are
       attempting another auth request inside an iframe.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: static function blockReloadInHiddenIframes()
@@ -91,7 +85,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Clears hash from window url.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function clearHash(contentWindow: Window)'
@@ -106,7 +99,6 @@ methods:
       Returns boolean of whether current browser is an Internet Explorer or Edge
       browser.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function detectIEOrEdge(): boolean'
@@ -118,7 +110,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Returns best compatible network client object.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function getBrowserNetworkClient(): INetworkModule'
@@ -130,7 +121,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Returns current window URL as redirect uri
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function getCurrentUri(): string'
@@ -142,7 +132,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Gets the homepage url for the current window location.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function getHomepage(): string'
@@ -154,7 +143,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Returns boolean of whether the current window is in an iframe or not.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function isInIframe(): boolean'
@@ -168,7 +156,6 @@ methods:
       Returns boolean of whether or not the current window is a popup opened by
       msal
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function isInPopup(): boolean'
@@ -180,7 +167,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Replaces current hash with hash from provided url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function replaceHash(url: string)'

@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: INavigationClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
@@ -16,7 +15,6 @@ methods:
       Navigates to other pages outside the web application i.e. the Identity
       Provider
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -42,7 +40,6 @@ methods:
       Return false if this doesn't cause the page to reload i.e. Client-side
       navigation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

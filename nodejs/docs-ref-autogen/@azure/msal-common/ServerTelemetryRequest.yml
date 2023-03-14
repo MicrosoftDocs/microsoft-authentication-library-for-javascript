@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: ''
 fullName: ServerTelemetryRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type ServerTelemetryRequest = {

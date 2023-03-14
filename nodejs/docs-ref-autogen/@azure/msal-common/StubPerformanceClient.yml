@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: ''
 fullName: StubPerformanceClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -18,7 +17,6 @@ constructors:
       Creates an instance of PerformanceClient,
       an abstract class containing core performance telemetry logic.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -51,7 +49,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Registers a callback function to receive performance events.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -72,7 +69,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Saves extra information to be emitted when the measurements are flushed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function addStaticFields(fields: StaticFields, correlationId: string)'
@@ -92,7 +88,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Removes measurements for a given correlation id.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function discardMeasurements(correlationId: string)'
@@ -109,7 +104,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Emits events to all registered callbacks.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function emitEvents(events: PerformanceEvent[], correlationId: string)'
@@ -123,7 +117,7 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [PerformanceClient.emitEvents](xref:@azure/msal-common.PerformanceClient.emitEvents)
-  - name: endMeasurement(PerformanceEvent)
+  - name: 'endMeasurement(PerformanceEvent, IPerformanceMeasurement)'
     uid: '@azure/msal-common.StubPerformanceClient.endMeasurement'
     package: '@azure/msal-common'
     summary: >-
@@ -131,16 +125,23 @@ inheritedMethods:
       directly by PerformanceClient classes,
 
       as consumers should instead use the function returned by startMeasurement.
+
+      Adds a new field named as "[event name]DurationMs" for sub-measurements,
+      completes and emits an event
+
+      otherwise.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function endMeasurement(event: PerformanceEvent): PerformanceEvent |
-        null
+        function endMeasurement(event: PerformanceEvent, measurement?:
+        IPerformanceMeasurement): PerformanceEvent | null
       parameters:
         - id: event
           type: <xref uid="@azure/msal-common.PerformanceEvent" />
+          description: ''
+        - id: measurement
+          type: <xref uid="@azure/msal-common.IPerformanceMeasurement" />
           description: ''
       return:
         description: ''
@@ -148,36 +149,69 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [PerformanceClient.endMeasurement](xref:@azure/msal-common.PerformanceClient.endMeasurement)
-  - name: 'flushMeasurements(PerformanceEvents, string)'
-    uid: '@azure/msal-common.StubPerformanceClient.flushMeasurements'
+  - name: getIntFields()
+    uid: '@azure/msal-common.StubPerformanceClient.getIntFields'
     package: '@azure/msal-common'
-    summary: >-
-      Gathers and emits performance events for measurements taked for the given
-      top-level API and correlation ID.
+    summary: |-
+      Get integral fields.
+      Override to change the set.
     remarks: ''
-    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getIntFields(): ReadonlySet<string>'
+      return:
+        description: ''
+        type: ReadonlySet&lt;string&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [PerformanceClient.getIntFields](xref:@azure/msal-common.PerformanceClient.getIntFields)
+  - name: 'getPreQueueTime(PerformanceEvents, string)'
+    uid: '@azure/msal-common.StubPerformanceClient.getPreQueueTime'
+    package: '@azure/msal-common'
+    summary: Gets map of pre-queue times by correlation Id
+    remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function flushMeasurements(measureName: PerformanceEvents,
-        correlationId: string)
+        function getPreQueueTime(eventName: PerformanceEvents, correlationId:
+        string): number | void
       parameters:
-        - id: measureName
+        - id: eventName
           type: <xref uid="@azure/msal-common.PerformanceEvents" />
           description: ''
         - id: correlationId
           type: string
-          description: |+
-
+          description: ''
+      return:
+        description: ''
+        type: number | void
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [PerformanceClient.flushMeasurements](xref:@azure/msal-common.PerformanceClient.flushMeasurements)
+      [PerformanceClient.getPreQueueTime](xref:@azure/msal-common.PerformanceClient.getPreQueueTime)
+  - name: 'increment(Counters, string)'
+    uid: '@azure/msal-common.StubPerformanceClient.increment'
+    package: '@azure/msal-common'
+    summary: Increment counters to be emitted when the measurements are flushed
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function increment(counters: Counters, correlationId: string)'
+      parameters:
+        - id: counters
+          type: <xref uid="@azure/msal-common.Counters" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: |
+            correlation identifier
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [PerformanceClient.increment](xref:@azure/msal-common.PerformanceClient.increment)
   - name: removePerformanceCallback(string)
     uid: '@azure/msal-common.StubPerformanceClient.removePerformanceCallback'
     package: '@azure/msal-common'
     summary: Removes a callback registered with addPerformanceCallback.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removePerformanceCallback(callbackId: string): boolean'
@@ -198,7 +232,6 @@ inheritedMethods:
       Starts measuring performance for a given operation. Returns a function
       that should be used to end the measurement.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -218,27 +251,93 @@ inheritedMethods:
       <b>Inherited From</b>
       [PerformanceClient.startMeasurement](xref:@azure/msal-common.PerformanceClient.startMeasurement)
 methods:
+  - name: 'addQueueMeasurement(PerformanceEvents, string, number)'
+    uid: '@azure/msal-common.StubPerformanceClient.addQueueMeasurement'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addQueueMeasurement(eventName: PerformanceEvents,
+        correlationId: string, queueTime: number)
+      parameters:
+        - id: eventName
+          type: <xref uid="@azure/msal-common.PerformanceEvents" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+        - id: queueTime
+          type: number
+          description: ''
+  - name: 'calculateQueuedTime(number, number)'
+    uid: '@azure/msal-common.StubPerformanceClient.calculateQueuedTime'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function calculateQueuedTime(preQueueTime: number, currentTime: number):
+        number
+      parameters:
+        - id: preQueueTime
+          type: number
+          description: ''
+        - id: currentTime
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: number
   - name: generateId()
     uid: '@azure/msal-common.StubPerformanceClient.generateId'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateId(): string'
       return:
         description: ''
         type: string
+  - name: 'setPreQueueTime(PerformanceEvents, string | undefined)'
+    uid: '@azure/msal-common.StubPerformanceClient.setPreQueueTime'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function setPreQueueTime(eventName: PerformanceEvents, correlationId?:
+        string | undefined)
+      parameters:
+        - id: eventName
+          type: <xref uid="@azure/msal-common.PerformanceEvents" />
+          description: ''
+        - id: correlationId
+          type: string | undefined
+          description: ''
   - name: startPerformanceMeasuremeant()
     uid: '@azure/msal-common.StubPerformanceClient.startPerformanceMeasuremeant'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function startPerformanceMeasuremeant(): IPerformanceMeasurement'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.IPerformanceMeasurement" />
+  - name: startPerformanceMeasurement()
+    uid: '@azure/msal-common.StubPerformanceClient.startPerformanceMeasurement'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function startPerformanceMeasurement(): IPerformanceMeasurement'
       return:
         description: ''
         type: <xref uid="@azure/msal-common.IPerformanceMeasurement" />

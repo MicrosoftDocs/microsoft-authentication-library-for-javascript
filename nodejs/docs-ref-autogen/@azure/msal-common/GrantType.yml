@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: allowed grant_type
 fullName: GrantType
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: AUTHORIZATION_CODE_GRANT

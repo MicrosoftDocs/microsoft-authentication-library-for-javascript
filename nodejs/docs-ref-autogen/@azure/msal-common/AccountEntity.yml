@@ -30,7 +30,6 @@ summary: >
   }
 fullName: AccountEntity
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 properties:
@@ -40,7 +39,6 @@ properties:
     summary: ''
     fullName: authorityType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authorityType: string'
@@ -53,7 +51,6 @@ properties:
     summary: ''
     fullName: clientInfo
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'clientInfo?: string'
@@ -66,7 +63,6 @@ properties:
     summary: ''
     fullName: cloudGraphHostName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'cloudGraphHostName?: string'
@@ -79,7 +75,6 @@ properties:
     summary: ''
     fullName: environment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'environment: string'
@@ -92,7 +87,6 @@ properties:
     summary: ''
     fullName: homeAccountId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'homeAccountId: string'
@@ -105,7 +99,6 @@ properties:
     summary: ''
     fullName: idTokenClaims
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'idTokenClaims?: TokenClaims'
@@ -118,7 +111,6 @@ properties:
     summary: ''
     fullName: lastModificationApp
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastModificationApp?: string'
@@ -131,7 +123,6 @@ properties:
     summary: ''
     fullName: lastModificationTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastModificationTime?: string'
@@ -144,7 +135,6 @@ properties:
     summary: ''
     fullName: localAccountId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'localAccountId: string'
@@ -157,7 +147,6 @@ properties:
     summary: ''
     fullName: msGraphHost
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'msGraphHost?: string'
@@ -170,7 +159,6 @@ properties:
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name?: string'
@@ -183,7 +171,6 @@ properties:
     summary: ''
     fullName: nativeAccountId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'nativeAccountId?: string'
@@ -196,7 +183,6 @@ properties:
     summary: ''
     fullName: realm
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'realm: string'
@@ -209,7 +195,6 @@ properties:
     summary: ''
     fullName: username
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'username: string'
@@ -224,7 +209,6 @@ methods:
       Helper function to determine whether 2 accountInfo objects represent the
       same account
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -254,7 +238,6 @@ methods:
       Build Account cache from IdToken, clientInfo and authority/policy.
       Associated with AAD.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -295,7 +278,6 @@ methods:
     package: '@azure/msal-common'
     summary: Builds non-AAD/ADFS account.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -330,7 +312,6 @@ methods:
     package: '@azure/msal-common'
     summary: Generates account key from interface
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -351,7 +332,6 @@ methods:
       Generate Account Id key component as per the schema:
       <home_account_id>-<environment>
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateAccountId(): string'
@@ -365,7 +345,6 @@ methods:
       Generate Account Cache Key as per the schema:
       <home_account_id>-<environment>-<realm*>
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateAccountKey(): string'
@@ -377,7 +356,6 @@ methods:
     package: '@azure/msal-common'
     summary: Generate HomeAccountId from server response
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -409,7 +387,6 @@ methods:
     package: '@azure/msal-common'
     summary: returns the type of the cache (in this case account)
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateType(): number'
@@ -421,7 +398,6 @@ methods:
     package: '@azure/msal-common'
     summary: Returns the AccountInfo interface for this account.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAccountInfo(): AccountInfo'
@@ -433,7 +409,6 @@ methods:
     package: '@azure/msal-common'
     summary: 'Validates an entity: checks for all expected params'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function isAccountEntity(entity: object): boolean'

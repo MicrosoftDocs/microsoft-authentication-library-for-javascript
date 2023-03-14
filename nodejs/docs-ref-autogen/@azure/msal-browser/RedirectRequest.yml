@@ -74,7 +74,6 @@ summary: >
   will navigate to. Returning false in the callback will stop navigation.
 fullName: RedirectRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type RedirectRequest = Partial<

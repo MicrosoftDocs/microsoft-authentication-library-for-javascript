@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: Use this to configure the auth options in the Configuration object
 fullName: BrowserAuthOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type BrowserAuthOptions = {

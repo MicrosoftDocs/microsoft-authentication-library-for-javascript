@@ -31,7 +31,6 @@ summary: >-
   - nativeAccountId        - The user's native account ID
 fullName: AccountInfo
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: >-
   type AccountInfo = { environment: string, homeAccountId: string, idToken?:

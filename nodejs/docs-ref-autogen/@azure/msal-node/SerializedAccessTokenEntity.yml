@@ -5,7 +5,6 @@ package: '@azure/msal-node'
 summary: Access token credential type
 fullName: SerializedAccessTokenEntity
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type SerializedAccessTokenEntity = {
@@ -24,4 +23,5 @@ syntax: |
     secret: string,
     target: string,
     token_type?: string,
+    userAssertionHash?: string,
   }

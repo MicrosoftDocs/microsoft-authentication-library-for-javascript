@@ -5,7 +5,6 @@ package: '@azure/msal-angular'
 summary: ''
 fullName: MsalBroadcastService
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -16,7 +15,6 @@ constructors:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -40,7 +38,6 @@ properties:
     summary: ''
     fullName: inProgress$
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'inProgress$: Observable<InteractionStatus>'
@@ -53,7 +50,6 @@ properties:
     summary: ''
     fullName: msalSubject$
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'msalSubject$: Observable<EventMessage>'

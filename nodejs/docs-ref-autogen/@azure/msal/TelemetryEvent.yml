@@ -5,7 +5,6 @@ package: '@azure/msal'
 summary: ''
 fullName: TelemetryEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -37,7 +35,6 @@ properties:
     summary: ''
     fullName: displayName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'displayName: string'
@@ -50,7 +47,6 @@ properties:
     summary: ''
     fullName: eventId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'eventId: string'
@@ -63,7 +59,6 @@ properties:
     summary: ''
     fullName: eventName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'eventName: string'
@@ -76,7 +71,6 @@ properties:
     summary: ''
     fullName: key
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'key: string'
@@ -89,7 +83,6 @@ properties:
     summary: ''
     fullName: telemetryCorrelationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'telemetryCorrelationId: string'
@@ -102,7 +95,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function get(): object'
@@ -114,7 +106,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function start()
@@ -123,7 +114,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function stop()

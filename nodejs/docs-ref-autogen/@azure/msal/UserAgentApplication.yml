@@ -9,7 +9,6 @@ summary: >
   functions
 fullName: UserAgentApplication
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -18,7 +17,6 @@ constructors:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new UserAgentApplication(configuration: Configuration)'
@@ -34,7 +32,6 @@ properties:
     summary: Method to manage the authority URL.
     fullName: authority
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authority: string'
@@ -49,7 +46,6 @@ methods:
       Use when you want to obtain an access_token for your API via opening a
       popup window in the user's browser
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -72,7 +68,6 @@ methods:
       Use when you want to obtain an access_token for your API by redirecting
       the user's browser window to the authorization endpoint.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function acquireTokenRedirect(userRequest: AuthenticationParameters)'
@@ -92,7 +87,6 @@ methods:
       Or it send's a request to the STS to obtain a new token using a hidden
       iframe.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -116,7 +110,6 @@ methods:
       (the account object is created at the time of successful login)
       or null when no state is found
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAccount(): Account'
@@ -130,7 +123,6 @@ methods:
       Use to get a list of unique accounts in MSAL cache based on
       homeAccountIdentifier.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAllAccounts(): Array<Account>'
@@ -142,7 +134,6 @@ methods:
     package: '@azure/msal'
     summary: Get the current authority instance from the MSAL configuration object
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAuthorityInstance(): Authority'
@@ -154,7 +145,6 @@ methods:
     package: '@azure/msal'
     summary: 'Use to get the current <xref:@azure/msal.Configuration> object in MSAL'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCurrentConfiguration(): Configuration'
@@ -166,7 +156,6 @@ methods:
     package: '@azure/msal'
     summary: Return boolean flag to developer to help inform if login is in progress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getLoginInProgress(): boolean'
@@ -182,7 +171,6 @@ methods:
       Evaluates postLogoutredirectUri if its a function, otherwise simply
       returns its value.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getPostLogoutRedirectUri(): string'
@@ -198,7 +186,6 @@ methods:
       Evaluates redirectUri if its a function, otherwise simply returns its
       value.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getRedirectUri(reqRedirectUri?: string): string'
@@ -216,7 +203,6 @@ methods:
       Use when initiating the login process via opening a popup window in the
       user's browser
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -239,7 +225,6 @@ methods:
       Use when initiating the login process by redirecting the user's browser to
       the authorization endpoint.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function loginRedirect(userRequest?: AuthenticationParameters)'
@@ -256,7 +241,6 @@ methods:
 
       Default behaviour is to redirect the user to `window.location.href`.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function logout(correlationId?: string)'
@@ -269,7 +253,6 @@ methods:
     package: '@azure/msal'
     summary: Sets the logger callback.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setLogger(logger: Logger)'
@@ -285,7 +268,6 @@ methods:
       API interfacing idToken request when applications already have a
       session/hint acquired by authorization client applications
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -304,7 +286,6 @@ methods:
     package: '@azure/msal'
     summary: Public API to verify if the URL contains the hash with known properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function urlContainsHash(hash: string): boolean'

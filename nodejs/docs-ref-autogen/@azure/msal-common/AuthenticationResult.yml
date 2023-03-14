@@ -37,7 +37,6 @@ summary: >-
   - requestId              - Request ID returned as part of the response
 fullName: AuthenticationResult
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AuthenticationResult = {

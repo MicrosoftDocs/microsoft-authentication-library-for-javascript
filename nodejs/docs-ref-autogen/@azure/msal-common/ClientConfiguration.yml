@@ -27,7 +27,6 @@ summary: >
   - clientCredentials          - Credentials options for confidential clients
 fullName: ClientConfiguration
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type ClientConfiguration = {

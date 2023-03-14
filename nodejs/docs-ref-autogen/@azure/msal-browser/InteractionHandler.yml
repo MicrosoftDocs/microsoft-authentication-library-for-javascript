@@ -7,24 +7,23 @@ summary: >-
   class.
 fullName: InteractionHandler
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
   - name: >-
       InteractionHandler(AuthorizationCodeClient, BrowserCacheManager,
-      CommonAuthorizationCodeRequest, Logger)
+      CommonAuthorizationCodeRequest, Logger, IPerformanceClient)
     uid: '@azure/msal-browser.InteractionHandler.constructor'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         new InteractionHandler(authCodeModule: AuthorizationCodeClient,
         storageImpl: BrowserCacheManager, authCodeRequest:
-        CommonAuthorizationCodeRequest, logger: Logger)
+        CommonAuthorizationCodeRequest, logger: Logger, performanceClient:
+        IPerformanceClient)
       parameters:
         - id: authCodeModule
           type: AuthorizationCodeClient
@@ -38,13 +37,15 @@ constructors:
         - id: logger
           type: Logger
           description: ''
+        - id: performanceClient
+          type: IPerformanceClient
+          description: ''
 methods:
   - name: 'handleCodeResponseFromHash(string, string, Authority, INetworkModule)'
     uid: '@azure/msal-browser.InteractionHandler.handleCodeResponseFromHash'
     package: '@azure/msal-browser'
     summary: Function to handle response parameters from hash.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -75,7 +76,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Process auth code response from AAD
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

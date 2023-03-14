@@ -5,7 +5,6 @@ package: '@azure/msal'
 summary: ''
 fullName: WindowUtils
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 methods:
@@ -14,7 +13,6 @@ methods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function checkIfBackButtonIsPressed(cacheStorage: AuthCache)'
@@ -28,7 +26,6 @@ methods:
     package: '@azure/msal'
     summary: Removes url fragment from browser url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: static function clearUrlFragment()

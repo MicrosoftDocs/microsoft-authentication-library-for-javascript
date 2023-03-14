@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Account types in Cache
 fullName: CacheAccountType
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: ADFS_ACCOUNT_TYPE

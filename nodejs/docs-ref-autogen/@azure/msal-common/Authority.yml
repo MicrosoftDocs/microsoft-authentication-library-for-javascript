@@ -10,24 +10,22 @@ summary: >-
   during token calls.
 fullName: Authority
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
   - name: >-
       Authority(string, INetworkModule, ICacheManager, AuthorityOptions, Logger,
-      string)
+      IPerformanceClient, string)
     uid: '@azure/msal-common.Authority.constructor'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         new Authority(authority: string, networkInterface: INetworkModule,
         cacheManager: ICacheManager, authorityOptions: AuthorityOptions, logger:
-        Logger, proxyUrl?: string)
+        Logger, performanceClient?: IPerformanceClient, correlationId?: string)
       parameters:
         - id: authority
           type: string
@@ -44,7 +42,10 @@ constructors:
         - id: logger
           type: <xref uid="@azure/msal-common.Logger" />
           description: ''
-        - id: proxyUrl
+        - id: performanceClient
+          type: <xref uid="@azure/msal-common.IPerformanceClient" />
+          description: ''
+        - id: correlationId
           type: string
           description: ''
 properties:
@@ -54,7 +55,6 @@ properties:
     summary: ''
     fullName: authorityType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: AuthorityType authorityType
@@ -67,7 +67,6 @@ properties:
     summary: OAuth /authorize endpoint for requests
     fullName: authorizationEndpoint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: string authorizationEndpoint
@@ -82,7 +81,6 @@ properties:
       Sets canonical authority.
     fullName: canonicalAuthority
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: string canonicalAuthority
@@ -95,7 +93,6 @@ properties:
     summary: Get authority components.
     fullName: canonicalAuthorityUrlComponents
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: IUri canonicalAuthorityUrlComponents
@@ -108,7 +105,6 @@ properties:
     summary: ''
     fullName: deviceCodeEndpoint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: string deviceCodeEndpoint
@@ -121,7 +117,6 @@ properties:
     summary: OAuth logout endpoint for requests
     fullName: endSessionEndpoint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: string endSessionEndpoint
@@ -134,7 +129,6 @@ properties:
     summary: Get hostname and port i.e. login.microsoftonline.com
     fullName: hostnameAndPort
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: string hostnameAndPort
@@ -147,7 +141,6 @@ properties:
     summary: Jwks_uri for token signing keys
     fullName: jwksUri
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: string jwksUri
@@ -162,7 +155,6 @@ properties:
       authority instance
     fullName: options
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: AuthorityOptions options
@@ -175,7 +167,6 @@ properties:
     summary: ProtocolMode enum representing the way endpoints are constructed.
     fullName: protocolMode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: ProtocolMode protocolMode
@@ -188,7 +179,6 @@ properties:
     summary: ''
     fullName: regionDiscoveryMetadata
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'regionDiscoveryMetadata: RegionDiscoveryMetadata'
@@ -201,7 +191,6 @@ properties:
     summary: OAuth issuer for requests
     fullName: selfSignedJwtAudience
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: string selfSignedJwtAudience
@@ -214,7 +203,6 @@ properties:
     summary: Get tenant for authority.
     fullName: tenant
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: string tenant
@@ -227,7 +215,6 @@ properties:
     summary: OAuth /token endpoint for requests
     fullName: tokenEndpoint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: string tokenEndpoint
@@ -240,7 +227,6 @@ methods:
     package: '@azure/msal-common'
     summary: Rebuild the authority string with the region
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -265,7 +251,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates cloud discovery metadata object from a given host
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -284,7 +269,6 @@ methods:
     package: '@azure/msal-common'
     summary: Boolean that returns whethr or not tenant discovery has been completed.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function discoveryComplete(): boolean'
@@ -296,7 +280,6 @@ methods:
     package: '@azure/msal-common'
     summary: helper function to populate the authority based on azureCloudOptions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -322,7 +305,6 @@ methods:
       Searches instance discovery network response for the entry that contains
       the host in the aliases list
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -345,7 +327,6 @@ methods:
     package: '@azure/msal-common'
     summary: helper function to generate environment from authority object
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getPreferredCache(): string'
@@ -359,7 +340,6 @@ methods:
       Returns whether or not the provided host is an alias of this authority
       instance
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function isAlias(host: string): boolean'
@@ -376,7 +356,6 @@ methods:
     package: '@azure/msal-common'
     summary: Checks whether the provided host is that of a public cloud authority
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function isPublicCloudAuthority(host: string): boolean'
@@ -394,7 +373,6 @@ methods:
       Replace the endpoints in the metadata object with their regional
       equivalents.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -420,7 +398,6 @@ methods:
 
       and the /authorize, /token and logout endpoints.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function resolveEndpointsAsync(): Promise<void>'

@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Response returned after processing the code response query string or fragment.
 fullName: AuthorizationCodePayload
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AuthorizationCodePayload = {

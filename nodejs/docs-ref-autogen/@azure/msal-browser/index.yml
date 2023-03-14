@@ -7,30 +7,17 @@ classes:
   - '@azure/msal-browser.ClientApplication'
   - '@azure/msal-browser.PublicClientApplication'
   - '@azure/msal-browser.NativeMessageHandler'
-  - '@azure/msal-browser.AsyncMemoryStorage'
   - '@azure/msal-browser.BrowserCacheManager'
-  - '@azure/msal-browser.BrowserStorage'
-  - '@azure/msal-browser.CryptoKeyStore'
-  - '@azure/msal-browser.DatabaseStorage'
   - '@azure/msal-browser.MemoryStorage'
   - '@azure/msal-browser.TokenCache'
-  - '@azure/msal-browser.BrowserCrypto'
   - '@azure/msal-browser.CryptoOps'
-  - '@azure/msal-browser.GuidGenerator'
-  - '@azure/msal-browser.ModernBrowserCrypto'
-  - '@azure/msal-browser.MsBrowserCrypto'
-  - '@azure/msal-browser.MsrBrowserCrypto'
-  - '@azure/msal-browser.PkceGenerator'
   - '@azure/msal-browser.SignedHttpRequest'
-  - '@azure/msal-browser.Base64Decode'
-  - '@azure/msal-browser.Base64Encode'
   - '@azure/msal-browser.BrowserAuthError'
   - '@azure/msal-browser.BrowserConfigurationAuthError'
   - '@azure/msal-browser.NativeAuthError'
   - '@azure/msal-browser.EventHandler'
   - '@azure/msal-browser.EventMessageUtils'
   - '@azure/msal-browser.BaseInteractionClient'
-  - '@azure/msal-browser.HybridSpaAuthorizationCodeClient'
   - '@azure/msal-browser.NativeInteractionClient'
   - '@azure/msal-browser.PopupClient'
   - '@azure/msal-browser.RedirectClient'
@@ -41,22 +28,15 @@ classes:
   - '@azure/msal-browser.StandardInteractionClient'
   - '@azure/msal-browser.InteractionHandler'
   - '@azure/msal-browser.RedirectHandler'
-  - '@azure/msal-browser.SilentHandler'
   - '@azure/msal-browser.NavigationClient'
-  - '@azure/msal-browser.FetchClient'
-  - '@azure/msal-browser.XhrClient'
   - '@azure/msal-browser.BrowserPerformanceClient'
   - '@azure/msal-browser.BrowserPerformanceMeasurement'
   - '@azure/msal-browser.BrowserProtocolUtils'
-  - '@azure/msal-browser.BrowserStringUtils'
   - '@azure/msal-browser.BrowserUtils'
-  - '@azure/msal-browser.MathUtils'
 interfaces:
   - '@azure/msal-browser.IPublicClientApplication'
-  - '@azure/msal-browser.IAsyncStorage'
   - '@azure/msal-browser.ITokenCache'
   - '@azure/msal-browser.IWindowStorage'
-  - '@azure/msal-browser.ISubtleCrypto'
   - '@azure/msal-browser.INavigationClient'
 typeAliases:
   - '@azure/msal-browser.NativeExtensionRequest'
@@ -98,20 +78,6 @@ typeAliases:
   - '@azure/msal-browser.SilentRequest'
   - '@azure/msal-browser.SsoSilentRequest'
   - '@azure/msal-browser.BrowserStateObject'
-enums:
-  - '@azure/msal-browser.CryptoKeyStoreNames'
-  - '@azure/msal-browser.NativeStatusCode'
-  - '@azure/msal-browser.EventType'
-  - '@azure/msal-browser.ApiId'
-  - '@azure/msal-browser.BrowserCacheLocation'
-  - '@azure/msal-browser.CacheLookupPolicy'
-  - '@azure/msal-browser.HTTP_REQUEST_TYPE'
-  - '@azure/msal-browser.InMemoryCacheKeys'
-  - '@azure/msal-browser.InteractionStatus'
-  - '@azure/msal-browser.InteractionType'
-  - '@azure/msal-browser.NativeExtensionMethod'
-  - '@azure/msal-browser.TemporaryCacheKeys'
-  - '@azure/msal-browser.WrapperSKU'
 functions:
   - name: >-
       buildConfiguration({ userInputAuth: { authority?: string,
@@ -123,22 +89,21 @@ functions:
       skipAuthorityMetadataCache?: boolean }, userInputCache: { cacheLocation?:
       BrowserCacheLocation | string, secureCookies?: boolean,
       storeAuthStateInCookie?: boolean }, userInputSystem: {
-      preventCorsPreflight?: boolean, proxyUrl?: string,
-      tokenRenewalOffsetSeconds?: number } & { allowNativeBroker?: boolean,
-      allowRedirectInIframe?: boolean, asyncPopups?: boolean, cryptoOptions?:
-      CryptoOptions, iframeHashTimeout?: number, loadFrameTimeout?: number,
-      loggerOptions?: LoggerOptions, nativeBrokerHandshakeTimeout?: number,
-      navigateFrameWait?: number, navigationClient?: INavigationClient,
-      networkClient?: INetworkModule, pollIntervalMilliseconds?: number,
-      redirectNavigationTimeout?: number, windowHashTimeout?: number },
-      userInputTelemetry: { application?: ApplicationTelemetry } }, boolean)
+      preventCorsPreflight?: boolean, tokenRenewalOffsetSeconds?: number } & {
+      allowNativeBroker?: boolean, allowRedirectInIframe?: boolean,
+      asyncPopups?: boolean, cryptoOptions?: CryptoOptions, iframeHashTimeout?:
+      number, loadFrameTimeout?: number, loggerOptions?: LoggerOptions,
+      nativeBrokerHandshakeTimeout?: number, navigateFrameWait?: number,
+      navigationClient?: INavigationClient, networkClient?: INetworkModule,
+      pollIntervalMilliseconds?: number, redirectNavigationTimeout?: number,
+      windowHashTimeout?: number }, userInputTelemetry: { application?:
+      ApplicationTelemetry } }, boolean)
     uid: '@azure/msal-browser.buildConfiguration'
     package: '@azure/msal-browser'
     summary: >-
       MSAL function that sets the default options when not explicitly configured
       from app developer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -151,11 +116,11 @@ functions:
         skipAuthorityMetadataCache?: boolean }, userInputCache: {
         cacheLocation?: BrowserCacheLocation | string, secureCookies?: boolean,
         storeAuthStateInCookie?: boolean }, userInputSystem: {
-        preventCorsPreflight?: boolean, proxyUrl?: string,
-        tokenRenewalOffsetSeconds?: number } & { allowNativeBroker?: boolean,
-        allowRedirectInIframe?: boolean, asyncPopups?: boolean, cryptoOptions?:
-        CryptoOptions, iframeHashTimeout?: number, loadFrameTimeout?: number,
-        loggerOptions?: LoggerOptions, nativeBrokerHandshakeTimeout?: number,
+        preventCorsPreflight?: boolean, tokenRenewalOffsetSeconds?: number } & {
+        allowNativeBroker?: boolean, allowRedirectInIframe?: boolean,
+        asyncPopups?: boolean, cryptoOptions?: CryptoOptions,
+        iframeHashTimeout?: number, loadFrameTimeout?: number, loggerOptions?:
+        LoggerOptions, nativeBrokerHandshakeTimeout?: number,
         navigateFrameWait?: number, navigationClient?: INavigationClient,
         networkClient?: INetworkModule, pollIntervalMilliseconds?: number,
         redirectNavigationTimeout?: number, windowHashTimeout?: number },
@@ -173,16 +138,16 @@ functions:
             skipAuthorityMetadataCache?: boolean }, userInputCache: {
             cacheLocation?: BrowserCacheLocation | string, secureCookies?:
             boolean, storeAuthStateInCookie?: boolean }, userInputSystem: {
-            preventCorsPreflight?: boolean, proxyUrl?: string,
-            tokenRenewalOffsetSeconds?: number } & { allowNativeBroker?:
-            boolean, allowRedirectInIframe?: boolean, asyncPopups?: boolean,
-            cryptoOptions?: CryptoOptions, iframeHashTimeout?: number,
-            loadFrameTimeout?: number, loggerOptions?: LoggerOptions,
-            nativeBrokerHandshakeTimeout?: number, navigateFrameWait?: number,
-            navigationClient?: INavigationClient, networkClient?:
-            INetworkModule, pollIntervalMilliseconds?: number,
-            redirectNavigationTimeout?: number, windowHashTimeout?: number },
-            userInputTelemetry: { application?: ApplicationTelemetry } }
+            preventCorsPreflight?: boolean, tokenRenewalOffsetSeconds?: number }
+            & { allowNativeBroker?: boolean, allowRedirectInIframe?: boolean,
+            asyncPopups?: boolean, cryptoOptions?: CryptoOptions,
+            iframeHashTimeout?: number, loadFrameTimeout?: number,
+            loggerOptions?: LoggerOptions, nativeBrokerHandshakeTimeout?:
+            number, navigateFrameWait?: number, navigationClient?:
+            INavigationClient, networkClient?: INetworkModule,
+            pollIntervalMilliseconds?: number, redirectNavigationTimeout?:
+            number, windowHashTimeout?: number }, userInputTelemetry: {
+            application?: ApplicationTelemetry } }
           description: ''
         - id: isBrowserEnvironment
           type: boolean
@@ -190,3 +155,16 @@ functions:
       return:
         description: Configuration object
         type: <xref uid="@azure/msal-browser.BrowserConfiguration" />
+enums:
+  - '@azure/msal-browser.NativeStatusCode'
+  - '@azure/msal-browser.EventType'
+  - '@azure/msal-browser.ApiId'
+  - '@azure/msal-browser.BrowserCacheLocation'
+  - '@azure/msal-browser.CacheLookupPolicy'
+  - '@azure/msal-browser.HTTP_REQUEST_TYPE'
+  - '@azure/msal-browser.InMemoryCacheKeys'
+  - '@azure/msal-browser.InteractionStatus'
+  - '@azure/msal-browser.InteractionType'
+  - '@azure/msal-browser.NativeExtensionMethod'
+  - '@azure/msal-browser.TemporaryCacheKeys'
+  - '@azure/msal-browser.WrapperSKU'

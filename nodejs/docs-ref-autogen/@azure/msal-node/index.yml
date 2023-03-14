@@ -9,25 +9,16 @@ interfaces:
   - '@azure/msal-node.IPartitionManager'
   - '@azure/msal-node.IConfidentialClientApplication'
   - '@azure/msal-node.IPublicClientApplication'
+  - '@azure/msal-node.ILoopbackClient'
 classes:
   - '@azure/msal-node.NodeStorage'
   - '@azure/msal-node.TokenCache'
   - '@azure/msal-node.DistributedCachePlugin'
-  - '@azure/msal-node.Deserializer'
-  - '@azure/msal-node.Serializer'
   - '@azure/msal-node.ClientApplication'
   - '@azure/msal-node.ClientAssertion'
   - '@azure/msal-node.ConfidentialClientApplication'
   - '@azure/msal-node.PublicClientApplication'
   - '@azure/msal-node.CryptoProvider'
-  - '@azure/msal-node.GuidGenerator'
-  - '@azure/msal-node.HashUtils'
-  - '@azure/msal-node.PkceGenerator'
-  - '@azure/msal-node.NodeAuthError'
-  - '@azure/msal-node.HttpClient'
-  - '@azure/msal-node.LoopbackClient'
-  - '@azure/msal-node.EncodingUtils'
-  - '@azure/msal-node.NetworkUtils'
 typeAliases:
   - '@azure/msal-node.CacheKVStore'
   - '@azure/msal-node.InMemoryCache'
@@ -37,6 +28,7 @@ typeAliases:
   - '@azure/msal-node.SerializedAppMetadataEntity'
   - '@azure/msal-node.SerializedIdTokenEntity'
   - '@azure/msal-node.SerializedRefreshTokenEntity'
+  - '@azure/msal-node.BrokerOptions'
   - '@azure/msal-node.CacheOptions'
   - '@azure/msal-node.Configuration'
   - '@azure/msal-node.NodeAuthOptions'
@@ -50,6 +42,7 @@ typeAliases:
   - '@azure/msal-node.InteractiveRequest'
   - '@azure/msal-node.OnBehalfOfRequest'
   - '@azure/msal-node.RefreshTokenRequest'
+  - '@azure/msal-node.SignOutRequest'
   - '@azure/msal-node.SilentFlowRequest'
   - '@azure/msal-node.UsernamePasswordRequest'
 functions:
@@ -60,14 +53,15 @@ functions:
       string, thumbprint: string, x5c?: string }, clientId: string,
       clientSecret?: string, cloudDiscoveryMetadata?: string, knownAuthorities?:
       Array<string>, protocolMode?: ProtocolMode, skipAuthorityMetadataCache?:
-      boolean }, cache: { cachePlugin?: ICachePlugin }, system: {
-      loggerOptions?: LoggerOptions, networkClient?: INetworkModule, proxyUrl?:
-      string }, telemetry: { application?: ApplicationTelemetry } })
+      boolean }, broker: { nativeBrokerPlugin?: INativeBrokerPlugin }, cache: {
+      cachePlugin?: ICachePlugin }, system: { customAgentOptions?:
+      httpAgentOptions | httpsAgentOptions, loggerOptions?: LoggerOptions,
+      networkClient?: INetworkModule, proxyUrl?: string }, telemetry: {
+      application?: ApplicationTelemetry } })
     uid: '@azure/msal-node.buildAppConfiguration'
     package: '@azure/msal-node'
     summary: Sets the default options when not explicitly configured from app developer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -78,9 +72,11 @@ functions:
         string, x5c?: string }, clientId: string, clientSecret?: string,
         cloudDiscoveryMetadata?: string, knownAuthorities?: Array<string>,
         protocolMode?: ProtocolMode, skipAuthorityMetadataCache?: boolean },
-        cache: { cachePlugin?: ICachePlugin }, system: { loggerOptions?:
-        LoggerOptions, networkClient?: INetworkModule, proxyUrl?: string },
-        telemetry: { application?: ApplicationTelemetry } }): NodeConfiguration
+        broker: { nativeBrokerPlugin?: INativeBrokerPlugin }, cache: {
+        cachePlugin?: ICachePlugin }, system: { customAgentOptions?:
+        httpAgentOptions | httpsAgentOptions, loggerOptions?: LoggerOptions,
+        networkClient?: INetworkModule, proxyUrl?: string }, telemetry: {
+        application?: ApplicationTelemetry } }): NodeConfiguration
       parameters:
         - id: __namedParameters
           type: >-
@@ -90,16 +86,13 @@ functions:
             privateKey: string, thumbprint: string, x5c?: string }, clientId:
             string, clientSecret?: string, cloudDiscoveryMetadata?: string,
             knownAuthorities?: Array&lt;string&gt;, protocolMode?: ProtocolMode,
-            skipAuthorityMetadataCache?: boolean }, cache: { cachePlugin?:
-            ICachePlugin }, system: { loggerOptions?: LoggerOptions,
-            networkClient?: INetworkModule, proxyUrl?: string }, telemetry: {
-            application?: ApplicationTelemetry } }
+            skipAuthorityMetadataCache?: boolean }, broker: {
+            nativeBrokerPlugin?: INativeBrokerPlugin }, cache: { cachePlugin?:
+            ICachePlugin }, system: { customAgentOptions?: httpAgentOptions |
+            httpsAgentOptions, loggerOptions?: LoggerOptions, networkClient?:
+            INetworkModule, proxyUrl?: string }, telemetry: { application?:
+            ApplicationTelemetry } }
           description: ''
       return:
         description: Configuration
         type: <xref uid="@azure/msal-node.NodeConfiguration" />
-enums:
-  - '@azure/msal-node.ApiId'
-  - '@azure/msal-node.HttpMethod'
-  - '@azure/msal-node.HttpStatus'
-  - '@azure/msal-node.ProxyStatus'

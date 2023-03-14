@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: AuthorizationCodeRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AuthorizationCodeRequest = Partial<

@@ -68,7 +68,6 @@ summary: >
   with height and width, and popupPosition with top and left can be set.
 fullName: PopupRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type PopupRequest = Partial<

@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: Cache keys stored in-memory
 fullName: InMemoryCacheKeys
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: WRAPPER_SKU

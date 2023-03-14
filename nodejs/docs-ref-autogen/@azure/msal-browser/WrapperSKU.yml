@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: WrapperSKU
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: Angular

@@ -5,7 +5,6 @@ package: '@azure/msal'
 summary: ''
 fullName: ApiEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -37,7 +35,6 @@ properties:
     summary: ''
     fullName: accountId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'accountId: string'
@@ -50,7 +47,6 @@ properties:
     summary: ''
     fullName: apiCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'apiCode: number'
@@ -63,7 +59,6 @@ properties:
     summary: ''
     fullName: apiErrorCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'apiErrorCode: string'
@@ -76,7 +71,6 @@ properties:
     summary: ''
     fullName: apiEventIdentifier
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'apiEventIdentifier: string'
@@ -89,7 +83,6 @@ properties:
     summary: ''
     fullName: authority
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authority: string'
@@ -102,7 +95,6 @@ properties:
     summary: ''
     fullName: authorityType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authorityType: string'
@@ -115,7 +107,6 @@ properties:
     summary: ''
     fullName: loginHint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'loginHint: string'
@@ -128,7 +119,6 @@ properties:
     summary: ''
     fullName: promptType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'promptType: string'
@@ -141,7 +131,6 @@ properties:
     summary: ''
     fullName: tenantId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'tenantId: string'
@@ -154,7 +143,6 @@ properties:
     summary: ''
     fullName: wasSuccessful
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'wasSuccessful: boolean'
@@ -168,7 +156,6 @@ inheritedProperties:
     summary: ''
     fullName: displayName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'displayName: string'
@@ -184,7 +171,6 @@ inheritedProperties:
     summary: ''
     fullName: eventId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'eventId: string'
@@ -200,7 +186,6 @@ inheritedProperties:
     summary: ''
     fullName: eventName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'eventName: string'
@@ -216,7 +201,6 @@ inheritedProperties:
     summary: ''
     fullName: key
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'key: string'
@@ -232,7 +216,6 @@ inheritedProperties:
     summary: ''
     fullName: telemetryCorrelationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'telemetryCorrelationId: string'
@@ -248,7 +231,6 @@ inheritedMethods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function get(): object'
@@ -263,7 +245,6 @@ inheritedMethods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function start()
@@ -275,7 +256,6 @@ inheritedMethods:
     package: '@azure/msal'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function stop()

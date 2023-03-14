@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Keys in the hashParams sent by AAD Server
 fullName: AADServerParamKeys
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: ACCESS_TOKEN

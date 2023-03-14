@@ -14,7 +14,6 @@ summary: >-
        - uhw: hardware storage
 fullName: ReqCnf
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type ReqCnf = { kid: string, xms_ksl: KeyLocation }

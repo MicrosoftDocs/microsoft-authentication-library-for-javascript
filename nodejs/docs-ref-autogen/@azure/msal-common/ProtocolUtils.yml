@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Class which provides helpers for OAuth 2.0 protocol specific values
 fullName: ProtocolUtils
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 methods:
@@ -14,7 +13,6 @@ methods:
     package: '@azure/msal-common'
     summary: Generates the state value used by the common library.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -38,7 +36,6 @@ methods:
       Parses the state into the RequestStateObject, which contains the
       LibraryState info and the state passed by the user.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -60,7 +57,6 @@ methods:
     package: '@azure/msal-common'
     summary: 'Appends user state with random guid, or returns random guid.'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

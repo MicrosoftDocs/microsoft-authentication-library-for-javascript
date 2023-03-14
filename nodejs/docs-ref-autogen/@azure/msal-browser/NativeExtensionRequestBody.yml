@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: Request which will be forwarded to native broker by the browser extension
 fullName: NativeExtensionRequestBody
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type NativeExtensionRequestBody = {

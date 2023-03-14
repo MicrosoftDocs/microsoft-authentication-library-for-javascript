@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: Token request which native broker will use to acquire tokens
 fullName: NativeTokenRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type NativeTokenRequest = {

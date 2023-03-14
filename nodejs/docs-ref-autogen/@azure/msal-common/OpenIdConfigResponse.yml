@@ -7,7 +7,6 @@ summary: >-
   needed for authentication and authorization.
 fullName: OpenIdConfigResponse
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type OpenIdConfigResponse = {

@@ -29,10 +29,11 @@ summary: >-
   logged out in order to skip the server account picker on logout
 fullName: EndSessionPopupRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
-  type EndSessionPopupRequest = Partial<CommonEndSessionRequest> & {
+  type EndSessionPopupRequest = Partial<
+    Omit<CommonEndSessionRequest, "tokenQueryParameters">
+  > & {
     authority?: string,
     mainWindowRedirectUri?: string,
     popupWindowAttributes?: PopupWindowAttributes,

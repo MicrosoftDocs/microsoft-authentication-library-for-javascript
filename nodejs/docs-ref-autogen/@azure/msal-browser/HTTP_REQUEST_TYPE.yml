@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: HTTP Request types supported by MSAL.
 fullName: HTTP_REQUEST_TYPE
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: GET

@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: General error class thrown by the MSAL.js library.
 fullName: AuthError
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -37,7 +35,6 @@ properties:
     summary: CorrelationId associated with the error
     fullName: correlationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'correlationId: string'
@@ -50,7 +47,6 @@ properties:
     summary: ''
     fullName: Error
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static Error: ErrorConstructor'
@@ -63,7 +59,6 @@ properties:
     summary: Short string denoting error
     fullName: errorCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorCode: string'
@@ -76,7 +71,6 @@ properties:
     summary: Detailed description of error
     fullName: errorMessage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorMessage: string'
@@ -89,7 +83,6 @@ properties:
     summary: Describes the subclass of an error
     fullName: subError
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subError: string'
@@ -103,7 +96,6 @@ inheritedProperties:
     summary: ''
     fullName: message
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'message: string'
@@ -117,7 +109,6 @@ inheritedProperties:
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -131,7 +122,6 @@ inheritedProperties:
     summary: ''
     fullName: stack
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stack?: string'
@@ -145,7 +135,6 @@ methods:
     package: '@azure/msal-common'
     summary: Creates an error for post request failures.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createPostRequestFailed(errDesc: string): AuthError'
@@ -163,7 +152,6 @@ methods:
       Creates an error that is thrown when something unexpected happens in the
       library.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function createUnexpectedError(errDesc: string): AuthError'
@@ -180,7 +168,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setCorrelationId(correlationId: string)'

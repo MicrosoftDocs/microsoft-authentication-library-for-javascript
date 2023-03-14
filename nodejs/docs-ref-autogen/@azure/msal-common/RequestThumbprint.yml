@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Type representing a unique request thumbprint.
 fullName: RequestThumbprint
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type RequestThumbprint = {

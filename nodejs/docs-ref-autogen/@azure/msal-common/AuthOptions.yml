@@ -29,7 +29,6 @@ summary: >
   the local metadata cache during authority initialization. Defaults to false.
 fullName: AuthOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AuthOptions = {

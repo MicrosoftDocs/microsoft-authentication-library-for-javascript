@@ -5,7 +5,6 @@ package: '@azure/msal-angular'
 summary: ''
 fullName: IMsalService
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
@@ -14,7 +13,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -32,7 +30,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -50,7 +47,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -68,7 +64,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getLogger(): Logger'
@@ -80,7 +75,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -94,7 +88,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function initialize(): Observable<void>'
@@ -106,7 +99,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -124,7 +116,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function loginRedirect(request?: RedirectRequest): Observable<void>'
@@ -140,7 +131,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function logout(logoutRequest?: EndSessionRequest): Observable<void>'
@@ -156,7 +146,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setLogger(logger: Logger)'
@@ -169,7 +158,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

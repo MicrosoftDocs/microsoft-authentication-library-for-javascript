@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: ''
 fullName: NetworkResponse<T>
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type NetworkResponse<T> = {

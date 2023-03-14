@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: ClientApplication
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new ClientApplication(configuration: Configuration)'
@@ -40,7 +38,6 @@ methods:
       Redemption of this authorization code will not require PKCE, as it was
       acquired by a confidential client.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -62,7 +59,6 @@ methods:
       Use when you want to obtain an access_token for your API via opening a
       popup window in the user's browser
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -95,7 +91,6 @@ methods:
       browser window. It currently returns a Promise in order to reflect the
       asynchronous nature of the code running in this function.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function acquireTokenRedirect(request: RedirectRequest): Promise<void>'
@@ -112,7 +107,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Adds event callbacks to array
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -131,7 +125,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Registers a callback to receive performance events.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -151,7 +144,6 @@ methods:
       Removes event listener that emits an event when a user account is added or
       removed from localstorage in a different browser tab or window
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function disableAccountStorageEvents()
@@ -162,7 +154,6 @@ methods:
       Adds event listener that emits an event when a user account is added or
       removed from localstorage in a different browser tab or window
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function enableAccountStorageEvents()
@@ -174,7 +165,6 @@ methods:
       (the account object is created at the time of successful login)
       or null when no matching account is found
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAccountByHomeId(homeAccountId: string): AccountInfo | null'
@@ -193,7 +183,6 @@ methods:
       (the account object is created at the time of successful login)
       or null when no matching account is found
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAccountByLocalId(localAccountId: string): AccountInfo | null'
@@ -217,7 +206,6 @@ methods:
       This API is provided for convenience but getAccountById should be used for
       best reliability
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAccountByUsername(userName: string): AccountInfo | null'
@@ -233,7 +221,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Gets the currently active account
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getActiveAccount(): AccountInfo | null'
@@ -248,7 +235,6 @@ methods:
       (the account object is created at the time of successful login)
       or empty array when no accounts are found
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAllAccounts(): AccountInfo[]'
@@ -260,7 +246,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Returns the configuration object
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getConfiguration(): BrowserConfiguration'
@@ -272,7 +257,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Returns the logger instance
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getLogger(): Logger'
@@ -284,7 +268,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Gets the token cache for the application.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getTokenCache(): ITokenCache'
@@ -303,7 +286,6 @@ methods:
 
       auth flows.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -328,7 +310,6 @@ methods:
       Initializer function to perform async startup tasks such as connecting to
       WAM extension
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function initialize(): Promise<void>'
@@ -342,7 +323,6 @@ methods:
       Called by wrapper libraries (Angular & React) to set SKU and Version
       passed down to telemetry, logger, etc.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function initializeWrapperLibrary(sku: WrapperSKU, version: string)'
@@ -359,7 +339,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Deprecated logout function. Use logoutRedirect or logoutPopup instead
     remarks: ''
-    isPreview: false
     isDeprecated: true
     customDeprecatedMessage: ''
     syntax:
@@ -378,7 +357,6 @@ methods:
       Clears local cache for the current user then opens a popup window
       prompting the user to sign-out of the server
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -401,7 +379,6 @@ methods:
 
       Default behaviour is to redirect the user to `window.location.href`.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -420,7 +397,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Removes callback with provided id from callback array
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeEventCallback(callbackId: string)'
@@ -434,7 +410,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Removes a callback registered with addPerformanceCallback.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removePerformanceCallback(callbackId: string): boolean'
@@ -452,7 +427,6 @@ methods:
       Sets the account to use as the active account. If no account is passed to
       the acquireToken APIs, then MSAL will use this active account.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setActiveAccount(account: AccountInfo | null)'
@@ -468,7 +442,6 @@ methods:
       Replaces the default logger set in configurations with new Logger with new
       configurations
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setLogger(logger: Logger)'
@@ -482,7 +455,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Sets navigation client
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setNavigationClient(navigationClient: INavigationClient)'
@@ -515,7 +487,6 @@ methods:
 
       you session on the server still exists.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

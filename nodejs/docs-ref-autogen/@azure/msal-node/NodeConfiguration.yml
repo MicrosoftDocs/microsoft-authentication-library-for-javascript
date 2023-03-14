@@ -5,11 +5,11 @@ package: '@azure/msal-node'
 summary: ''
 fullName: NodeConfiguration
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type NodeConfiguration = {
     auth: Required<NodeAuthOptions>,
+    broker: BrokerOptions,
     cache: CacheOptions,
     system: Required<NodeSystemOptions>,
     telemetry: Required<NodeTelemetryOptions>,

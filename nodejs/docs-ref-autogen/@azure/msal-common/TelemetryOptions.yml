@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: ''
 fullName: TelemetryOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type TelemetryOptions = { application: ApplicationTelemetry }

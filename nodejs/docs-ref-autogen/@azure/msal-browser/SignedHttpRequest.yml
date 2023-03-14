@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: SignedHttpRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -33,7 +31,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Generates and caches a keypair for the given request options.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generatePublicKeyThumbprint(): Promise<string>'
@@ -45,7 +42,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Removes cached keys from browser for given public key thumbprint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeKeys(publicKeyThumbprint: string): Promise<boolean>'
@@ -61,7 +57,6 @@ methods:
     package: '@azure/msal-browser'
     summary: Generates a signed http request for the given payload with the given key.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

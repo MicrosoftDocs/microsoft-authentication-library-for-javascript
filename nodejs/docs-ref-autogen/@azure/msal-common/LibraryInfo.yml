@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Library-specific options
 fullName: LibraryInfo
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type LibraryInfo = { cpu: string, os: string, sku: string, version: string }

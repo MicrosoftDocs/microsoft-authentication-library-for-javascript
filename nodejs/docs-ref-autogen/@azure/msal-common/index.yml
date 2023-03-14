@@ -15,8 +15,6 @@ typeAliases:
   - '@azure/msal-common.AzureRegion'
   - '@azure/msal-common.AzureRegionConfiguration'
   - '@azure/msal-common.CloudDiscoveryMetadata'
-  - '@azure/msal-common.CloudInstanceDiscoveryResponse'
-  - '@azure/msal-common.ImdsOptions'
   - '@azure/msal-common.OpenIdConfigResponse'
   - '@azure/msal-common.RegionDiscoveryMetadata'
   - '@azure/msal-common.AccessTokenCache'
@@ -50,6 +48,7 @@ typeAliases:
   - '@azure/msal-common.LoggerMessageOptions'
   - '@azure/msal-common.NetworkRequestOptions'
   - '@azure/msal-common.NetworkResponse'
+  - '@azure/msal-common.UrlToHttpRequestOptions'
   - '@azure/msal-common.RequestThumbprint'
   - '@azure/msal-common.BaseAuthRequest'
   - '@azure/msal-common.CommonAuthorizationCodeRequest'
@@ -61,18 +60,22 @@ typeAliases:
   - '@azure/msal-common.CommonRefreshTokenRequest'
   - '@azure/msal-common.CommonSilentFlowRequest'
   - '@azure/msal-common.CommonUsernamePasswordRequest'
+  - '@azure/msal-common.NativeRequest'
+  - '@azure/msal-common.NativeSignOutRequest'
   - '@azure/msal-common.AuthenticationResult'
   - '@azure/msal-common.AuthorizationCodePayload'
   - '@azure/msal-common.DeviceCodeResponse'
   - '@azure/msal-common.ServerDeviceCodeResponse'
   - '@azure/msal-common.ExternalTokenResponse'
-  - '@azure/msal-common.IMDSBadResponse'
   - '@azure/msal-common.ServerAuthorizationCodeResponse'
   - '@azure/msal-common.ServerAuthorizationTokenResponse'
   - '@azure/msal-common.InProgressPerformanceEvent'
   - '@azure/msal-common.PerformanceCallbackFunction'
+  - '@azure/msal-common.QueueMeasurement'
+  - '@azure/msal-common.Counters'
   - '@azure/msal-common.PerformanceEvent'
   - '@azure/msal-common.StaticFields'
+  - '@azure/msal-common.SubMeasurement'
   - '@azure/msal-common.ServerTelemetryRequest'
   - '@azure/msal-common.StringDict'
   - '@azure/msal-common.LibraryStateObject'
@@ -81,7 +84,6 @@ classes:
   - '@azure/msal-common.AuthToken'
   - '@azure/msal-common.Authority'
   - '@azure/msal-common.AuthorityFactory'
-  - '@azure/msal-common.RegionDiscovery'
   - '@azure/msal-common.CacheManager'
   - '@azure/msal-common.DefaultStorageClass'
   - '@azure/msal-common.AccessTokenEntity'
@@ -109,16 +111,12 @@ classes:
   - '@azure/msal-common.ClientAuthError'
   - '@azure/msal-common.ClientConfigurationError'
   - '@azure/msal-common.InteractionRequiredAuthError'
-  - '@azure/msal-common.JoseHeaderError'
   - '@azure/msal-common.ServerError'
   - '@azure/msal-common.Logger'
   - '@azure/msal-common.NetworkManager'
   - '@azure/msal-common.ThrottlingUtils'
   - '@azure/msal-common.AuthenticationHeaderParser'
-  - '@azure/msal-common.RequestParameterBuilder'
-  - '@azure/msal-common.RequestValidator'
   - '@azure/msal-common.ScopeSet'
-  - '@azure/msal-common.ResponseHandler'
   - '@azure/msal-common.PerformanceClient'
   - '@azure/msal-common.StubPerformanceClient'
   - '@azure/msal-common.StubPerformanceMeasurement'
@@ -162,7 +160,6 @@ functions:
     package: '@azure/msal-common'
     summary: Function to build a client info object from server clientInfo string
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -184,7 +181,6 @@ functions:
     package: '@azure/msal-common'
     summary: Function to build a client info object from cached homeAccountId string
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -198,28 +194,11 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.ClientInfo" />
-  - name: isCloudInstanceDiscoveryResponse(object)
-    uid: '@azure/msal-common.isCloudInstanceDiscoveryResponse'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function isCloudInstanceDiscoveryResponse(response: object): boolean'
-      parameters:
-        - id: response
-          type: object
-          description: ''
-      return:
-        description: ''
-        type: boolean
   - name: isOpenIdConfigResponse(object)
     uid: '@azure/msal-common.isOpenIdConfigResponse'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function isOpenIdConfigResponse(response: object): boolean'
@@ -242,7 +221,7 @@ functions:
       Array<string>, clientId: string, skipAuthorityMetadataCache?: boolean },
       userLoggerOption: { correlationId?: string, logLevel?: LogLevel,
       loggerCallback?: ILoggerCallback, piiLoggingEnabled?: boolean },
-      userSystemOptions: { preventCorsPreflight?: boolean, proxyUrl?: string,
+      userSystemOptions: { preventCorsPreflight?: boolean,
       tokenRenewalOffsetSeconds?: number } })
     uid: '@azure/msal-common.buildClientConfiguration'
     package: '@azure/msal-common'
@@ -250,7 +229,6 @@ functions:
       Function that sets the default options when not explicitly configured from
       app developer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -266,7 +244,7 @@ functions:
         Array<string>, clientId: string, skipAuthorityMetadataCache?: boolean },
         userLoggerOption: { correlationId?: string, logLevel?: LogLevel,
         loggerCallback?: ILoggerCallback, piiLoggingEnabled?: boolean },
-        userSystemOptions: { preventCorsPreflight?: boolean, proxyUrl?: string,
+        userSystemOptions: { preventCorsPreflight?: boolean,
         tokenRenewalOffsetSeconds?: number } }): CommonClientConfiguration
       parameters:
         - id: __namedParameters
@@ -284,13 +262,14 @@ functions:
             boolean }, userLoggerOption: { correlationId?: string, logLevel?:
             LogLevel, loggerCallback?: ILoggerCallback, piiLoggingEnabled?:
             boolean }, userSystemOptions: { preventCorsPreflight?: boolean,
-            proxyUrl?: string, tokenRenewalOffsetSeconds?: number } }
+            tokenRenewalOffsetSeconds?: number } }
           description: ''
       return:
         description: Configuration
         type: <xref uid="@azure/msal-common.CommonClientConfiguration" />
 interfaces:
   - '@azure/msal-common.DecodedAuthToken'
+  - '@azure/msal-common.INativeBrokerPlugin'
   - '@azure/msal-common.ICacheManager'
   - '@azure/msal-common.ICachePlugin'
   - '@azure/msal-common.ISerializableTokenCache'
@@ -301,4 +280,5 @@ interfaces:
   - '@azure/msal-common.INetworkModule'
   - '@azure/msal-common.IPerformanceClient'
   - '@azure/msal-common.IPerformanceMeasurement'
+  - '@azure/msal-common.PreQueueEvent'
   - '@azure/msal-common.IUri'

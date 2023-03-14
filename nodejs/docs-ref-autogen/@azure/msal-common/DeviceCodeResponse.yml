@@ -21,7 +21,6 @@ summary: >-
   - message: message which should be displayed to the user
 fullName: DeviceCodeResponse
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type DeviceCodeResponse = {

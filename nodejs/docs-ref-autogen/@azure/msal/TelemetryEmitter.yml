@@ -5,7 +5,6 @@ package: '@azure/msal'
 summary: ''
 fullName: TelemetryEmitter
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type TelemetryEmitter = (events: Array<object>) => void

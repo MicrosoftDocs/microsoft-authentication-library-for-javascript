@@ -17,7 +17,6 @@ summary: >
   - claims                  - any extra claims that the token must satisfy
 fullName: AppTokenProviderParameters
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AppTokenProviderParameters = {

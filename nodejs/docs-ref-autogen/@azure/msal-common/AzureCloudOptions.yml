@@ -11,7 +11,6 @@ summary: >
   - tenant                         - provision to provide the tenant info
 fullName: AzureCloudOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AzureCloudOptions = {

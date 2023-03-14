@@ -9,7 +9,6 @@ summary: >-
   interaction is in progress or all interactions are complete.
 fullName: InteractionStatus
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: AcquireToken

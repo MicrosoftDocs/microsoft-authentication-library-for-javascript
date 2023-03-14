@@ -25,7 +25,6 @@ functions:
       MSAL context provider component. This must be rendered above any other
       components that use MSAL.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -45,7 +44,6 @@ functions:
     package: '@azure/msal-react'
     summary: Renders child components if user is authenticated
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -71,7 +69,6 @@ functions:
       Attempts to authenticate user if not already authenticated, then renders
       child components
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -96,7 +93,6 @@ functions:
     package: '@azure/msal-react'
     summary: Renders child components if user is unauthenticated
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -119,7 +115,6 @@ functions:
       Given 1 or more accountIdentifiers, returns the Account object if the user
       is signed-in
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -140,7 +135,6 @@ functions:
       Returns whether or not a user is currently signed-in. Optionally provide 1
       or more accountIdentifiers to determine if a specific user is signed-in
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function useIsAuthenticated(matchAccount?: AccountIdentifiers): boolean'
@@ -169,7 +163,6 @@ functions:
 
       Optionally provide a specific user that should be logged in.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -200,7 +193,6 @@ functions:
       Helper function to determine whether 2 arrays are equal
       Used to avoid unnecessary state updates
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -222,7 +214,6 @@ functions:
     package: '@azure/msal-react'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -243,7 +234,6 @@ functions:
     package: '@azure/msal-react'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -261,5 +251,3 @@ functions:
       return:
         description: ''
         type: <xref uid="React.ReactNode" />
-classes:
-  - '@azure/msal-react.ReactAuthError'

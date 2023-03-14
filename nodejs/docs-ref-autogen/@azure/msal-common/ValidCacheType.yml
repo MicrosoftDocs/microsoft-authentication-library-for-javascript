@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Object type of all accepted cache types
 fullName: ValidCacheType
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type ValidCacheType =

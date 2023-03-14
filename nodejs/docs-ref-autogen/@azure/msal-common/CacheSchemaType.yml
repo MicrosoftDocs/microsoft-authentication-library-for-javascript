@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Credential Type stored in the cache
 fullName: CacheSchemaType
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: ACCESS_TOKEN

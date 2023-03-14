@@ -34,17 +34,19 @@ summary: >
   request.For more information, see the PKCE RFC:
   https://tools.ietf.org/html/rfc7636
 
-  - resourceRequestMethod      - HTTP Request type used to request data from the
+  - resourceRequestMethod   - HTTP Request type used to request data from the
   resource (i.e. "GET", "POST", etc.).  Used for proof-of-possession flows.
 
-  - resourceRequestUri         - URI that token will be used for. Used for
+  - resourceRequestUri      - URI that token will be used for. Used for
   proof-of-possession flows.
 
-  - enableSpaAuthCode        - Enables the acqusition of a spa authorization
-  code (confidential clients only)
+  - enableSpaAuthCode       - Enables the acqusition of a spa authorization code
+  (confidential clients only)
+
+  - tokenQueryParameters    - String to string map of custom query parameters
+  added to the /token call
 fullName: CommonAuthorizationCodeRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type CommonAuthorizationCodeRequest = BaseAuthRequest & {
@@ -55,5 +57,4 @@ syntax: |
     enableSpaAuthorizationCode?: boolean,
     redirectUri: string,
     tokenBodyParameters?: StringDict,
-    tokenQueryParameters?: StringDict,
   }

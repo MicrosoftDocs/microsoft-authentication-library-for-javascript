@@ -5,7 +5,6 @@ package: '@azure/msal-angular'
 summary: ''
 fullName: MsalGuard
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -16,7 +15,6 @@ constructors:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -45,7 +43,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -66,7 +63,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -87,7 +83,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function canLoad(): Observable<boolean>'
@@ -99,7 +94,6 @@ methods:
     package: '@azure/msal-angular'
     summary: Builds the absolute url for the destination page
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getDestinationUrl(path: string): string'
@@ -115,7 +109,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function includesCode(path: string): boolean'
@@ -131,7 +124,6 @@ methods:
     package: '@azure/msal-angular'
     summary: Parses url string to UrlTree
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function parseUrl(url: string): UrlTree'

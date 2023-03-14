@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Url object class which can perform various transformations on url strings.
 fullName: UrlString
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new UrlString(url: string)'
@@ -29,7 +27,6 @@ properties:
     summary: ''
     fullName: urlString
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: string urlString
@@ -44,7 +41,6 @@ methods:
       Given a url and a query string return the url with provided query string
       appended
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -66,7 +62,6 @@ methods:
     package: '@azure/msal-common'
     summary: Ensure urls are lower case and end with a / character.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function canonicalizeUri(url: string): string'
@@ -83,7 +78,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -101,7 +95,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -122,7 +115,6 @@ methods:
     package: '@azure/msal-common'
     summary: Returns URL hash as server auth code response object.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -140,7 +132,6 @@ methods:
     package: '@azure/msal-common'
     summary: Returns URL query string as server auth code response object.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -158,7 +149,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function getDomainFromUrl(url: string): string'
@@ -174,7 +164,6 @@ methods:
     package: '@azure/msal-common'
     summary: Returns the anchor part(#) of the URL
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getHash(): string'
@@ -186,7 +175,6 @@ methods:
     package: '@azure/msal-common'
     summary: Parses out the components from a url string.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getUrlComponents(): IUri'
@@ -200,7 +188,6 @@ methods:
     package: '@azure/msal-common'
     summary: Check if the hash of the URL string contains known properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function hashContainsKnownProperties(hash: string): boolean'
@@ -218,7 +205,6 @@ methods:
       Parses hash string from given string. Returns empty string if no hash
       symbol is found.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function parseHash(hashString: string): string'
@@ -237,7 +223,6 @@ methods:
       Parses query string from given string. Returns empty string if no query
       symbol is found.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function parseQueryString(queryString: string): string'
@@ -254,7 +239,6 @@ methods:
     package: '@azure/msal-common'
     summary: Returns a url with the hash removed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function removeHashFromUrl(url: string): string'
@@ -273,7 +257,6 @@ methods:
       Given a url like https://a:b/common/d?e=f#g, and a tenantId, returns
       https://a:b/tenantId/d
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function replaceTenantPath(tenantId: string): UrlString'
@@ -290,7 +273,6 @@ methods:
     package: '@azure/msal-common'
     summary: Throws if urlString passed is not a valid authority URI string.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function validateAsUri()

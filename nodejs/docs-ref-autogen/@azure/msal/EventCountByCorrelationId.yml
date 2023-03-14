@@ -5,6 +5,5 @@ package: '@azure/msal'
 summary: ''
 fullName: EventCountByCorrelationId
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface

@@ -5,7 +5,6 @@ package: '@azure/msal'
 summary: ''
 fullName: InteractionType
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type InteractionType =

@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: ''
 fullName: DefaultStorageClass
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new DefaultStorageClass(clientId: string, cryptoImpl: ICrypto)'
@@ -31,7 +29,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: returns cache key used for cloud instance metadata
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateAuthorityMetadataCacheKey(authority: string): string'
@@ -55,7 +52,6 @@ inheritedMethods:
       not checking for casing as keys are all generated in lower case, remember
       to convert to lower case if object properties are compared
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -76,7 +72,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Returns all accounts in cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAllAccounts(): AccountInfo[]'
@@ -93,7 +88,6 @@ inheritedMethods:
       retrieve appMetadata matching all provided filters; if no filter is set,
       get all appMetadata
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -115,7 +109,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: retrieve authorityMetadata that contains a matching alias
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -138,7 +131,6 @@ inheritedMethods:
       retrieve credentails matching all provided filters; if no filter is set,
       get all credentials
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -159,7 +151,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Return the family_id value associated  with FOCI
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -184,7 +175,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Retrieve AccessTokenEntity from cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -211,7 +201,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Retrieve AccountEntity from cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -234,7 +223,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Retrieve AccountEntity from cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -255,7 +243,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Retrieve AppMetadataEntity from cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -279,7 +266,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Retrieve the cached credentials into a cacherecord
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -309,7 +295,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Retrieve IdTokenEntity from cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -333,7 +318,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Helper to retrieve the appropriate refresh token from cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -361,7 +345,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: returns a boolean if the given account is removed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeAccount(accountKey: string): Promise<boolean>'
@@ -380,7 +363,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Removes credentials associated with the provided account
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeAccountContext(account: AccountEntity): Promise<boolean>'
@@ -400,7 +382,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Removes all accounts and related tokens from cache.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeAllAccounts(): Promise<boolean>'
@@ -415,7 +396,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Removes all app metadata objects from cache.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeAppMetadata(): boolean'
@@ -430,7 +410,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: returns a boolean if the given credential is removed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -452,7 +431,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: saves a cache record
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function saveCacheRecord(cacheRecord: CacheRecord): Promise<void>'
@@ -472,7 +450,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: Helper to convert serialized data to object
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function toObject<T>(obj: T, json: object): T'
@@ -496,7 +473,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function clear(): Promise<void>'
@@ -508,7 +484,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function containsKey(): boolean'
@@ -520,7 +495,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAccessTokenCredential(): AccessTokenEntity'
@@ -532,7 +506,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAccount(): AccountEntity'
@@ -544,7 +517,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAppMetadata(): AppMetadataEntity'
@@ -556,7 +528,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAuthorityMetadata(): AuthorityMetadataEntity | null'
@@ -568,7 +539,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAuthorityMetadataKeys(): Array<string>'
@@ -580,7 +550,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getIdTokenCredential(): IdTokenEntity'
@@ -592,7 +561,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getKeys(): string[]'
@@ -604,7 +572,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getRefreshTokenCredential(): RefreshTokenEntity'
@@ -616,7 +583,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getServerTelemetry(): ServerTelemetryEntity'
@@ -628,7 +594,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getThrottlingCache(): ThrottlingEntity'
@@ -640,7 +605,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeItem(): boolean'
@@ -652,7 +616,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function setAccessTokenCredential()
@@ -661,7 +624,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function setAccount()
@@ -670,7 +632,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function setAppMetadata()
@@ -679,7 +640,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function setAuthorityMetadata()
@@ -688,7 +648,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function setIdTokenCredential()
@@ -697,7 +656,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function setRefreshTokenCredential()
@@ -706,7 +664,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function setServerTelemetry()
@@ -715,7 +672,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function setThrottlingCache()
@@ -724,7 +680,6 @@ methods:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function updateCredentialCacheKey(): string'

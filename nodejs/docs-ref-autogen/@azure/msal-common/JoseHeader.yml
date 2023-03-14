@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: ''
 fullName: JoseHeader
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new JoseHeader(options: JoseHeaderOptions)'
@@ -29,7 +27,6 @@ properties:
     summary: ''
     fullName: alg
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'alg?: string'
@@ -42,7 +39,6 @@ properties:
     summary: ''
     fullName: kid
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'kid?: string'
@@ -55,7 +51,6 @@ properties:
     summary: ''
     fullName: typ
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'typ?: JsonTypes'
@@ -76,7 +71,6 @@ methods:
       Throws if keyId or algorithm aren't provided since they are required for
       Access Token Binding.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

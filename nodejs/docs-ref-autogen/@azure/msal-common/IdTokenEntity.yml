@@ -19,7 +19,6 @@ summary: |
   }
 fullName: IdTokenEntity
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 properties:
@@ -29,7 +28,6 @@ properties:
     summary: ''
     fullName: realm
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'realm: string'
@@ -43,7 +41,6 @@ inheritedProperties:
     summary: ''
     fullName: clientId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'clientId: string'
@@ -59,7 +56,6 @@ inheritedProperties:
     summary: ''
     fullName: credentialType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'credentialType: CredentialType'
@@ -75,7 +71,6 @@ inheritedProperties:
     summary: ''
     fullName: environment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'environment: string'
@@ -91,7 +86,6 @@ inheritedProperties:
     summary: ''
     fullName: familyId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'familyId?: string'
@@ -107,7 +101,6 @@ inheritedProperties:
     summary: ''
     fullName: homeAccountId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'homeAccountId: string'
@@ -123,7 +116,6 @@ inheritedProperties:
     summary: ''
     fullName: keyId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'keyId?: string'
@@ -139,7 +131,6 @@ inheritedProperties:
     summary: ''
     fullName: requestedClaimsHash
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'requestedClaimsHash?: string'
@@ -155,7 +146,6 @@ inheritedProperties:
     summary: ''
     fullName: secret
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'secret: string'
@@ -171,7 +161,6 @@ inheritedProperties:
     summary: ''
     fullName: target
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'target?: string'
@@ -187,7 +176,6 @@ inheritedProperties:
     summary: ''
     fullName: tokenType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'tokenType?: AuthenticationScheme'
@@ -203,7 +191,6 @@ inheritedProperties:
     summary: ''
     fullName: userAssertionHash
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'userAssertionHash?: string'
@@ -221,7 +208,6 @@ inheritedMethods:
       Generate Account Id key component as per the schema:
       <home_account_id>-<environment>
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateAccountId(): string'
@@ -241,7 +227,6 @@ inheritedMethods:
 
       <home_account_id*>-\<environment>-<credential_type>-<client_id>-<realm\*>-<target\*>-<scheme\*>
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -290,7 +275,6 @@ inheritedMethods:
       Generate Credential Id key component as per the schema:
       <credential_type>-<client_id>-<realm>
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateCredentialId(): string'
@@ -305,7 +289,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: generates credential key
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateCredentialKey(): string'
@@ -320,7 +303,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: 'Generate target key component as per schema: <target>'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateTarget(): string'
@@ -335,7 +317,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: returns the type of the cache (in this case credential)
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generateType(): number'
@@ -350,7 +331,6 @@ inheritedMethods:
     package: '@azure/msal-common'
     summary: helper function to return `CredentialType`
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function getCredentialType(key: string): string'
@@ -371,7 +351,6 @@ methods:
     package: '@azure/msal-common'
     summary: Create IdTokenEntity
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -402,7 +381,6 @@ methods:
     package: '@azure/msal-common'
     summary: 'Validates an entity: checks for all expected params'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function isIdTokenEntity(entity: object): boolean'

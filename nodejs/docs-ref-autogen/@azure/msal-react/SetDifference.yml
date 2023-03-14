@@ -5,7 +5,6 @@ package: '@azure/msal-react'
 summary: ''
 fullName: 'SetDifference<A, B>'
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type SetDifference<A, B> = SetDifference<A, B>

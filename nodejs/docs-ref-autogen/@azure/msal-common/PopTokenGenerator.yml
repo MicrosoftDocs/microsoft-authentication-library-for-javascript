@@ -5,22 +5,25 @@ package: '@azure/msal-common'
 summary: ''
 fullName: PopTokenGenerator
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: PopTokenGenerator(ICrypto)
+  - name: 'PopTokenGenerator(ICrypto, IPerformanceClient)'
     uid: '@azure/msal-common.PopTokenGenerator.constructor'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'new PopTokenGenerator(cryptoUtils: ICrypto)'
+      content: >-
+        new PopTokenGenerator(cryptoUtils: ICrypto, performanceClient?:
+        IPerformanceClient)
       parameters:
         - id: cryptoUtils
           type: <xref uid="@azure/msal-common.ICrypto" />
+          description: ''
+        - id: performanceClient
+          type: <xref uid="@azure/msal-common.IPerformanceClient" />
           description: ''
 methods:
   - name: generateCnf(SignedHttpRequestParameters)
@@ -33,7 +36,6 @@ methods:
       and returns an object containing the keyid, the full req_cnf string and
       the req_cnf string hash
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -51,7 +53,6 @@ methods:
     package: '@azure/msal-common'
     summary: Generates key_id for a SHR token request
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -69,7 +70,6 @@ methods:
     package: '@azure/msal-common'
     summary: Utility function to generate the signed JWT for an access_token
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -96,7 +96,6 @@ methods:
     package: '@azure/msal-common'
     summary: Signs the POP access_token with the local generated key-pair
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

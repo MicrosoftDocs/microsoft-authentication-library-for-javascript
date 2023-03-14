@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Combine all cache types
 fullName: CacheType
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: ADFS

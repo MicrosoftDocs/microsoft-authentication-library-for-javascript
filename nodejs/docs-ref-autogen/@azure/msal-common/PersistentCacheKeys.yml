@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Persistent cache keys MSAL which stay while user is logged in.
 fullName: PersistentCacheKeys
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: ACTIVE_ACCOUNT

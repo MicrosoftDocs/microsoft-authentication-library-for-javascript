@@ -5,6 +5,5 @@ package: '@azure/msal'
 summary: ''
 fullName: InProgressEvents
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface

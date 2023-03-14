@@ -5,7 +5,6 @@ package: '@azure/msal'
 summary: ''
 fullName: AuthResponse
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AuthResponse = {

@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: Counters
+uid: '@azure/msal-common.Counters'
+package: '@azure/msal-common'
+summary: Fields whose value may change throughout a request
+fullName: Counters
+remarks: ''
+isDeprecated: false
+syntax: |
+  type Counters = {
+    incompleteSubsCount?: number,
+    queuedCount?: number,
+    queuedManuallyCompletedCount?: number,
+    visibilityChangeCount?: number,
+  }

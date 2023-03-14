@@ -22,7 +22,6 @@ summary: >+
 
 fullName: FrameworkOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type FrameworkOptions = {
