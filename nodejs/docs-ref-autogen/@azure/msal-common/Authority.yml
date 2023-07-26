@@ -404,3 +404,29 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: transformCIAMAuthority(string)
+    uid: '@azure/msal-common.Authority.transformCIAMAuthority'
+    package: '@azure/msal-common'
+    summary: >
+      Transform CIAM_AUTHORIY as per the below rules:
+
+      If no path segments found and it is a CIAM authority (hostname ends with
+      .ciamlogin.com), then transform it
+
+      NOTE: The transformation path should go away once STS supports CIAM with
+      the format: `tenantIdorDomain.ciamlogin.com`
+
+      `ciamlogin.com` can also change in the future and we should accommodate
+      the same
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function transformCIAMAuthority(authority: string): string'
+      parameters:
+        - id: authority
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: string

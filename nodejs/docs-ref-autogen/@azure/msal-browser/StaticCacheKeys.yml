@@ -1,0 +1,17 @@
+### YamlMime:TSEnum
+name: StaticCacheKeys
+uid: '@azure/msal-browser.StaticCacheKeys'
+package: '@azure/msal-browser'
+summary: ''
+fullName: StaticCacheKeys
+remarks: ''
+isDeprecated: false
+fields:
+  - name: ACCOUNT_KEYS
+    uid: '@azure/msal-browser.StaticCacheKeys.ACCOUNT_KEYS'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: TOKEN_KEYS
+    uid: '@azure/msal-browser.StaticCacheKeys.TOKEN_KEYS'
+    package: '@azure/msal-browser'
+    summary: ''

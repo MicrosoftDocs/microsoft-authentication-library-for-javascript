@@ -108,6 +108,23 @@ methods:
       return:
         description: ''
         type: boolean
+  - name: createSearchScopes(Array<string>)
+    uid: '@azure/msal-common.ScopeSet.createSearchScopes'
+    package: '@azure/msal-common'
+    summary: Creates the set of scopes to search for in cache lookups
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createSearchScopes(inputScopeString: Array<string>):
+        ScopeSet
+      parameters:
+        - id: inputScopeString
+          type: Array&lt;string&gt;
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.ScopeSet" />
   - name: fromString(string)
     uid: '@azure/msal-common.ScopeSet.fromString'
     package: '@azure/msal-common'

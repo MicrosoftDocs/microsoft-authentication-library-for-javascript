@@ -87,12 +87,14 @@ functions:
       navigateToLoginRequestUrl?: boolean, postLogoutRedirectUri?: string |
       null, protocolMode?: ProtocolMode, redirectUri?: string,
       skipAuthorityMetadataCache?: boolean }, userInputCache: { cacheLocation?:
-      BrowserCacheLocation | string, secureCookies?: boolean,
-      storeAuthStateInCookie?: boolean }, userInputSystem: {
-      preventCorsPreflight?: boolean, tokenRenewalOffsetSeconds?: number } & {
-      allowNativeBroker?: boolean, allowRedirectInIframe?: boolean,
-      asyncPopups?: boolean, cryptoOptions?: CryptoOptions, iframeHashTimeout?:
-      number, loadFrameTimeout?: number, loggerOptions?: LoggerOptions,
+      BrowserCacheLocation | string, cacheMigrationEnabled?: boolean,
+      claimsBasedCachingEnabled?: boolean, secureCookies?: boolean,
+      storeAuthStateInCookie?: boolean, temporaryCacheLocation?:
+      BrowserCacheLocation | string }, userInputSystem: { preventCorsPreflight?:
+      boolean, tokenRenewalOffsetSeconds?: number } & { allowNativeBroker?:
+      boolean, allowRedirectInIframe?: boolean, asyncPopups?: boolean,
+      cryptoOptions?: CryptoOptions, iframeHashTimeout?: number,
+      loadFrameTimeout?: number, loggerOptions?: LoggerOptions,
       nativeBrokerHandshakeTimeout?: number, navigateFrameWait?: number,
       navigationClient?: INavigationClient, networkClient?: INetworkModule,
       pollIntervalMilliseconds?: number, redirectNavigationTimeout?: number,
@@ -114,8 +116,10 @@ functions:
         navigateToLoginRequestUrl?: boolean, postLogoutRedirectUri?: string |
         null, protocolMode?: ProtocolMode, redirectUri?: string,
         skipAuthorityMetadataCache?: boolean }, userInputCache: {
-        cacheLocation?: BrowserCacheLocation | string, secureCookies?: boolean,
-        storeAuthStateInCookie?: boolean }, userInputSystem: {
+        cacheLocation?: BrowserCacheLocation | string, cacheMigrationEnabled?:
+        boolean, claimsBasedCachingEnabled?: boolean, secureCookies?: boolean,
+        storeAuthStateInCookie?: boolean, temporaryCacheLocation?:
+        BrowserCacheLocation | string }, userInputSystem: {
         preventCorsPreflight?: boolean, tokenRenewalOffsetSeconds?: number } & {
         allowNativeBroker?: boolean, allowRedirectInIframe?: boolean,
         asyncPopups?: boolean, cryptoOptions?: CryptoOptions,
@@ -136,18 +140,20 @@ functions:
             navigateToLoginRequestUrl?: boolean, postLogoutRedirectUri?: string
             | null, protocolMode?: ProtocolMode, redirectUri?: string,
             skipAuthorityMetadataCache?: boolean }, userInputCache: {
-            cacheLocation?: BrowserCacheLocation | string, secureCookies?:
-            boolean, storeAuthStateInCookie?: boolean }, userInputSystem: {
-            preventCorsPreflight?: boolean, tokenRenewalOffsetSeconds?: number }
-            & { allowNativeBroker?: boolean, allowRedirectInIframe?: boolean,
-            asyncPopups?: boolean, cryptoOptions?: CryptoOptions,
-            iframeHashTimeout?: number, loadFrameTimeout?: number,
-            loggerOptions?: LoggerOptions, nativeBrokerHandshakeTimeout?:
-            number, navigateFrameWait?: number, navigationClient?:
-            INavigationClient, networkClient?: INetworkModule,
-            pollIntervalMilliseconds?: number, redirectNavigationTimeout?:
-            number, windowHashTimeout?: number }, userInputTelemetry: {
-            application?: ApplicationTelemetry } }
+            cacheLocation?: BrowserCacheLocation | string,
+            cacheMigrationEnabled?: boolean, claimsBasedCachingEnabled?:
+            boolean, secureCookies?: boolean, storeAuthStateInCookie?: boolean,
+            temporaryCacheLocation?: BrowserCacheLocation | string },
+            userInputSystem: { preventCorsPreflight?: boolean,
+            tokenRenewalOffsetSeconds?: number } & { allowNativeBroker?:
+            boolean, allowRedirectInIframe?: boolean, asyncPopups?: boolean,
+            cryptoOptions?: CryptoOptions, iframeHashTimeout?: number,
+            loadFrameTimeout?: number, loggerOptions?: LoggerOptions,
+            nativeBrokerHandshakeTimeout?: number, navigateFrameWait?: number,
+            navigationClient?: INavigationClient, networkClient?:
+            INetworkModule, pollIntervalMilliseconds?: number,
+            redirectNavigationTimeout?: number, windowHashTimeout?: number },
+            userInputTelemetry: { application?: ApplicationTelemetry } }
           description: ''
         - id: isBrowserEnvironment
           type: boolean
@@ -166,5 +172,6 @@ enums:
   - '@azure/msal-browser.InteractionStatus'
   - '@azure/msal-browser.InteractionType'
   - '@azure/msal-browser.NativeExtensionMethod'
+  - '@azure/msal-browser.StaticCacheKeys'
   - '@azure/msal-browser.TemporaryCacheKeys'
   - '@azure/msal-browser.WrapperSKU'

@@ -11,6 +11,10 @@ fields:
     uid: '@azure/msal-common.CacheOutcome.CACHED_ACCESS_TOKEN_EXPIRED'
     package: '@azure/msal-common'
     summary: ''
+  - name: CLAIMS_REQUESTED_CACHE_SKIPPED
+    uid: '@azure/msal-common.CacheOutcome.CLAIMS_REQUESTED_CACHE_SKIPPED'
+    package: '@azure/msal-common'
+    summary: ''
   - name: FORCE_REFRESH
     uid: '@azure/msal-common.CacheOutcome.FORCE_REFRESH'
     package: '@azure/msal-common'

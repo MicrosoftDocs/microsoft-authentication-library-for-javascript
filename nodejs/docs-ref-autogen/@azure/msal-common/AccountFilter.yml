@@ -10,6 +10,8 @@ syntax: |
   type AccountFilter = {
     environment?: string,
     homeAccountId?: string,
+    localAccountId?: string,
     nativeAccountId?: string,
     realm?: string,
+    username?: string,
   }

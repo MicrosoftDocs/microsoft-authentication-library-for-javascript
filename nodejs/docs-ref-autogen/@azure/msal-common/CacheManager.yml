@@ -10,14 +10,14 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: 'CacheManager(string, ICrypto)'
+  - name: 'CacheManager(string, ICrypto, Logger)'
     uid: '@azure/msal-common.CacheManager.constructor'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'new CacheManager(clientId: string, cryptoImpl: ICrypto)'
+      content: 'new CacheManager(clientId: string, cryptoImpl: ICrypto, logger: Logger)'
       parameters:
         - id: clientId
           type: string
@@ -25,7 +25,35 @@ constructors:
         - id: cryptoImpl
           type: <xref uid="@azure/msal-common.ICrypto" />
           description: ''
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: ''
 methods:
+  - name: 'accessTokenKeyMatchesFilter(string, CredentialFilter, boolean)'
+    uid: '@azure/msal-common.CacheManager.accessTokenKeyMatchesFilter'
+    package: '@azure/msal-common'
+    summary: >-
+      Validate the cache key against filter before retrieving and parsing cache
+      value
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function accessTokenKeyMatchesFilter(inputKey: string, filter:
+        CredentialFilter, keyMustContainAllScopes: boolean): boolean
+      parameters:
+        - id: inputKey
+          type: string
+          description: ''
+        - id: filter
+          type: <xref uid="@azure/msal-common.CredentialFilter" />
+          description: ''
+        - id: keyMustContainAllScopes
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: boolean
   - name: clear()
     uid: '@azure/msal-common.CacheManager.clear'
     package: '@azure/msal-common'
@@ -56,6 +84,26 @@ methods:
       return:
         description: ''
         type: boolean
+  - name: 'credentialMatchesFilter(ValidCredentialType, CredentialFilter)'
+    uid: '@azure/msal-common.CacheManager.credentialMatchesFilter'
+    package: '@azure/msal-common'
+    summary: Returns whether or not the given credential entity matches the filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function credentialMatchesFilter(entity: ValidCredentialType, filter:
+        CredentialFilter): boolean
+      parameters:
+        - id: entity
+          type: <xref uid="@azure/msal-common.ValidCredentialType" />
+          description: ''
+        - id: filter
+          type: <xref uid="@azure/msal-common.CredentialFilter" />
+          description: ''
+      return:
+        description: ''
+        type: boolean
   - name: generateAuthorityMetadataCacheKey(string)
     uid: '@azure/msal-common.CacheManager.generateAuthorityMetadataCacheKey'
     package: '@azure/msal-common'
@@ -71,6 +119,29 @@ methods:
       return:
         description: ''
         type: string
+  - name: 'getAccessToken(AccountInfo, BaseAuthRequest, TokenKeys)'
+    uid: '@azure/msal-common.CacheManager.getAccessToken'
+    package: '@azure/msal-common'
+    summary: Retrieve AccessTokenEntity from cache
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAccessToken(account: AccountInfo, request: BaseAuthRequest,
+        tokenKeys?: TokenKeys): AccessTokenEntity | null
+      parameters:
+        - id: account
+          type: <xref uid="@azure/msal-common.AccountInfo" />
+          description: ''
+        - id: request
+          type: <xref uid="@azure/msal-common.BaseAuthRequest" />
+          description: ''
+        - id: tokenKeys
+          type: <xref uid="@azure/msal-common.TokenKeys" />
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AccessTokenEntity" /> | null
   - name: getAccessTokenCredential(string)
     uid: '@azure/msal-common.CacheManager.getAccessTokenCredential'
     package: '@azure/msal-common'
@@ -89,6 +160,23 @@ methods:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.AccessTokenEntity" /> | null
+  - name: getAccessTokensByFilter(CredentialFilter)
+    uid: '@azure/msal-common.CacheManager.getAccessTokensByFilter'
+    package: '@azure/msal-common'
+    summary: Gets all access tokens matching the filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAccessTokensByFilter(filter: CredentialFilter):
+        AccessTokenEntity[]
+      parameters:
+        - id: filter
+          type: <xref uid="@azure/msal-common.CredentialFilter" />
+          description: ''
+      return:
+        description: ''
+        type: '<xref uid="@azure/msal-common.AccessTokenEntity" />[]'
   - name: getAccount(string)
     uid: '@azure/msal-common.CacheManager.getAccount'
     package: '@azure/msal-common'
@@ -106,6 +194,34 @@ methods:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.AccountEntity" /> | null
+  - name: getAccountInfoFilteredBy(AccountFilter)
+    uid: '@azure/msal-common.CacheManager.getAccountInfoFilteredBy'
+    package: '@azure/msal-common'
+    summary: Gets accountInfo object based on provided filters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAccountInfoFilteredBy(accountFilter: AccountFilter):
+        AccountInfo | null
+      parameters:
+        - id: accountFilter
+          type: <xref uid="@azure/msal-common.AccountFilter" />
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AccountInfo" /> | null
+  - name: getAccountKeys()
+    uid: '@azure/msal-common.CacheManager.getAccountKeys'
+    package: '@azure/msal-common'
+    summary: Function which retrieves all account keys from the cache
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAccountKeys(): string[]'
+      return:
+        description: ''
+        type: 'string[]'
   - name: getAccountsFilteredBy(AccountFilter)
     uid: '@azure/msal-common.CacheManager.getAccountsFilteredBy'
     package: '@azure/msal-common'
@@ -119,15 +235,15 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getAccountsFilteredBy(accountFilter?: AccountFilter):
-        AccountCache
+        function getAccountsFilteredBy(accountFilter: AccountFilter):
+        AccountEntity[]
       parameters:
         - id: accountFilter
           type: <xref uid="@azure/msal-common.AccountFilter" />
           description: ''
       return:
         description: ''
-        type: <xref uid="@azure/msal-common.AccountCache" />
+        type: '<xref uid="@azure/msal-common.AccountEntity" />[]'
   - name: getAllAccounts()
     uid: '@azure/msal-common.CacheManager.getAllAccounts'
     package: '@azure/msal-common'
@@ -223,25 +339,26 @@ methods:
       return:
         description: ''
         type: Array&lt;string&gt;
-  - name: getCredentialsFilteredBy(CredentialFilter)
-    uid: '@azure/msal-common.CacheManager.getCredentialsFilteredBy'
+  - name: 'getIdToken(AccountInfo, TokenKeys)'
+    uid: '@azure/msal-common.CacheManager.getIdToken'
     package: '@azure/msal-common'
-    summary: >-
-      retrieve credentails matching all provided filters; if no filter is set,
-      get all credentials
+    summary: Retrieve IdTokenEntity from cache
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function getCredentialsFilteredBy(filter: CredentialFilter):
-        CredentialCache
+        function getIdToken(account: AccountInfo, tokenKeys?: TokenKeys):
+        IdTokenEntity | null
       parameters:
-        - id: filter
-          type: <xref uid="@azure/msal-common.CredentialFilter" />
+        - id: account
+          type: <xref uid="@azure/msal-common.AccountInfo" />
+          description: ''
+        - id: tokenKeys
+          type: <xref uid="@azure/msal-common.TokenKeys" />
           description: ''
       return:
         description: ''
-        type: <xref uid="@azure/msal-common.CredentialCache" />
+        type: <xref uid="@azure/msal-common.IdTokenEntity" /> | null
   - name: getIdTokenCredential(string)
     uid: '@azure/msal-common.CacheManager.getIdTokenCredential'
     package: '@azure/msal-common'
@@ -258,6 +375,26 @@ methods:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.IdTokenEntity" /> | null
+  - name: 'getIdTokensByFilter(CredentialFilter, TokenKeys)'
+    uid: '@azure/msal-common.CacheManager.getIdTokensByFilter'
+    package: '@azure/msal-common'
+    summary: Gets all idTokens matching the given filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getIdTokensByFilter(filter: CredentialFilter, tokenKeys?:
+        TokenKeys): IdTokenEntity[]
+      parameters:
+        - id: filter
+          type: <xref uid="@azure/msal-common.CredentialFilter" />
+          description: ''
+        - id: tokenKeys
+          type: <xref uid="@azure/msal-common.TokenKeys" />
+          description: ''
+      return:
+        description: ''
+        type: '<xref uid="@azure/msal-common.IdTokenEntity" />[]'
   - name: getKeys()
     uid: '@azure/msal-common.CacheManager.getKeys'
     package: '@azure/msal-common'
@@ -269,6 +406,30 @@ methods:
       return:
         description: ''
         type: 'string[]'
+  - name: 'getRefreshToken(AccountInfo, boolean, TokenKeys)'
+    uid: '@azure/msal-common.CacheManager.getRefreshToken'
+    package: '@azure/msal-common'
+    summary: Helper to retrieve the appropriate refresh token from cache
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRefreshToken(account: AccountInfo, familyRT: boolean,
+        tokenKeys?: TokenKeys): RefreshTokenEntity | null
+      parameters:
+        - id: account
+          type: <xref uid="@azure/msal-common.AccountInfo" />
+          description: ''
+        - id: familyRT
+          type: boolean
+          description: |+
+
+        - id: tokenKeys
+          type: <xref uid="@azure/msal-common.TokenKeys" />
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.RefreshTokenEntity" /> | null
   - name: getRefreshTokenCredential(string)
     uid: '@azure/msal-common.CacheManager.getRefreshTokenCredential'
     package: '@azure/msal-common'
@@ -323,50 +484,95 @@ methods:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.ThrottlingEntity" /> | null
-  - name: 'isAppMetadataFOCI(string, string)'
+  - name: getTokenKeys()
+    uid: '@azure/msal-common.CacheManager.getTokenKeys'
+    package: '@azure/msal-common'
+    summary: Function which retrieves all token keys from the cache
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getTokenKeys(): TokenKeys'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.TokenKeys" />
+  - name: 'idTokenKeyMatchesFilter(string, CredentialFilter)'
+    uid: '@azure/msal-common.CacheManager.idTokenKeyMatchesFilter'
+    package: '@azure/msal-common'
+    summary: >-
+      Validate the cache key against filter before retrieving and parsing cache
+      value
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function idTokenKeyMatchesFilter(inputKey: string, filter:
+        CredentialFilter): boolean
+      parameters:
+        - id: inputKey
+          type: string
+          description: ''
+        - id: filter
+          type: <xref uid="@azure/msal-common.CredentialFilter" />
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: 'isAccountKey(string, string, string)'
+    uid: '@azure/msal-common.CacheManager.isAccountKey'
+    package: '@azure/msal-common'
+    summary: >-
+      Returns true if the given key matches our account key schema. Also matches
+      homeAccountId and/or tenantId if provided
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function isAccountKey(key: string, homeAccountId?: string, tenantId?:
+        string): boolean
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: homeAccountId
+          type: string
+          description: ''
+        - id: tenantId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: isAppMetadataFOCI(string)
     uid: '@azure/msal-common.CacheManager.isAppMetadataFOCI'
     package: '@azure/msal-common'
     summary: Return the family_id value associated  with FOCI
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        function isAppMetadataFOCI(environment: string, clientId: string):
-        boolean
+      content: 'function isAppMetadataFOCI(environment: string): boolean'
       parameters:
         - id: environment
           type: string
           description: ''
-        - id: clientId
+      return:
+        description: ''
+        type: boolean
+  - name: isCredentialKey(string)
+    uid: '@azure/msal-common.CacheManager.isCredentialKey'
+    package: '@azure/msal-common'
+    summary: Returns true if the given key matches our credential key schema.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCredentialKey(key: string): boolean'
+      parameters:
+        - id: key
           type: string
           description: |+
 
       return:
         description: ''
         type: boolean
-  - name: 'readAccessTokenFromCache(string, AccountInfo, BaseAuthRequest)'
-    uid: '@azure/msal-common.CacheManager.readAccessTokenFromCache'
-    package: '@azure/msal-common'
-    summary: Retrieve AccessTokenEntity from cache
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function readAccessTokenFromCache(clientId: string, account:
-        AccountInfo, request: BaseAuthRequest): AccessTokenEntity | null
-      parameters:
-        - id: clientId
-          type: string
-          description: ''
-        - id: account
-          type: <xref uid="@azure/msal-common.AccountInfo" />
-          description: ''
-        - id: request
-          type: <xref uid="@azure/msal-common.BaseAuthRequest" />
-          description: ''
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-common.AccessTokenEntity" /> | null
   - name: readAccountFromCache(AccountInfo)
     uid: '@azure/msal-common.CacheManager.readAccountFromCache'
     package: '@azure/msal-common'
@@ -385,24 +591,7 @@ methods:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.AccountEntity" /> | null
-  - name: readAccountFromCacheWithNativeAccountId(string)
-    uid: '@azure/msal-common.CacheManager.readAccountFromCacheWithNativeAccountId'
-    package: '@azure/msal-common'
-    summary: Retrieve AccountEntity from cache
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function readAccountFromCacheWithNativeAccountId(nativeAccountId:
-        string): AccountEntity | null
-      parameters:
-        - id: nativeAccountId
-          type: string
-          description: ''
-      return:
-        description: AccountEntity or Null
-        type: <xref uid="@azure/msal-common.AccountEntity" /> | null
-  - name: 'readAppMetadataFromCache(string, string)'
+  - name: readAppMetadataFromCache(string)
     uid: '@azure/msal-common.CacheManager.readAppMetadataFromCache'
     package: '@azure/msal-common'
     summary: Retrieve AppMetadataEntity from cache
@@ -410,19 +599,16 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function readAppMetadataFromCache(environment: string, clientId:
-        string): AppMetadataEntity | null
+        function readAppMetadataFromCache(environment: string):
+        AppMetadataEntity | null
       parameters:
         - id: environment
-          type: string
-          description: ''
-        - id: clientId
           type: string
           description: ''
       return:
         description: ''
         type: <xref uid="@azure/msal-common.AppMetadataEntity" /> | null
-  - name: 'readCacheRecord(AccountInfo, string, BaseAuthRequest, string)'
+  - name: 'readCacheRecord(AccountInfo, BaseAuthRequest, string)'
     uid: '@azure/msal-common.CacheManager.readCacheRecord'
     package: '@azure/msal-common'
     summary: Retrieve the cached credentials into a cacherecord
@@ -430,14 +616,11 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function readCacheRecord(account: AccountInfo, clientId: string,
-        request: BaseAuthRequest, environment: string): CacheRecord
+        function readCacheRecord(account: AccountInfo, request: BaseAuthRequest,
+        environment: string): CacheRecord
       parameters:
         - id: account
           type: <xref uid="@azure/msal-common.AccountInfo" />
-          description: ''
-        - id: clientId
-          type: string
           description: ''
         - id: request
           type: <xref uid="@azure/msal-common.BaseAuthRequest" />
@@ -448,65 +631,59 @@ methods:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.CacheRecord" />
-  - name: 'readIdTokenFromCache(string, AccountInfo)'
-    uid: '@azure/msal-common.CacheManager.readIdTokenFromCache'
+  - name: 'refreshTokenKeyMatchesFilter(string, CredentialFilter)'
+    uid: '@azure/msal-common.CacheManager.refreshTokenKeyMatchesFilter'
     package: '@azure/msal-common'
-    summary: Retrieve IdTokenEntity from cache
+    summary: >-
+      Validate the cache key against filter before retrieving and parsing cache
+      value
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function readIdTokenFromCache(clientId: string, account: AccountInfo):
-        IdTokenEntity | null
+        function refreshTokenKeyMatchesFilter(inputKey: string, filter:
+        CredentialFilter): boolean
       parameters:
-        - id: clientId
+        - id: inputKey
           type: string
           description: ''
-        - id: account
-          type: <xref uid="@azure/msal-common.AccountInfo" />
-          description: ''
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-common.IdTokenEntity" /> | null
-  - name: 'readRefreshTokenFromCache(string, AccountInfo, boolean)'
-    uid: '@azure/msal-common.CacheManager.readRefreshTokenFromCache'
-    package: '@azure/msal-common'
-    summary: Helper to retrieve the appropriate refresh token from cache
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function readRefreshTokenFromCache(clientId: string, account:
-        AccountInfo, familyRT: boolean): RefreshTokenEntity | null
-      parameters:
-        - id: clientId
-          type: string
-          description: ''
-        - id: account
-          type: <xref uid="@azure/msal-common.AccountInfo" />
-          description: ''
-        - id: familyRT
-          type: boolean
+        - id: filter
+          type: <xref uid="@azure/msal-common.CredentialFilter" />
           description: |+
 
       return:
         description: ''
-        type: <xref uid="@azure/msal-common.RefreshTokenEntity" /> | null
-  - name: removeAccount(string)
-    uid: '@azure/msal-common.CacheManager.removeAccount'
+        type: boolean
+  - name: removeAccessToken(string)
+    uid: '@azure/msal-common.CacheManager.removeAccessToken'
     package: '@azure/msal-common'
-    summary: returns a boolean if the given account is removed
+    summary: returns a boolean if the given credential is removed
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function removeAccount(accountKey: string): Promise<boolean>'
+      content: 'function removeAccessToken(key: string): Promise<void>'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: removeAccount(string)
+    uid: '@azure/msal-common.CacheManager.removeAccount'
+    package: '@azure/msal-common'
+    summary: Removes the account and related tokens for a given account key
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removeAccount(accountKey: string): Promise<void>'
       parameters:
         - id: accountKey
           type: string
           description: ''
       return:
         description: ''
-        type: Promise&lt;boolean&gt;
+        type: Promise&lt;void&gt;
   - name: removeAccountContext(AccountEntity)
     uid: '@azure/msal-common.CacheManager.removeAccountContext'
     package: '@azure/msal-common'
@@ -514,7 +691,7 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function removeAccountContext(account: AccountEntity): Promise<boolean>'
+      content: 'function removeAccountContext(account: AccountEntity): Promise<void>'
       parameters:
         - id: account
           type: <xref uid="@azure/msal-common.AccountEntity" />
@@ -522,7 +699,7 @@ methods:
 
       return:
         description: ''
-        type: Promise&lt;boolean&gt;
+        type: Promise&lt;void&gt;
   - name: removeAllAccounts()
     uid: '@azure/msal-common.CacheManager.removeAllAccounts'
     package: '@azure/msal-common'
@@ -530,10 +707,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function removeAllAccounts(): Promise<boolean>'
+      content: 'function removeAllAccounts(): Promise<void>'
       return:
         description: ''
-        type: Promise&lt;boolean&gt;
+        type: Promise&lt;void&gt;
   - name: removeAppMetadata()
     uid: '@azure/msal-common.CacheManager.removeAppMetadata'
     package: '@azure/msal-common'
@@ -545,43 +722,45 @@ methods:
       return:
         description: ''
         type: boolean
-  - name: removeCredential(CredentialEntity)
-    uid: '@azure/msal-common.CacheManager.removeCredential'
+  - name: removeIdToken(string)
+    uid: '@azure/msal-common.CacheManager.removeIdToken'
     package: '@azure/msal-common'
-    summary: returns a boolean if the given credential is removed
+    summary: Removes idToken from the cache
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        function removeCredential(credential: CredentialEntity):
-        Promise<boolean>
+      content: 'function removeIdToken(key: string)'
       parameters:
-        - id: credential
-          type: <xref uid="@azure/msal-common.CredentialEntity" />
+        - id: key
+          type: string
           description: |+
 
-      return:
-        description: ''
-        type: Promise&lt;boolean&gt;
-  - name: 'removeItem(string, string)'
+  - name: removeItem(string)
     uid: '@azure/msal-common.CacheManager.removeItem'
     package: '@azure/msal-common'
     summary: Function to remove an item from cache given its key.
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function removeItem(key: string, type?: string): boolean'
+      content: 'function removeItem(key: string)'
       parameters:
         - id: key
           type: string
           description: |+
 
-        - id: type
+  - name: removeRefreshToken(string)
+    uid: '@azure/msal-common.CacheManager.removeRefreshToken'
+    package: '@azure/msal-common'
+    summary: Removes refresh token from the cache
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removeRefreshToken(key: string)'
+      parameters:
+        - id: key
           type: string
-          description: ''
-      return:
-        description: ''
-        type: boolean
+          description: |+
+
   - name: saveCacheRecord(CacheRecord)
     uid: '@azure/msal-common.CacheManager.saveCacheRecord'
     package: '@azure/msal-common'

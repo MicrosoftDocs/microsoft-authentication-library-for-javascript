@@ -22,3 +22,8 @@ fields:
     package: '@azure/msal-common'
     summary: ''
     numericValue: 2
+  - name: Ciam
+    uid: '@azure/msal-common.AuthorityType.Ciam'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 3

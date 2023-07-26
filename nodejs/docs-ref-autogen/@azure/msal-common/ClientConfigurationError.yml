@@ -971,6 +971,19 @@ inheritedMethods:
       <b>Inherited From</b>
       [AuthError.setCorrelationId](xref:@azure/msal-common.AuthError.setCorrelationId)
 methods:
+  - name: createAuthorityMismatchError()
+    uid: '@azure/msal-common.ClientConfigurationError.createAuthorityMismatchError'
+    package: '@azure/msal-common'
+    summary: >-
+      Create an error when the authority provided in request does not match
+      authority provided in account or MSAL.js configuration.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function createAuthorityMismatchError(): ClientConfigurationError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.ClientConfigurationError" />
   - name: createClaimsRequestParsingError(string)
     uid: >-
       @azure/msal-common.ClientConfigurationError.createClaimsRequestParsingError

@@ -82,6 +82,29 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [BaseInteractionClient.getRedirectUri](xref:@azure/msal-browser.BaseInteractionClient.getRedirectUri)
+  - name: 'validateRequestAuthority(string, AccountInfo)'
+    uid: '@azure/msal-browser.NativeInteractionClient.validateRequestAuthority'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function validateRequestAuthority(authority: string, account:
+        AccountInfo): Promise<void>
+      parameters:
+        - id: authority
+          type: string
+          description: ''
+        - id: account
+          type: AccountInfo
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseInteractionClient.validateRequestAuthority](xref:@azure/msal-browser.BaseInteractionClient.validateRequestAuthority)
 methods:
   - name: acquireToken(PopupRequest | SilentRequest | SsoSilentRequest)
     uid: '@azure/msal-browser.NativeInteractionClient.acquireToken'
@@ -136,8 +159,8 @@ methods:
           description: |+
 
   - name: >-
-      cacheNativeTokens(NativeResponse, NativeTokenRequest, string, AuthToken,
-      string, string, number)
+      cacheNativeTokens(NativeResponse, NativeTokenRequest, string,
+      AccountEntity, AuthToken, string, string, number)
     uid: '@azure/msal-browser.NativeInteractionClient.cacheNativeTokens'
     package: '@azure/msal-browser'
     summary: Stores the access_token and id_token in inmemory storage
@@ -146,9 +169,9 @@ methods:
     syntax:
       content: >-
         function cacheNativeTokens(response: NativeResponse, request:
-        NativeTokenRequest, homeAccountIdentifier: string, idTokenObj:
-        AuthToken, responseAccessToken: string, tenantId: string, reqTimestamp:
-        number)
+        NativeTokenRequest, homeAccountIdentifier: string, accountEntity:
+        AccountEntity, idTokenObj: AuthToken, responseAccessToken: string,
+        tenantId: string, reqTimestamp: number)
       parameters:
         - id: response
           type: <xref uid="@azure/msal-browser.NativeResponse" />
@@ -158,6 +181,9 @@ methods:
           description: ''
         - id: homeAccountIdentifier
           type: string
+          description: ''
+        - id: accountEntity
+          type: AccountEntity
           description: ''
         - id: idTokenObj
           type: AuthToken

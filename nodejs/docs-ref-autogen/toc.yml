@@ -430,6 +430,9 @@
     - uid: '@azure/msal-browser.StandardInteractionClient'
       name: StandardInteractionClient
       items: []
+    - uid: '@azure/msal-browser.StaticCacheKeys'
+      name: StaticCacheKeys
+      items: []
     - uid: '@azure/msal-browser.TemporaryCacheKeys'
       name: TemporaryCacheKeys
       items: []
@@ -554,14 +557,14 @@
     - uid: '@azure/msal-common.CacheManager'
       name: CacheManager
       items: []
+    - uid: '@azure/msal-common.CacheOptions'
+      name: CacheOptions
+      items: []
     - uid: '@azure/msal-common.CacheOutcome'
       name: CacheOutcome
       items: []
     - uid: '@azure/msal-common.CacheRecord'
       name: CacheRecord
-      items: []
-    - uid: '@azure/msal-common.CacheSchemaType'
-      name: CacheSchemaType
       items: []
     - uid: '@azure/msal-common.CacheType'
       name: CacheType
@@ -631,9 +634,6 @@
       items: []
     - uid: '@azure/msal-common.Counters'
       name: Counters
-      items: []
-    - uid: '@azure/msal-common.CredentialCache'
-      name: CredentialCache
       items: []
     - uid: '@azure/msal-common.CredentialEntity'
       name: CredentialEntity
@@ -913,6 +913,9 @@
       items: []
     - uid: '@azure/msal-common.TokenClaims'
       name: TokenClaims
+      items: []
+    - uid: '@azure/msal-common.TokenKeys'
+      name: TokenKeys
       items: []
     - uid: '@azure/msal-common.UrlString'
       name: UrlString

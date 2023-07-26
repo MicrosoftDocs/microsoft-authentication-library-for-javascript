@@ -31,6 +31,8 @@ syntax: |
     roles?: string[],
     sid?: string,
     sub?: string,
+    tenant_region_scope?: string,
+    tenant_region_sub_scope?: string,
     tid?: string,
     ts?: number,
     u?: string,

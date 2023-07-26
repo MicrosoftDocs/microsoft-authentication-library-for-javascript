@@ -18,6 +18,8 @@ summary: >
 
   - loggerOptions              - Logging for application
 
+  - cacheOptions               - Cache options for application
+
   - networkInterface           - Network implementation
 
   - storageInterface           - Storage implementation
@@ -31,6 +33,7 @@ isDeprecated: false
 syntax: |
   type ClientConfiguration = {
     authOptions: AuthOptions,
+    cacheOptions?: CacheOptions,
     clientCredentials?: ClientCredentials,
     cryptoInterface?: ICrypto,
     libraryInfo?: LibraryInfo,

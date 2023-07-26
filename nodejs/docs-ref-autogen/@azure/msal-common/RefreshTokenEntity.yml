@@ -328,25 +328,6 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [CredentialEntity.generateType](xref:@azure/msal-common.CredentialEntity.generateType)
-  - name: getCredentialType(string)
-    uid: '@azure/msal-common.RefreshTokenEntity.getCredentialType'
-    package: '@azure/msal-common'
-    summary: helper function to return `CredentialType`
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'static function getCredentialType(key: string): string'
-      parameters:
-        - id: key
-          type: string
-          description: |+
-
-      return:
-        description: ''
-        type: string
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [CredentialEntity.getCredentialType](xref:@azure/msal-common.CredentialEntity.getCredentialType)
 methods:
   - name: 'createRefreshTokenEntity(string, string, string, string, string, string)'
     uid: '@azure/msal-common.RefreshTokenEntity.createRefreshTokenEntity'

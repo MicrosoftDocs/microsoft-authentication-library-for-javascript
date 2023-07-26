@@ -103,3 +103,23 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: 'validateRequestAuthority(string, AccountInfo)'
+    uid: '@azure/msal-browser.BaseInteractionClient.validateRequestAuthority'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function validateRequestAuthority(authority: string, account:
+        AccountInfo): Promise<void>
+      parameters:
+        - id: authority
+          type: string
+          description: ''
+        - id: account
+          type: AccountInfo
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;

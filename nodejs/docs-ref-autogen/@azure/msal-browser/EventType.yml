@@ -91,6 +91,10 @@ fields:
     uid: '@azure/msal-browser.EventType.POPUP_OPENED'
     package: '@azure/msal-browser'
     summary: ''
+  - name: RESTORE_FROM_BFCACHE
+    uid: '@azure/msal-browser.EventType.RESTORE_FROM_BFCACHE'
+    package: '@azure/msal-browser'
+    summary: ''
   - name: SSO_SILENT_FAILURE
     uid: '@azure/msal-browser.EventType.SSO_SILENT_FAILURE'
     package: '@azure/msal-browser'

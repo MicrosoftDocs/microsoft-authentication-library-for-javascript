@@ -9,6 +9,7 @@ isDeprecated: false
 syntax: |
   type CommonClientConfiguration = {
     authOptions: Required<AuthOptions>,
+    cacheOptions: Required<CacheOptions>,
     clientCredentials: ClientCredentials,
     cryptoInterface: Required<ICrypto>,
     libraryInfo: LibraryInfo,

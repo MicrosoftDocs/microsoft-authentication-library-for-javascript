@@ -208,9 +208,9 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getAccountByUsername(userName: string): AccountInfo | null'
+      content: 'function getAccountByUsername(username: string): AccountInfo | null'
       parameters:
-        - id: userName
+        - id: username
           type: string
           description: ''
       return:

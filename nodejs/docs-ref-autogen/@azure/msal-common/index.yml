@@ -22,10 +22,10 @@ typeAliases:
   - '@azure/msal-common.AccountFilter'
   - '@azure/msal-common.AppMetadataCache'
   - '@azure/msal-common.AppMetadataFilter'
-  - '@azure/msal-common.CredentialCache'
   - '@azure/msal-common.CredentialFilter'
   - '@azure/msal-common.IdTokenCache'
   - '@azure/msal-common.RefreshTokenCache'
+  - '@azure/msal-common.TokenKeys'
   - '@azure/msal-common.ValidCacheType'
   - '@azure/msal-common.ValidCredentialType'
   - '@azure/msal-common.AppTokenProviderParameters'
@@ -33,6 +33,7 @@ typeAliases:
   - '@azure/msal-common.ApplicationTelemetry'
   - '@azure/msal-common.AuthOptions'
   - '@azure/msal-common.AzureCloudOptions'
+  - '@azure/msal-common.CacheOptions'
   - '@azure/msal-common.ClientConfiguration'
   - '@azure/msal-common.CommonClientConfiguration'
   - '@azure/msal-common.LibraryInfo'
@@ -139,7 +140,6 @@ enums:
   - '@azure/msal-common.AuthorityMetadataSource'
   - '@azure/msal-common.CacheAccountType'
   - '@azure/msal-common.CacheOutcome'
-  - '@azure/msal-common.CacheSchemaType'
   - '@azure/msal-common.CacheType'
   - '@azure/msal-common.ClaimsRequestKeys'
   - '@azure/msal-common.CredentialType'
@@ -219,6 +219,7 @@ functions:
       application: ApplicationTelemetry }, userAuthOptions: { authority:
       Authority, azureCloudOptions?: AzureCloudOptions, clientCapabilities?:
       Array<string>, clientId: string, skipAuthorityMetadataCache?: boolean },
+      userCacheOptions: { claimsBasedCachingEnabled?: boolean },
       userLoggerOption: { correlationId?: string, logLevel?: LogLevel,
       loggerCallback?: ILoggerCallback, piiLoggingEnabled?: boolean },
       userSystemOptions: { preventCorsPreflight?: boolean,
@@ -242,6 +243,7 @@ functions:
         ApplicationTelemetry }, userAuthOptions: { authority: Authority,
         azureCloudOptions?: AzureCloudOptions, clientCapabilities?:
         Array<string>, clientId: string, skipAuthorityMetadataCache?: boolean },
+        userCacheOptions: { claimsBasedCachingEnabled?: boolean },
         userLoggerOption: { correlationId?: string, logLevel?: LogLevel,
         loggerCallback?: ILoggerCallback, piiLoggingEnabled?: boolean },
         userSystemOptions: { preventCorsPreflight?: boolean,
@@ -259,9 +261,10 @@ functions:
             ApplicationTelemetry }, userAuthOptions: { authority: Authority,
             azureCloudOptions?: AzureCloudOptions, clientCapabilities?:
             Array&lt;string&gt;, clientId: string, skipAuthorityMetadataCache?:
-            boolean }, userLoggerOption: { correlationId?: string, logLevel?:
-            LogLevel, loggerCallback?: ILoggerCallback, piiLoggingEnabled?:
-            boolean }, userSystemOptions: { preventCorsPreflight?: boolean,
+            boolean }, userCacheOptions: { claimsBasedCachingEnabled?: boolean
+            }, userLoggerOption: { correlationId?: string, logLevel?: LogLevel,
+            loggerCallback?: ILoggerCallback, piiLoggingEnabled?: boolean },
+            userSystemOptions: { preventCorsPreflight?: boolean,
             tokenRenewalOffsetSeconds?: number } }
           description: ''
       return:

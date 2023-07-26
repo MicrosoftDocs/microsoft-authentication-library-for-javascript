@@ -38,6 +38,53 @@ constructors:
           type: Logger
           description: ''
 inheritedMethods:
+  - name: 'accessTokenKeyMatchesFilter(string, CredentialFilter, boolean)'
+    uid: '@azure/msal-browser.BrowserCacheManager.accessTokenKeyMatchesFilter'
+    package: '@azure/msal-browser'
+    summary: >-
+      Validate the cache key against filter before retrieving and parsing cache
+      value
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function accessTokenKeyMatchesFilter(inputKey: string, filter:
+        CredentialFilter, keyMustContainAllScopes: boolean): boolean
+      parameters:
+        - id: inputKey
+          type: string
+          description: ''
+        - id: filter
+          type: CredentialFilter
+          description: ''
+        - id: keyMustContainAllScopes
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> CacheManager.accessTokenKeyMatchesFilter
+  - name: 'credentialMatchesFilter(ValidCredentialType, CredentialFilter)'
+    uid: '@azure/msal-browser.BrowserCacheManager.credentialMatchesFilter'
+    package: '@azure/msal-browser'
+    summary: Returns whether or not the given credential entity matches the filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function credentialMatchesFilter(entity: ValidCredentialType, filter:
+        CredentialFilter): boolean
+      parameters:
+        - id: entity
+          type: ValidCredentialType
+          description: ''
+        - id: filter
+          type: CredentialFilter
+          description: ''
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> CacheManager.credentialMatchesFilter
   - name: generateAuthorityMetadataCacheKey(string)
     uid: '@azure/msal-browser.BrowserCacheManager.generateAuthorityMetadataCacheKey'
     package: '@azure/msal-browser'
@@ -54,6 +101,66 @@ inheritedMethods:
         description: ''
         type: string
     inheritanceDescription: <b>Inherited From</b> CacheManager.generateAuthorityMetadataCacheKey
+  - name: 'getAccessToken(AccountInfo, BaseAuthRequest, TokenKeys)'
+    uid: '@azure/msal-browser.BrowserCacheManager.getAccessToken'
+    package: '@azure/msal-browser'
+    summary: Retrieve AccessTokenEntity from cache
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAccessToken(account: AccountInfo, request: BaseAuthRequest,
+        tokenKeys?: TokenKeys): AccessTokenEntity | null
+      parameters:
+        - id: account
+          type: AccountInfo
+          description: ''
+        - id: request
+          type: BaseAuthRequest
+          description: ''
+        - id: tokenKeys
+          type: TokenKeys
+          description: ''
+      return:
+        description: ''
+        type: AccessTokenEntity | null
+    inheritanceDescription: <b>Inherited From</b> CacheManager.getAccessToken
+  - name: getAccessTokensByFilter(CredentialFilter)
+    uid: '@azure/msal-browser.BrowserCacheManager.getAccessTokensByFilter'
+    package: '@azure/msal-browser'
+    summary: Gets all access tokens matching the filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAccessTokensByFilter(filter: CredentialFilter):
+        AccessTokenEntity[]
+      parameters:
+        - id: filter
+          type: CredentialFilter
+          description: ''
+      return:
+        description: ''
+        type: 'AccessTokenEntity[]'
+    inheritanceDescription: <b>Inherited From</b> CacheManager.getAccessTokensByFilter
+  - name: getAccountInfoFilteredBy(AccountFilter)
+    uid: '@azure/msal-browser.BrowserCacheManager.getAccountInfoFilteredBy'
+    package: '@azure/msal-browser'
+    summary: Gets accountInfo object based on provided filters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAccountInfoFilteredBy(accountFilter: AccountFilter):
+        AccountInfo | null
+      parameters:
+        - id: accountFilter
+          type: AccountFilter
+          description: ''
+      return:
+        description: ''
+        type: AccountInfo | null
+    inheritanceDescription: <b>Inherited From</b> CacheManager.getAccountInfoFilteredBy
   - name: getAccountsFilteredBy(AccountFilter)
     uid: '@azure/msal-browser.BrowserCacheManager.getAccountsFilteredBy'
     package: '@azure/msal-browser'
@@ -67,15 +174,15 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function getAccountsFilteredBy(accountFilter?: AccountFilter):
-        AccountCache
+        function getAccountsFilteredBy(accountFilter: AccountFilter):
+        AccountEntity[]
       parameters:
         - id: accountFilter
           type: AccountFilter
           description: ''
       return:
         description: ''
-        type: AccountCache
+        type: 'AccountEntity[]'
     inheritanceDescription: <b>Inherited From</b> CacheManager.getAccountsFilteredBy
   - name: getAllAccounts()
     uid: '@azure/msal-browser.BrowserCacheManager.getAllAccounts'
@@ -128,72 +235,155 @@ inheritedMethods:
         description: ''
         type: AuthorityMetadataEntity | null
     inheritanceDescription: <b>Inherited From</b> CacheManager.getAuthorityMetadataByAlias
-  - name: getCredentialsFilteredBy(CredentialFilter)
-    uid: '@azure/msal-browser.BrowserCacheManager.getCredentialsFilteredBy'
+  - name: 'getIdToken(AccountInfo, TokenKeys)'
+    uid: '@azure/msal-browser.BrowserCacheManager.getIdToken'
     package: '@azure/msal-browser'
-    summary: >-
-      retrieve credentails matching all provided filters; if no filter is set,
-      get all credentials
+    summary: Retrieve IdTokenEntity from cache
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function getCredentialsFilteredBy(filter: CredentialFilter):
-        CredentialCache
+        function getIdToken(account: AccountInfo, tokenKeys?: TokenKeys):
+        IdTokenEntity | null
       parameters:
+        - id: account
+          type: AccountInfo
+          description: ''
+        - id: tokenKeys
+          type: TokenKeys
+          description: ''
+      return:
+        description: ''
+        type: IdTokenEntity | null
+    inheritanceDescription: <b>Inherited From</b> CacheManager.getIdToken
+  - name: 'getIdTokensByFilter(CredentialFilter, TokenKeys)'
+    uid: '@azure/msal-browser.BrowserCacheManager.getIdTokensByFilter'
+    package: '@azure/msal-browser'
+    summary: Gets all idTokens matching the given filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getIdTokensByFilter(filter: CredentialFilter, tokenKeys?:
+        TokenKeys): IdTokenEntity[]
+      parameters:
+        - id: filter
+          type: CredentialFilter
+          description: ''
+        - id: tokenKeys
+          type: TokenKeys
+          description: ''
+      return:
+        description: ''
+        type: 'IdTokenEntity[]'
+    inheritanceDescription: <b>Inherited From</b> CacheManager.getIdTokensByFilter
+  - name: 'getRefreshToken(AccountInfo, boolean, TokenKeys)'
+    uid: '@azure/msal-browser.BrowserCacheManager.getRefreshToken'
+    package: '@azure/msal-browser'
+    summary: Helper to retrieve the appropriate refresh token from cache
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRefreshToken(account: AccountInfo, familyRT: boolean,
+        tokenKeys?: TokenKeys): RefreshTokenEntity | null
+      parameters:
+        - id: account
+          type: AccountInfo
+          description: ''
+        - id: familyRT
+          type: boolean
+          description: |+
+
+        - id: tokenKeys
+          type: TokenKeys
+          description: ''
+      return:
+        description: ''
+        type: RefreshTokenEntity | null
+    inheritanceDescription: <b>Inherited From</b> CacheManager.getRefreshToken
+  - name: 'idTokenKeyMatchesFilter(string, CredentialFilter)'
+    uid: '@azure/msal-browser.BrowserCacheManager.idTokenKeyMatchesFilter'
+    package: '@azure/msal-browser'
+    summary: >-
+      Validate the cache key against filter before retrieving and parsing cache
+      value
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function idTokenKeyMatchesFilter(inputKey: string, filter:
+        CredentialFilter): boolean
+      parameters:
+        - id: inputKey
+          type: string
+          description: ''
         - id: filter
           type: CredentialFilter
           description: ''
       return:
         description: ''
-        type: CredentialCache
-    inheritanceDescription: <b>Inherited From</b> CacheManager.getCredentialsFilteredBy
-  - name: 'isAppMetadataFOCI(string, string)'
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> CacheManager.idTokenKeyMatchesFilter
+  - name: 'isAccountKey(string, string, string)'
+    uid: '@azure/msal-browser.BrowserCacheManager.isAccountKey'
+    package: '@azure/msal-browser'
+    summary: >-
+      Returns true if the given key matches our account key schema. Also matches
+      homeAccountId and/or tenantId if provided
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function isAccountKey(key: string, homeAccountId?: string, tenantId?:
+        string): boolean
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: homeAccountId
+          type: string
+          description: ''
+        - id: tenantId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> CacheManager.isAccountKey
+  - name: isAppMetadataFOCI(string)
     uid: '@azure/msal-browser.BrowserCacheManager.isAppMetadataFOCI'
     package: '@azure/msal-browser'
     summary: Return the family_id value associated  with FOCI
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        function isAppMetadataFOCI(environment: string, clientId: string):
-        boolean
+      content: 'function isAppMetadataFOCI(environment: string): boolean'
       parameters:
         - id: environment
           type: string
           description: ''
-        - id: clientId
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> CacheManager.isAppMetadataFOCI
+  - name: isCredentialKey(string)
+    uid: '@azure/msal-browser.BrowserCacheManager.isCredentialKey'
+    package: '@azure/msal-browser'
+    summary: Returns true if the given key matches our credential key schema.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCredentialKey(key: string): boolean'
+      parameters:
+        - id: key
           type: string
           description: |+
 
       return:
         description: ''
         type: boolean
-    inheritanceDescription: <b>Inherited From</b> CacheManager.isAppMetadataFOCI
-  - name: 'readAccessTokenFromCache(string, AccountInfo, BaseAuthRequest)'
-    uid: '@azure/msal-browser.BrowserCacheManager.readAccessTokenFromCache'
-    package: '@azure/msal-browser'
-    summary: Retrieve AccessTokenEntity from cache
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function readAccessTokenFromCache(clientId: string, account:
-        AccountInfo, request: BaseAuthRequest): AccessTokenEntity | null
-      parameters:
-        - id: clientId
-          type: string
-          description: ''
-        - id: account
-          type: AccountInfo
-          description: ''
-        - id: request
-          type: BaseAuthRequest
-          description: ''
-      return:
-        description: ''
-        type: AccessTokenEntity | null
-    inheritanceDescription: <b>Inherited From</b> CacheManager.readAccessTokenFromCache
+    inheritanceDescription: <b>Inherited From</b> CacheManager.isCredentialKey
   - name: readAccountFromCache(AccountInfo)
     uid: '@azure/msal-browser.BrowserCacheManager.readAccountFromCache'
     package: '@azure/msal-browser'
@@ -213,26 +403,7 @@ inheritedMethods:
         description: ''
         type: AccountEntity | null
     inheritanceDescription: <b>Inherited From</b> CacheManager.readAccountFromCache
-  - name: readAccountFromCacheWithNativeAccountId(string)
-    uid: >-
-      @azure/msal-browser.BrowserCacheManager.readAccountFromCacheWithNativeAccountId
-    package: '@azure/msal-browser'
-    summary: Retrieve AccountEntity from cache
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function readAccountFromCacheWithNativeAccountId(nativeAccountId:
-        string): AccountEntity | null
-      parameters:
-        - id: nativeAccountId
-          type: string
-          description: ''
-      return:
-        description: AccountEntity or Null
-        type: AccountEntity | null
-    inheritanceDescription: <b>Inherited From</b> CacheManager.readAccountFromCacheWithNativeAccountId
-  - name: 'readAppMetadataFromCache(string, string)'
+  - name: readAppMetadataFromCache(string)
     uid: '@azure/msal-browser.BrowserCacheManager.readAppMetadataFromCache'
     package: '@azure/msal-browser'
     summary: Retrieve AppMetadataEntity from cache
@@ -240,20 +411,17 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function readAppMetadataFromCache(environment: string, clientId:
-        string): AppMetadataEntity | null
+        function readAppMetadataFromCache(environment: string):
+        AppMetadataEntity | null
       parameters:
         - id: environment
-          type: string
-          description: ''
-        - id: clientId
           type: string
           description: ''
       return:
         description: ''
         type: AppMetadataEntity | null
     inheritanceDescription: <b>Inherited From</b> CacheManager.readAppMetadataFromCache
-  - name: 'readCacheRecord(AccountInfo, string, BaseAuthRequest, string)'
+  - name: 'readCacheRecord(AccountInfo, BaseAuthRequest, string)'
     uid: '@azure/msal-browser.BrowserCacheManager.readCacheRecord'
     package: '@azure/msal-browser'
     summary: Retrieve the cached credentials into a cacherecord
@@ -261,14 +429,11 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function readCacheRecord(account: AccountInfo, clientId: string,
-        request: BaseAuthRequest, environment: string): CacheRecord
+        function readCacheRecord(account: AccountInfo, request: BaseAuthRequest,
+        environment: string): CacheRecord
       parameters:
         - id: account
           type: AccountInfo
-          description: ''
-        - id: clientId
-          type: string
           description: ''
         - id: request
           type: BaseAuthRequest
@@ -280,68 +445,30 @@ inheritedMethods:
         description: ''
         type: CacheRecord
     inheritanceDescription: <b>Inherited From</b> CacheManager.readCacheRecord
-  - name: 'readIdTokenFromCache(string, AccountInfo)'
-    uid: '@azure/msal-browser.BrowserCacheManager.readIdTokenFromCache'
+  - name: 'refreshTokenKeyMatchesFilter(string, CredentialFilter)'
+    uid: '@azure/msal-browser.BrowserCacheManager.refreshTokenKeyMatchesFilter'
     package: '@azure/msal-browser'
-    summary: Retrieve IdTokenEntity from cache
+    summary: >-
+      Validate the cache key against filter before retrieving and parsing cache
+      value
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function readIdTokenFromCache(clientId: string, account: AccountInfo):
-        IdTokenEntity | null
+        function refreshTokenKeyMatchesFilter(inputKey: string, filter:
+        CredentialFilter): boolean
       parameters:
-        - id: clientId
+        - id: inputKey
           type: string
           description: ''
-        - id: account
-          type: AccountInfo
-          description: ''
-      return:
-        description: ''
-        type: IdTokenEntity | null
-    inheritanceDescription: <b>Inherited From</b> CacheManager.readIdTokenFromCache
-  - name: 'readRefreshTokenFromCache(string, AccountInfo, boolean)'
-    uid: '@azure/msal-browser.BrowserCacheManager.readRefreshTokenFromCache'
-    package: '@azure/msal-browser'
-    summary: Helper to retrieve the appropriate refresh token from cache
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function readRefreshTokenFromCache(clientId: string, account:
-        AccountInfo, familyRT: boolean): RefreshTokenEntity | null
-      parameters:
-        - id: clientId
-          type: string
-          description: ''
-        - id: account
-          type: AccountInfo
-          description: ''
-        - id: familyRT
-          type: boolean
+        - id: filter
+          type: CredentialFilter
           description: |+
 
       return:
         description: ''
-        type: RefreshTokenEntity | null
-    inheritanceDescription: <b>Inherited From</b> CacheManager.readRefreshTokenFromCache
-  - name: removeAccount(string)
-    uid: '@azure/msal-browser.BrowserCacheManager.removeAccount'
-    package: '@azure/msal-browser'
-    summary: returns a boolean if the given account is removed
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function removeAccount(accountKey: string): Promise<boolean>'
-      parameters:
-        - id: accountKey
-          type: string
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;boolean&gt;
-    inheritanceDescription: <b>Inherited From</b> CacheManager.removeAccount
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> CacheManager.refreshTokenKeyMatchesFilter
   - name: removeAccountContext(AccountEntity)
     uid: '@azure/msal-browser.BrowserCacheManager.removeAccountContext'
     package: '@azure/msal-browser'
@@ -349,7 +476,7 @@ inheritedMethods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function removeAccountContext(account: AccountEntity): Promise<boolean>'
+      content: 'function removeAccountContext(account: AccountEntity): Promise<void>'
       parameters:
         - id: account
           type: AccountEntity
@@ -357,7 +484,7 @@ inheritedMethods:
 
       return:
         description: ''
-        type: Promise&lt;boolean&gt;
+        type: Promise&lt;void&gt;
     inheritanceDescription: <b>Inherited From</b> CacheManager.removeAccountContext
   - name: removeAllAccounts()
     uid: '@azure/msal-browser.BrowserCacheManager.removeAllAccounts'
@@ -366,10 +493,10 @@ inheritedMethods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function removeAllAccounts(): Promise<boolean>'
+      content: 'function removeAllAccounts(): Promise<void>'
       return:
         description: ''
-        type: Promise&lt;boolean&gt;
+        type: Promise&lt;void&gt;
     inheritanceDescription: <b>Inherited From</b> CacheManager.removeAllAccounts
   - name: removeAppMetadata()
     uid: '@azure/msal-browser.BrowserCacheManager.removeAppMetadata'
@@ -383,25 +510,6 @@ inheritedMethods:
         description: ''
         type: boolean
     inheritanceDescription: <b>Inherited From</b> CacheManager.removeAppMetadata
-  - name: removeCredential(CredentialEntity)
-    uid: '@azure/msal-browser.BrowserCacheManager.removeCredential'
-    package: '@azure/msal-browser'
-    summary: returns a boolean if the given credential is removed
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function removeCredential(credential: CredentialEntity):
-        Promise<boolean>
-      parameters:
-        - id: credential
-          type: CredentialEntity
-          description: |+
-
-      return:
-        description: ''
-        type: Promise&lt;boolean&gt;
-    inheritanceDescription: <b>Inherited From</b> CacheManager.removeCredential
   - name: saveCacheRecord(CacheRecord)
     uid: '@azure/msal-browser.BrowserCacheManager.saveCacheRecord'
     package: '@azure/msal-browser'
@@ -440,6 +548,35 @@ inheritedMethods:
         type: T
     inheritanceDescription: <b>Inherited From</b> CacheManager.toObject
 methods:
+  - name: addAccountKeyToMap(string)
+    uid: '@azure/msal-browser.BrowserCacheManager.addAccountKeyToMap'
+    package: '@azure/msal-browser'
+    summary: Add a new account to the key map
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function addAccountKeyToMap(key: string)'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+  - name: 'addTokenKey(string, CredentialType)'
+    uid: '@azure/msal-browser.BrowserCacheManager.addTokenKey'
+    package: '@azure/msal-browser'
+    summary: Adds the given key to the token key map
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function addTokenKey(key: string, type: CredentialType)'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: type
+          type: CredentialType
+          description: |+
+
   - name: 'cacheCodeRequest(CommonAuthorizationCodeRequest, ICrypto)'
     uid: '@azure/msal-browser.BrowserCacheManager.cacheCodeRequest'
     package: '@azure/msal-browser'
@@ -675,6 +812,17 @@ methods:
       return:
         description: ''
         type: AccountInfo | null
+  - name: getAccountKeys()
+    uid: '@azure/msal-browser.BrowserCacheManager.getAccountKeys'
+    package: '@azure/msal-browser'
+    summary: Returns the array of account keys currently cached
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAccountKeys(): Array<string>'
+      return:
+        description: ''
+        type: Array&lt;string&gt;
   - name: getActiveAccount()
     uid: '@azure/msal-browser.BrowserCacheManager.getActiveAccount'
     package: '@azure/msal-browser'
@@ -979,6 +1127,17 @@ methods:
       return:
         description: ''
         type: ThrottlingEntity | null
+  - name: getTokenKeys()
+    uid: '@azure/msal-browser.BrowserCacheManager.getTokenKeys'
+    package: '@azure/msal-browser'
+    summary: Gets the keys for the cached tokens associated with this clientId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getTokenKeys(): TokenKeys'
+      return:
+        description: ''
+        type: TokenKeys
   - name: getWrapperMetadata()
     uid: '@azure/msal-browser.BrowserCacheManager.getWrapperMetadata'
     package: '@azure/msal-browser'
@@ -1005,6 +1164,66 @@ methods:
       return:
         description: ''
         type: boolean
+  - name: removeAccessToken(string)
+    uid: '@azure/msal-browser.BrowserCacheManager.removeAccessToken'
+    package: '@azure/msal-browser'
+    summary: Removes given accessToken from the cache and from the key map
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removeAccessToken(key: string): Promise<void>'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: removeAccount(string)
+    uid: '@azure/msal-browser.BrowserCacheManager.removeAccount'
+    package: '@azure/msal-browser'
+    summary: >-
+      Extends inherited removeAccount function to include removal of the account
+      key from the map
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removeAccount(key: string): Promise<void>'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: removeAccountKeyFromMap(string)
+    uid: '@azure/msal-browser.BrowserCacheManager.removeAccountKeyFromMap'
+    package: '@azure/msal-browser'
+    summary: Remove an account from the key map
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removeAccountKeyFromMap(key: string)'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+  - name: removeIdToken(string)
+    uid: '@azure/msal-browser.BrowserCacheManager.removeIdToken'
+    package: '@azure/msal-browser'
+    summary: Removes given idToken from the cache and from the key map
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removeIdToken(key: string)'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
   - name: removeItem(string)
     uid: '@azure/msal-browser.BrowserCacheManager.removeItem'
     package: '@azure/msal-browser'
@@ -1014,15 +1233,41 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function removeItem(key: string): boolean'
+      content: 'function removeItem(key: string)'
       parameters:
         - id: key
           type: string
           description: |+
 
-      return:
-        description: ''
-        type: boolean
+  - name: removeRefreshToken(string)
+    uid: '@azure/msal-browser.BrowserCacheManager.removeRefreshToken'
+    package: '@azure/msal-browser'
+    summary: Removes given refreshToken from the cache and from the key map
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removeRefreshToken(key: string)'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+  - name: 'removeTokenKey(string, CredentialType)'
+    uid: '@azure/msal-browser.BrowserCacheManager.removeTokenKey'
+    package: '@azure/msal-browser'
+    summary: Removes the given key from the token key map
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removeTokenKey(key: string, type: CredentialType)'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: type
+          type: CredentialType
+          description: |+
+
   - name: resetRequestCache(string)
     uid: '@azure/msal-browser.BrowserCacheManager.resetRequestCache'
     package: '@azure/msal-browser'

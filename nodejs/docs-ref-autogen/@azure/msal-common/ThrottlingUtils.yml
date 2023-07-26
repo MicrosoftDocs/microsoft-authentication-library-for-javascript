@@ -138,8 +138,7 @@ methods:
     syntax:
       content: >-
         static function removeThrottle(cacheManager: CacheManager, clientId:
-        string, request: BaseAuthRequest, homeAccountIdentifier?: string):
-        boolean
+        string, request: BaseAuthRequest, homeAccountIdentifier?: string)
       parameters:
         - id: cacheManager
           type: <xref uid="@azure/msal-common.CacheManager" />
@@ -153,6 +152,3 @@ methods:
         - id: homeAccountIdentifier
           type: string
           description: ''
-      return:
-        description: ''
-        type: boolean
