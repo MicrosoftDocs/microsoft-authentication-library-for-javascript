@@ -2,22 +2,71 @@
   "build": {
     "content": [
       {
+        "src": "lcontent/lib/msal-angular/docs",
+        "dest": "msal-angular",
+        "files": [
+          "**/*.md"
+        ]
+      },
+      {
+        "src": "lcontent/lib/msal-browser/docs",
+        "dest": "msal-browser",
+        "files": [
+          "**/*.md"
+        ]
+      },
+      {
+        "src": "lcontent/lib/msal-common/docs",
+        "dest": "msal-common",
+        "files": [
+          "**/*.md"
+        ]
+      },
+      {
+        "src": "lcontent/lib/msal-node/docs",
+        "dest": "msal-node",
+        "files": [
+          "**/*.md"
+        ]
+      },
+      {
+        "src": "lcontent/lib/msal-react/docs",
+        "dest": "msal-react",
+        "files": [
+          "**/*.md"
+        ]
+      },
+      {
+        "src": "lcontent/extensions/docs",
+        "dest": "extensions",
+        "files": [
+          "**/*.md"
+        ]
+      },
+      {
         "files": [
           "**/*.md",
           "**/*.yml"
         ],
         "exclude": [
+          "**/README.md",
+          "**/CHANGELOG.md",
+          "**/LICENSE.md",
+          "**/SECURITY.md",
+          "**/CONTRIBUTING.md",
           "**/obj/**",
           "**/includes/**",
           "_themes/**",
           "_themes.pdf/**",
           "**/docfx.json",
           "_repo.en-us/**",
-          "README.md",
           "LICENSE",
           "LICENSE-CODE",
           "ThirdPartyNotices.md",
-          "SECURITY.md"
+          "lcontent/*.yml",
+          "lcontent/build/*.yml",
+          "lcontent/extensions/msal-node-extensions/**",
+          "lcontent/extensions/samples/**"
         ]
       }
     ],
