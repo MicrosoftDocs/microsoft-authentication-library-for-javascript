@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: EventMessage
+uid: '@azure/msal-browser.EventMessage'
+package: '@azure/msal-browser'
+summary: ''
+fullName: EventMessage
+remarks: ''
+isDeprecated: false
+syntax: |
+  type EventMessage = {
+    error: EventError
+    eventType: EventType
+    interactionType: InteractionType | null
+    payload: EventPayload
+    timestamp: number
+  }

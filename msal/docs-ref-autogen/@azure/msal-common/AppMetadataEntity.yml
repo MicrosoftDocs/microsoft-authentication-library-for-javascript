@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: AppMetadataEntity
+uid: '@azure/msal-common.AppMetadataEntity'
+package: '@azure/msal-common'
+summary: App Metadata Cache Type
+fullName: AppMetadataEntity
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AppMetadataEntity = {
+    clientId: string
+    environment: string
+    familyId?: string
+  }

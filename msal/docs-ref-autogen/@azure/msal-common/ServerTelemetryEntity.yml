@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: ServerTelemetryEntity
+uid: '@azure/msal-common.ServerTelemetryEntity'
+package: '@azure/msal-common'
+summary: ''
+fullName: ServerTelemetryEntity
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ServerTelemetryEntity = {
+    cacheHits: number
+    errors: string[]
+    failedRequests: (string | number)[]
+  }

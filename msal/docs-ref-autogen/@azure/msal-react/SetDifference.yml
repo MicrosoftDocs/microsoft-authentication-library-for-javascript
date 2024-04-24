@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: SetDifference
+uid: '@azure/msal-react.SetDifference'
+package: '@azure/msal-react'
+summary: ''
+fullName: SetDifference<A, B>
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SetDifference<A, B> = A extends B ? never : A

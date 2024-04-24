@@ -1,0 +1,25 @@
+### YamlMime:TSTypeAlias
+name: BrowserAuthOptions
+uid: '@azure/msal-browser.BrowserAuthOptions'
+package: '@azure/msal-browser'
+summary: Use this to configure the auth options in the Configuration object
+fullName: BrowserAuthOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type BrowserAuthOptions = {
+    OIDCOptions?: OIDCOptions
+    authority?: string
+    authorityMetadata?: string
+    azureCloudOptions?: AzureCloudOptions
+    clientCapabilities?: string[]
+    clientId: string
+    cloudDiscoveryMetadata?: string
+    knownAuthorities?: string[]
+    navigateToLoginRequestUrl?: boolean
+    postLogoutRedirectUri?: string | null
+    protocolMode?: ProtocolMode
+    redirectUri?: string
+    skipAuthorityMetadataCache?: boolean
+    supportsNestedAppAuth?: boolean
+  }

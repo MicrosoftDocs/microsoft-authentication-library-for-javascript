@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: PopupPosition
+uid: '@azure/msal-browser.PopupPosition'
+package: '@azure/msal-browser'
+summary: ''
+fullName: PopupPosition
+remarks: ''
+isDeprecated: false
+syntax: |
+  type PopupPosition = { left: number; top: number }

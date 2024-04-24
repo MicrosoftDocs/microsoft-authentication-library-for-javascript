@@ -1,0 +1,37 @@
+### YamlMime:TSType
+name: IPerformanceMeasurement
+uid: '@azure/msal-common.IPerformanceMeasurement'
+package: '@azure/msal-common'
+summary: ''
+fullName: IPerformanceMeasurement
+remarks: ''
+isDeprecated: false
+type: interface
+methods:
+  - name: endMeasurement()
+    uid: '@azure/msal-common.IPerformanceMeasurement.endMeasurement'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function endMeasurement()
+  - name: flushMeasurement()
+    uid: '@azure/msal-common.IPerformanceMeasurement.flushMeasurement'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function flushMeasurement(): null | number'
+      return:
+        description: ''
+        type: null | number
+  - name: startMeasurement()
+    uid: '@azure/msal-common.IPerformanceMeasurement.startMeasurement'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function startMeasurement()

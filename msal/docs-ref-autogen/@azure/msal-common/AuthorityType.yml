@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: AuthorityType
+uid: '@azure/msal-common.AuthorityType'
+package: '@azure/msal-common'
+summary: ''
+fullName: AuthorityType
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AuthorityType = (typeof AuthorityType)[keyof typeof AuthorityType]

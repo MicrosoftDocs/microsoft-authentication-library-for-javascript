@@ -1,0 +1,131 @@
+### YamlMime:TSType
+name: DeviceCodeClient
+uid: '@azure/msal-node.DeviceCodeClient'
+package: '@azure/msal-node'
+summary: OAuth2.0 Device code client
+fullName: DeviceCodeClient
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: DeviceCodeClient(ClientConfiguration)
+    uid: '@azure/msal-node.DeviceCodeClient.constructor'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new DeviceCodeClient(configuration: ClientConfiguration)'
+      parameters:
+        - id: configuration
+          type: <xref uid="@azure/msal-common.ClientConfiguration" />
+          description: ''
+inheritedProperties:
+  - name: authority
+    uid: '@azure/msal-node.DeviceCodeClient.authority'
+    package: '@azure/msal-node'
+    summary: ''
+    fullName: authority
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'authority: Authority'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.Authority" />
+    inheritanceDescription: <b>Inherited From</b> BaseClient.authority
+  - name: logger
+    uid: '@azure/msal-node.DeviceCodeClient.logger'
+    package: '@azure/msal-node'
+    summary: ''
+    fullName: logger
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'logger: Logger'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-node.Logger" />
+    inheritanceDescription: <b>Inherited From</b> BaseClient.logger
+inheritedMethods:
+  - name: createTokenQueryParameters(BaseAuthRequest)
+    uid: '@azure/msal-node.DeviceCodeClient.createTokenQueryParameters'
+    package: '@azure/msal-node'
+    summary: Creates query string for the /token request
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function createTokenQueryParameters(request: BaseAuthRequest): string'
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.BaseAuthRequest" />
+          description: ''
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> BaseClient.createTokenQueryParameters
+  - name: updateAuthority(string, string)
+    uid: '@azure/msal-node.DeviceCodeClient.updateAuthority'
+    package: '@azure/msal-node'
+    summary: >-
+      Updates the authority object of the client. Endpoint discovery must be
+      completed.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateAuthority(cloudInstanceHostname: string, correlationId:
+        string): Promise<void>
+      parameters:
+        - id: cloudInstanceHostname
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+    inheritanceDescription: <b>Inherited From</b> BaseClient.updateAuthority
+methods:
+  - name: acquireToken(CommonDeviceCodeRequest)
+    uid: '@azure/msal-node.DeviceCodeClient.acquireToken'
+    package: '@azure/msal-node'
+    summary: >-
+      Gets device code from device code endpoint, calls back to with device code
+      response, and
+
+      polls token endpoint to exchange device code for tokens
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireToken(request: CommonDeviceCodeRequest): Promise<null |
+        AuthenticationResult>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.CommonDeviceCodeRequest" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
+          />&gt;
+  - name: createExtraQueryParameters(CommonDeviceCodeRequest)
+    uid: '@azure/msal-node.DeviceCodeClient.createExtraQueryParameters'
+    package: '@azure/msal-node'
+    summary: Creates query string for the device code request
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createExtraQueryParameters(request: CommonDeviceCodeRequest):
+        string
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.CommonDeviceCodeRequest" />
+          description: ''
+      return:
+        description: ''
+        type: string
+extends: <xref uid="@azure/msal-common.BaseClient" />

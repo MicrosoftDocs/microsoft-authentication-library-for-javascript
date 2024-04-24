@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: InteractionStatus
+uid: '@azure/msal-browser.InteractionStatus'
+package: '@azure/msal-browser'
+summary: ''
+fullName: InteractionStatus
+remarks: ''
+isDeprecated: false
+syntax: |
+  type InteractionStatus =
+    (typeof InteractionStatus)[keyof typeof InteractionStatus]

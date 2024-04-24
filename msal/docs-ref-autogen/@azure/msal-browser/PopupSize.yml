@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: PopupSize
+uid: '@azure/msal-browser.PopupSize'
+package: '@azure/msal-browser'
+summary: ''
+fullName: PopupSize
+remarks: ''
+isDeprecated: false
+syntax: |
+  type PopupSize = { height: number; width: number }

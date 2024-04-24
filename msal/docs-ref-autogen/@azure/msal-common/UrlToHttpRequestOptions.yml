@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: UrlToHttpRequestOptions
+uid: '@azure/msal-common.UrlToHttpRequestOptions'
+package: '@azure/msal-common'
+summary: ''
+fullName: UrlToHttpRequestOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type UrlToHttpRequestOptions = {
+    auth?: string
+    hash: string
+    hostname: string
+    href: string
+    path: string
+    pathname: string
+    port?: number
+    protocol: string
+    search: string
+  }

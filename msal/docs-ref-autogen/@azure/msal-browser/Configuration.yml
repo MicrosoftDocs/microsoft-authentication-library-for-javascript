@@ -1,0 +1,17 @@
+### YamlMime:TSTypeAlias
+name: Configuration
+uid: '@azure/msal-browser.Configuration'
+package: '@azure/msal-browser'
+summary: >-
+  This object allows you to configure important elements of MSAL functionality
+  and is passed into the constructor of PublicClientApplication
+fullName: Configuration
+remarks: ''
+isDeprecated: false
+syntax: |
+  type Configuration = {
+    auth: BrowserAuthOptions
+    cache?: CacheOptions
+    system?: BrowserSystemOptions
+    telemetry?: BrowserTelemetryOptions
+  }

@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: AccessTokenEntity
+uid: '@azure/msal-common.AccessTokenEntity'
+package: '@azure/msal-common'
+summary: Access token cache type
+fullName: AccessTokenEntity
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AccessTokenEntity = CredentialEntity & {
+    cachedAt: string
+    expiresOn: string
+    extendedExpiresOn?: string
+    realm: string
+    refreshOn?: string
+    requestedClaims?: string
+    requestedClaimsHash?: string
+    target: string
+    tokenType?: AuthenticationScheme
+  }

@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: ProtectedResourceScopes
+uid: '@azure/msal-angular.ProtectedResourceScopes'
+package: '@azure/msal-angular'
+summary: ''
+fullName: ProtectedResourceScopes
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ProtectedResourceScopes = { httpMethod: string; scopes: string[] | null }

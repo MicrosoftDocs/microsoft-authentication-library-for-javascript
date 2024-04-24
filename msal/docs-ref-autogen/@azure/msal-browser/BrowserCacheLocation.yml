@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: BrowserCacheLocation
+uid: '@azure/msal-browser.BrowserCacheLocation'
+package: '@azure/msal-browser'
+summary: ''
+fullName: BrowserCacheLocation
+remarks: ''
+isDeprecated: false
+syntax: |
+  type BrowserCacheLocation =
+    (typeof BrowserCacheLocation)[keyof typeof BrowserCacheLocation]

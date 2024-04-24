@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: LoadTokenOptions
+uid: '@azure/msal-browser.LoadTokenOptions'
+package: '@azure/msal-browser'
+summary: ''
+fullName: LoadTokenOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type LoadTokenOptions = {
+    clientInfo?: string
+    expiresOn?: number
+    extendedExpiresOn?: number
+  }

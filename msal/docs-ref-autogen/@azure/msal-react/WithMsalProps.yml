@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: WithMsalProps
+uid: '@azure/msal-react.WithMsalProps'
+package: '@azure/msal-react'
+summary: ''
+fullName: WithMsalProps
+remarks: ''
+isDeprecated: false
+syntax: |
+  type WithMsalProps = { msalContext: IMsalContext }

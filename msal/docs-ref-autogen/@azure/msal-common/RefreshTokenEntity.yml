@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: RefreshTokenEntity
+uid: '@azure/msal-common.RefreshTokenEntity'
+package: '@azure/msal-common'
+summary: Refresh Token Cache Type
+fullName: RefreshTokenEntity
+remarks: ''
+isDeprecated: false
+syntax: |
+  type RefreshTokenEntity = CredentialEntity & { expiresOn?: string }

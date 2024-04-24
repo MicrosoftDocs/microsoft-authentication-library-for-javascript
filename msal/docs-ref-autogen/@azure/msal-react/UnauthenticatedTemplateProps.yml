@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: UnauthenticatedTemplateProps
+uid: '@azure/msal-react.UnauthenticatedTemplateProps'
+package: '@azure/msal-react'
+summary: ''
+fullName: UnauthenticatedTemplateProps
+remarks: ''
+isDeprecated: false
+syntax: |
+  type UnauthenticatedTemplateProps = PropsWithChildren<AccountIdentifiers>

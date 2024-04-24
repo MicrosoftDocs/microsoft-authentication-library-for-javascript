@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: EventType
+uid: '@azure/msal-browser.EventType'
+package: '@azure/msal-browser'
+summary: ''
+fullName: EventType
+remarks: ''
+isDeprecated: false
+syntax: |
+  type EventType = (typeof EventType)[keyof typeof EventType]

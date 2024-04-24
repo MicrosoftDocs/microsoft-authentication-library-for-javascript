@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: MsalInterceptorConfiguration
+uid: '@azure/msal-angular.MsalInterceptorConfiguration'
+package: '@azure/msal-angular'
+summary: ''
+fullName: MsalInterceptorConfiguration
+remarks: ''
+isDeprecated: false
+syntax: >-
+  type MsalInterceptorConfiguration = { authRequest?: MsalInterceptorAuthRequest
+  | (msalService: MsalService, req: HttpRequest<unknown>, originalAuthRequest:
+  MsalInterceptorAuthRequest) => MsalInterceptorAuthRequest, interactionType:
+  InteractionType, protectedResourceMap: Map<string, (string |
+  ProtectedResourceScopes)[] | null> }

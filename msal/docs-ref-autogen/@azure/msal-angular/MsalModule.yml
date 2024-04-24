@@ -1,0 +1,83 @@
+### YamlMime:TSType
+name: MsalModule
+uid: '@azure/msal-angular.MsalModule'
+package: '@azure/msal-angular'
+summary: ''
+fullName: MsalModule
+remarks: ''
+isDeprecated: false
+type: class
+properties:
+  - name: ɵfac
+    uid: '@azure/msal-angular.MsalModule.ɵfac'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵfac
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ɵfac: ɵɵFactoryDeclaration<MsalModule, never>'
+      return:
+        description: ''
+        type: >-
+          ɵɵFactoryDeclaration&lt;<xref uid="@azure/msal-angular.MsalModule" />,
+          never&gt;
+  - name: ɵinj
+    uid: '@azure/msal-angular.MsalModule.ɵinj'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵinj
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ɵinj: ɵɵInjectorDeclaration<MsalModule>'
+      return:
+        description: ''
+        type: >-
+          ɵɵInjectorDeclaration&lt;<xref uid="@azure/msal-angular.MsalModule"
+          />&gt;
+  - name: ɵmod
+    uid: '@azure/msal-angular.MsalModule.ɵmod'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵmod
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static ɵmod: ɵɵNgModuleDeclaration<MsalModule, [typeof
+        MsalRedirectComponent], [any], never>
+      return:
+        description: ''
+        type: >-
+          ɵɵNgModuleDeclaration&lt;<xref uid="@azure/msal-angular.MsalModule"
+          />, [typeof MsalRedirectComponent], [any], never&gt;
+methods:
+  - name: >-
+      forRoot(IPublicClientApplication, MsalGuardConfiguration,
+      MsalInterceptorConfiguration)
+    uid: '@azure/msal-angular.MsalModule.forRoot'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function forRoot(msalInstance: IPublicClientApplication,
+        guardConfig: MsalGuardConfiguration, interceptorConfig:
+        MsalInterceptorConfiguration): ModuleWithProviders<MsalModule>
+      parameters:
+        - id: msalInstance
+          type: <xref uid="@azure/msal-browser.IPublicClientApplication" />
+          description: ''
+        - id: guardConfig
+          type: <xref uid="@azure/msal-angular.MsalGuardConfiguration" />
+          description: ''
+        - id: interceptorConfig
+          type: <xref uid="@azure/msal-angular.MsalInterceptorConfiguration" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          ModuleWithProviders&lt;<xref uid="@azure/msal-angular.MsalModule"
+          />&gt;

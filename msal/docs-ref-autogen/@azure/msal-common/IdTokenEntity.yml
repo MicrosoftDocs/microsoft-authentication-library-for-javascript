@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: IdTokenEntity
+uid: '@azure/msal-common.IdTokenEntity'
+package: '@azure/msal-common'
+summary: Id Token Cache Type
+fullName: IdTokenEntity
+remarks: ''
+isDeprecated: false
+syntax: |
+  type IdTokenEntity = CredentialEntity & { realm: string }

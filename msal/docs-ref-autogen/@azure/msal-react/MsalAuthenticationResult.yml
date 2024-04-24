@@ -1,0 +1,21 @@
+### YamlMime:TSTypeAlias
+name: MsalAuthenticationResult
+uid: '@azure/msal-react.MsalAuthenticationResult'
+package: '@azure/msal-react'
+summary: ''
+fullName: MsalAuthenticationResult
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MsalAuthenticationResult = {
+    acquireToken: (
+      callbackInteractionType?: InteractionType,
+      callbackRequest?: SilentRequest
+    ) => Promise<AuthenticationResult | null>
+    error: AuthError | null
+    login: (
+      callbackInteractionType?: InteractionType,
+      callbackRequest?: PopupRequest | RedirectRequest | SilentRequest
+    ) => Promise<AuthenticationResult | null>
+    result: AuthenticationResult | null
+  }

@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: PerformanceCallbackFunction
+uid: '@azure/msal-common.PerformanceCallbackFunction'
+package: '@azure/msal-common'
+summary: ''
+fullName: PerformanceCallbackFunction
+remarks: ''
+isDeprecated: false
+syntax: |
+  type PerformanceCallbackFunction = (events: PerformanceEvent[]) => void

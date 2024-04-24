@@ -1,0 +1,9 @@
+### YamlMime:TSType
+name: IAppTokenProvider
+uid: '@azure/msal-common.IAppTokenProvider'
+package: '@azure/msal-common'
+summary: ''
+fullName: IAppTokenProvider
+remarks: ''
+isDeprecated: false
+type: interface

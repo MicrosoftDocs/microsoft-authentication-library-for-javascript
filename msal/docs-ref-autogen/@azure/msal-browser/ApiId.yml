@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: ApiId
+uid: '@azure/msal-browser.ApiId'
+package: '@azure/msal-browser'
+summary: ''
+fullName: ApiId
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ApiId = (typeof ApiId)[keyof typeof ApiId]

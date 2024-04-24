@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: ThrottlingEntity
+uid: '@azure/msal-common.ThrottlingEntity'
+package: '@azure/msal-common'
+summary: ''
+fullName: ThrottlingEntity
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ThrottlingEntity = {
+    error?: string
+    errorCodes?: string[]
+    errorMessage?: string
+    subError?: string
+    throttleTime: number
+  }

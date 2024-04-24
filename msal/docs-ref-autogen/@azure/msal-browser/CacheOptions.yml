@@ -1,0 +1,17 @@
+### YamlMime:TSTypeAlias
+name: CacheOptions
+uid: '@azure/msal-browser.CacheOptions'
+package: '@azure/msal-browser'
+summary: 'Use this to configure the below cache configuration options:'
+fullName: CacheOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type CacheOptions = {
+    cacheLocation?: BrowserCacheLocation | string
+    cacheMigrationEnabled?: boolean
+    claimsBasedCachingEnabled?: boolean
+    secureCookies?: boolean
+    storeAuthStateInCookie?: boolean
+    temporaryCacheLocation?: BrowserCacheLocation | string
+  }

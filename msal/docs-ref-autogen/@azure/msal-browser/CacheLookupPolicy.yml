@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: CacheLookupPolicy
+uid: '@azure/msal-browser.CacheLookupPolicy'
+package: '@azure/msal-browser'
+summary: ''
+fullName: CacheLookupPolicy
+remarks: ''
+isDeprecated: false
+syntax: |
+  type CacheLookupPolicy =
+    (typeof CacheLookupPolicy)[keyof typeof CacheLookupPolicy]

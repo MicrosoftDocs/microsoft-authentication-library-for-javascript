@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: BrowserTelemetryOptions
+uid: '@azure/msal-browser.BrowserTelemetryOptions'
+package: '@azure/msal-browser'
+summary: Telemetry Options
+fullName: BrowserTelemetryOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type BrowserTelemetryOptions = {
+    application?: ApplicationTelemetry
+    client?: IPerformanceClient
+  }
