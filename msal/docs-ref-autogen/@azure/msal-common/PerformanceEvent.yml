@@ -11,6 +11,7 @@ isDeprecated: false
 syntax: |
   type PerformanceEvent = {
     accessTokenSize?: number
+    accountType?: "AAD" | "MSA" | "B2C"
     allowNativeBroker?: boolean
     appName?: string
     appVersion?: string
@@ -66,6 +67,8 @@ syntax: |
     queuedTimeMs?: number
     refreshTokenSize?: number
     requestId?: string
+    scenarioId?: string
+    serverErrorNo?: string
     startPageVisibility?: string | null
     startTimeMs: number
     status: PerformanceEventStatus

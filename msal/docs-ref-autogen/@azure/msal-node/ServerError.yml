@@ -10,7 +10,7 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: ServerError(string, string, string)
+  - name: ServerError(string, string, string, string)
     uid: '@azure/msal-node.ServerError.constructor'
     package: '@azure/msal-node'
     summary: ''
@@ -19,7 +19,7 @@ constructors:
     syntax:
       content: >-
         new ServerError(errorCode?: string, errorMessage?: string, subError?:
-        string)
+        string, errorNo?: string)
       parameters:
         - id: errorCode
           type: string
@@ -30,6 +30,22 @@ constructors:
         - id: subError
           type: string
           description: ''
+        - id: errorNo
+          type: string
+          description: ''
+properties:
+  - name: errorNo
+    uid: '@azure/msal-node.ServerError.errorNo'
+    package: '@azure/msal-node'
+    summary: Server error number;
+    fullName: errorNo
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorNo?: string'
+      return:
+        description: ''
+        type: string
 inheritedProperties:
   - name: correlationId
     uid: '@azure/msal-node.ServerError.correlationId'

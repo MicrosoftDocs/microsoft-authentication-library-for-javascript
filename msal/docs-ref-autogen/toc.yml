@@ -412,6 +412,15 @@
     - uid: '@azure/msal-common.ClientAssertion'
       name: ClientAssertion
       items: []
+    - uid: '@azure/msal-common.ClientAssertionCallback'
+      name: ClientAssertionCallback
+      items: []
+    - uid: '@azure/msal-common.ClientAssertionConfig'
+      name: ClientAssertionConfig
+      items: []
+    - uid: '@azure/msal-common.ClientAssertionUtils'
+      name: ClientAssertionUtils
+      items: []
     - uid: '@azure/msal-common.ClientAuthError'
       name: ClientAuthError
       items: []
@@ -730,6 +739,9 @@
       items: []
     - uid: '@azure/msal-node.ClientAssertion'
       name: ClientAssertion
+      items: []
+    - uid: '@azure/msal-node.ClientAssertionCallback'
+      name: ClientAssertionCallback
       items: []
     - uid: '@azure/msal-node.ClientAuthError'
       name: ClientAuthError

@@ -137,7 +137,7 @@ methods:
   - name: discardMeasurements(string)
     uid: '@azure/msal-common.PerformanceClient.discardMeasurements'
     package: '@azure/msal-common'
-    summary: Removes measurements for a given correlation id.
+    summary: Removes measurements and aux data for a given correlation id.
     remarks: ''
     isDeprecated: false
     syntax:

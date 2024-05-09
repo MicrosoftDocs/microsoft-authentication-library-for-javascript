@@ -63,6 +63,8 @@ typeAliases:
   - '@azure/msal-common.CcsCredentialType'
   - '@azure/msal-common.ClaimsRequestKeys'
   - '@azure/msal-common.ClientAssertion'
+  - '@azure/msal-common.ClientAssertionCallback'
+  - '@azure/msal-common.ClientAssertionConfig'
   - '@azure/msal-common.ClientInfo'
   - '@azure/msal-common.CommonAuthorizationCodeRequest'
   - '@azure/msal-common.CommonAuthorizationUrlRequest'
@@ -339,6 +341,30 @@ functions:
       return:
         description: ''
         type: string
+  - name: getClientAssertion(string | ClientAssertionCallback, string, string)
+    uid: '@azure/msal-common.getClientAssertion'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getClientAssertion(clientAssertion: string |
+        ClientAssertionCallback, clientId: string, tokenEndpoint?: string):
+        Promise<string>
+      parameters:
+        - id: clientAssertion
+          type: string | <xref uid="@azure/msal-common.ClientAssertionCallback" />
+          description: ''
+        - id: clientId
+          type: string
+          description: ''
+        - id: tokenEndpoint
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
   - name: getTenantIdFromIdTokenClaims(TokenClaims)
     uid: '@azure/msal-common.getTenantIdFromIdTokenClaims'
     package: '@azure/msal-common'

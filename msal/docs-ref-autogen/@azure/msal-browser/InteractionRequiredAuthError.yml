@@ -10,7 +10,7 @@ type: class
 constructors:
   - name: >-
       InteractionRequiredAuthError(string, string, string, string, string,
-      string, string)
+      string, string, string)
     uid: '@azure/msal-browser.InteractionRequiredAuthError.constructor'
     package: '@azure/msal-browser'
     summary: ''
@@ -20,7 +20,7 @@ constructors:
       content: >-
         new InteractionRequiredAuthError(errorCode?: string, errorMessage?:
         string, subError?: string, timestamp?: string, traceId?: string,
-        correlationId?: string, claims?: string)
+        correlationId?: string, claims?: string, errorNo?: string)
       parameters:
         - id: errorCode
           type: string
@@ -41,6 +41,9 @@ constructors:
           type: string
           description: ''
         - id: claims
+          type: string
+          description: ''
+        - id: errorNo
           type: string
           description: ''
 properties:
@@ -70,6 +73,18 @@ properties:
     isDeprecated: false
     syntax:
       content: 'claims: string'
+      return:
+        description: ''
+        type: string
+  - name: errorNo
+    uid: '@azure/msal-browser.InteractionRequiredAuthError.errorNo'
+    package: '@azure/msal-browser'
+    summary: Server error number;
+    fullName: errorNo
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorNo?: string'
       return:
         description: ''
         type: string

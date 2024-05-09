@@ -16,9 +16,11 @@ summary: >-
   requesting a token. Only used in confidential client applications. Can be
   created in the Azure app registration portal.
 
-  - clientAssertion        - Assertion string that the application uses when
-  requesting a token. Only used in confidential client applications. Assertion
-  should be of type urn:ietf:params:oauth:client-assertion-type:jwt-bearer.
+  - clientAssertion        - A ClientAssertion object containing an assertion
+  string or a callback function that returns an assertion string that the
+  application uses when requesting a token, as well as the assertion's type
+  (urn:ietf:params:oauth:client-assertion-type:jwt-bearer). Only used in
+  confidential client applications.
 
   - clientCertificate      - Certificate that the application uses when
   requesting a token. Only used in confidential client applications. Requires
@@ -39,7 +41,7 @@ syntax: |
     authority?: string
     authorityMetadata?: string
     azureCloudOptions?: AzureCloudOptions
-    clientAssertion?: string
+    clientAssertion?: string | ClientAssertionCallback
     clientCapabilities?: string[]
     clientCertificate?: { privateKey: string; thumbprint: string; x5c?: string }
     clientId: string

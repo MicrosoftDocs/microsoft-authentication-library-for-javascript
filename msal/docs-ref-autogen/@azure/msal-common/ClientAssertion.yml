@@ -7,4 +7,7 @@ fullName: ClientAssertion
 remarks: ''
 isDeprecated: false
 syntax: |
-  type ClientAssertion = { assertion: string; assertionType: string }
+  type ClientAssertion = {
+    assertion: string | ClientAssertionCallback
+    assertionType: string
+  }

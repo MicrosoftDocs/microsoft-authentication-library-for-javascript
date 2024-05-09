@@ -56,6 +56,8 @@ summary: >-
 
   - storeInCache            - Object containing boolean values indicating
   whether to store tokens in the cache or not (default is true)
+
+  - scenarioId              - Scenario id to track custom user prompts
 fullName: BaseAuthRequest
 remarks: ''
 isDeprecated: false
@@ -70,6 +72,7 @@ syntax: |
     requestedClaimsHash?: string
     resourceRequestMethod?: string
     resourceRequestUri?: string
+    scenarioId?: string
     scopes: string[]
     shrClaims?: string
     shrNonce?: string

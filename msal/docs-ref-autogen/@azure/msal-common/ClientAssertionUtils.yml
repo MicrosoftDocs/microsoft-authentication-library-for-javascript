@@ -1,0 +1,6 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-common.ClientAssertionUtils'
+name: ClientAssertionUtils
+type: module
+package: '@azure/msal-common'
+summary: ''

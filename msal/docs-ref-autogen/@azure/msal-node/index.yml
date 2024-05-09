@@ -53,6 +53,7 @@ typeAliases:
   - '@azure/msal-node.BrokerOptions'
   - '@azure/msal-node.CacheKVStore'
   - '@azure/msal-node.CacheOptions'
+  - '@azure/msal-node.ClientAssertionCallback'
   - '@azure/msal-node.ClientCredentialRequest'
   - '@azure/msal-node.Configuration'
   - '@azure/msal-node.DeviceCodeRequest'

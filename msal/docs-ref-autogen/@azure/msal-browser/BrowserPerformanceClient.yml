@@ -94,7 +94,7 @@ inheritedMethods:
   - name: discardMeasurements(string)
     uid: '@azure/msal-browser.BrowserPerformanceClient.discardMeasurements'
     package: '@azure/msal-browser'
-    summary: Removes measurements for a given correlation id.
+    summary: Removes measurements and aux data for a given correlation id.
     remarks: ''
     isDeprecated: false
     syntax:

@@ -139,6 +139,21 @@ methods:
     isDeprecated: false
     syntax:
       content: function enableAccountStorageEvents()
+  - name: getAccount(AccountFilter)
+    uid: '@azure/msal-browser.IPublicClientApplication.getAccount'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAccount(accountFilter: AccountFilter): null | AccountInfo'
+      parameters:
+        - id: accountFilter
+          type: <xref uid="@azure/msal-common.AccountFilter" />
+          description: ''
+      return:
+        description: ''
+        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
   - name: getAccountByHomeId(string)
     uid: '@azure/msal-browser.IPublicClientApplication.getAccountByHomeId'
     package: '@azure/msal-browser'
