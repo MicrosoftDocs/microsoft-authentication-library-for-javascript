@@ -15,6 +15,12 @@ summary: >-
   old Browser, etc.)
 
   while still providing a consistent API surface for developers.
+
+
+  Please use PublicClientApplication for any prod/real-world scenarios.
+
+  Note: PublicClientNext is experimental and subject to breaking changes without
+  following semver
 fullName: PublicClientNext
 remarks: ''
 isDeprecated: false

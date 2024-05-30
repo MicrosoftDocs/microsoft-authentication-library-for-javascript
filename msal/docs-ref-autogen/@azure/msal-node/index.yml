@@ -64,6 +64,7 @@ typeAliases:
   - '@azure/msal-node.ManagedIdentityConfiguration'
   - '@azure/msal-node.ManagedIdentityIdParams'
   - '@azure/msal-node.ManagedIdentityRequestParams'
+  - '@azure/msal-node.ManagedIdentitySourceNames'
   - '@azure/msal-node.NetworkRequestOptions'
   - '@azure/msal-node.NetworkResponse'
   - '@azure/msal-node.NodeAuthOptions'

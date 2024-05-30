@@ -84,3 +84,47 @@ typeAliases:
   - '@azure/msal-browser.SsoSilentRequest'
   - '@azure/msal-browser.TenantProfile'
   - '@azure/msal-browser.WrapperSKU'
+functions:
+  - name: createNestablePublicClientApplication(Configuration)
+    uid: '@azure/msal-browser.createNestablePublicClientApplication'
+    package: '@azure/msal-browser'
+    summary: >-
+      creates NestedAppAuthController and passes it to the
+      PublicClientApplication,
+
+      falls back to StandardController if NestedAppAuthController is not
+      available
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createNestablePublicClientApplication(configuration:
+        Configuration): Promise<IPublicClientApplication>
+      parameters:
+        - id: configuration
+          type: <xref uid="@azure/msal-browser.Configuration" />
+          description: ''
+      return:
+        description: IPublicClientApplication
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.IPublicClientApplication"
+          />&gt;
+  - name: createStandardPublicClientApplication(Configuration)
+    uid: '@azure/msal-browser.createStandardPublicClientApplication'
+    package: '@azure/msal-browser'
+    summary: creates PublicClientApplication using StandardController
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createStandardPublicClientApplication(configuration:
+        Configuration): Promise<IPublicClientApplication>
+      parameters:
+        - id: configuration
+          type: <xref uid="@azure/msal-browser.Configuration" />
+          description: ''
+      return:
+        description: IPublicClientApplication
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.IPublicClientApplication"
+          />&gt;

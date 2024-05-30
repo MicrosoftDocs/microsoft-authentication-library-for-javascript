@@ -858,6 +858,9 @@
     - uid: '@azure/msal-node.ManagedIdentityRequestParams'
       name: ManagedIdentityRequestParams
       items: []
+    - uid: '@azure/msal-node.ManagedIdentitySourceNames'
+      name: ManagedIdentitySourceNames
+      items: []
     - uid: '@azure/msal-node.NetworkRequestOptions'
       name: NetworkRequestOptions
       items: []
