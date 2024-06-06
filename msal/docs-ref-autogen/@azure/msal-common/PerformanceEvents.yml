@@ -55,12 +55,20 @@ fields:
     summary: |-
       acquireTokenPopup (msal-browser).
       Used to acquire a new access token interactively through pop ups
+  - name: AcquireTokenPreRedirect
+    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenPreRedirect'
+    package: '@azure/msal-common'
+    summary: |-
+      acquireTokenPreRedirect (msal-browser).
+      First part of the redirect flow.
+      Used to acquire a new access token interactively through redirects.
   - name: AcquireTokenRedirect
     uid: '@azure/msal-common.PerformanceEvents.AcquireTokenRedirect'
     package: '@azure/msal-common'
     summary: |-
       acquireTokenRedirect (msal-browser).
-      Used to acquire a new access token interactively through redirects
+      Second part of the redirect flow.
+      Used to acquire a new access token interactively through redirects.
   - name: AcquireTokenSilent
     uid: '@azure/msal-common.PerformanceEvents.AcquireTokenSilent'
     package: '@azure/msal-common'
