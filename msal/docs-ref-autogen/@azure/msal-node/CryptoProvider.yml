@@ -43,6 +43,17 @@ methods:
       return:
         description: ''
         type: string
+  - name: base64UrlEncode()
+    uid: '@azure/msal-node.CryptoProvider.base64UrlEncode'
+    package: '@azure/msal-node'
+    summary: base64 URL safe encoded string
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function base64UrlEncode(): string'
+      return:
+        description: ''
+        type: string
   - name: clearKeystore()
     uid: '@azure/msal-node.CryptoProvider.clearKeystore'
     package: '@azure/msal-node'
@@ -64,6 +75,17 @@ methods:
       content: 'function createNewGuid(): string'
       return:
         description: string (GUID)
+        type: string
+  - name: encodeKid()
+    uid: '@azure/msal-node.CryptoProvider.encodeKid'
+    package: '@azure/msal-node'
+    summary: Stringifies and base64Url encodes input public key
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function encodeKid(): string'
+      return:
+        description: Base64Url encoded public key
         type: string
   - name: generatePkceCodes()
     uid: '@azure/msal-node.CryptoProvider.generatePkceCodes'

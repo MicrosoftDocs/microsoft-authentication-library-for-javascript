@@ -38,6 +38,21 @@ methods:
       return:
         description: ''
         type: string
+  - name: base64UrlEncode(string)
+    uid: '@azure/msal-common.ICrypto.base64UrlEncode'
+    package: '@azure/msal-common'
+    summary: base64 URL safe encoded string
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function base64UrlEncode(input: string): string'
+      parameters:
+        - id: input
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string
   - name: clearKeystore()
     uid: '@azure/msal-common.ICrypto.clearKeystore'
     package: '@azure/msal-common'
@@ -59,6 +74,21 @@ methods:
       content: 'function createNewGuid(): string'
       return:
         description: ''
+        type: string
+  - name: encodeKid(string)
+    uid: '@azure/msal-common.ICrypto.encodeKid'
+    package: '@azure/msal-common'
+    summary: Stringifies and base64Url encodes input public key
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function encodeKid(inputKid: string): string'
+      parameters:
+        - id: inputKid
+          type: string
+          description: ''
+      return:
+        description: Base64Url encoded public key
         type: string
   - name: getPublicKeyThumbprint(SignedHttpRequestParameters)
     uid: '@azure/msal-common.ICrypto.getPublicKeyThumbprint'

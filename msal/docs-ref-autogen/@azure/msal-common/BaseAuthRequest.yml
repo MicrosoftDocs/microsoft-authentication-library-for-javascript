@@ -58,6 +58,9 @@ summary: >-
   whether to store tokens in the cache or not (default is true)
 
   - scenarioId              - Scenario id to track custom user prompts
+
+  - popKid                  - Key ID to identify the public key for PoP token
+  request
 fullName: BaseAuthRequest
 remarks: ''
 isDeprecated: false
@@ -69,6 +72,7 @@ syntax: |
     claims?: string
     correlationId: string
     maxAge?: number
+    popKid?: string
     requestedClaimsHash?: string
     resourceRequestMethod?: string
     resourceRequestUri?: string
