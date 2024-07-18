@@ -187,7 +187,7 @@ methods:
   - name: createPublicClientApplication(Configuration)
     uid: '@azure/msal-browser.PublicClientApplication.createPublicClientApplication'
     package: '@azure/msal-browser'
-    summary: ''
+    summary: Creates StandardController and passes it to the PublicClientApplication
     remarks: ''
     isDeprecated: false
     syntax:
@@ -197,7 +197,7 @@ methods:
       parameters:
         - id: configuration
           type: <xref uid="@azure/msal-browser.Configuration" />
-          description: ''
+          description: '{Configuration}'
       return:
         description: ''
         type: >-
@@ -414,7 +414,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: initialize()
+  - name: initialize(InitializeApplicationRequest)
     uid: '@azure/msal-browser.PublicClientApplication.initialize'
     package: '@azure/msal-browser'
     summary: >-
@@ -423,7 +423,13 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function initialize(): Promise<void>'
+      content: >-
+        function initialize(request?: InitializeApplicationRequest):
+        Promise<void>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.InitializeApplicationRequest" />
+          description: '{?InitializeApplicationRequest}'
       return:
         description: ''
         type: Promise&lt;void&gt;

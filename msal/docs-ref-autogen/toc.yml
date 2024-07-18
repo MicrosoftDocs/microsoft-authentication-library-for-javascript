@@ -183,6 +183,9 @@
     - uid: '@azure/msal-browser.INetworkModule'
       name: INetworkModule
       items: []
+    - uid: '@azure/msal-browser.InitializeApplicationRequest'
+      name: InitializeApplicationRequest
+      items: []
     - uid: '@azure/msal-browser.InProgressPerformanceEvent'
       name: InProgressPerformanceEvent
       items: []

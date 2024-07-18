@@ -289,14 +289,20 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: initialize()
+  - name: initialize(InitializeApplicationRequest)
     uid: '@azure/msal-browser.IPublicClientApplication.initialize'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function initialize(): Promise<void>'
+      content: >-
+        function initialize(request?: InitializeApplicationRequest):
+        Promise<void>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.InitializeApplicationRequest" />
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;

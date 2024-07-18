@@ -10,7 +10,7 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: ServerError(string, string, string, string)
+  - name: ServerError(string, string, string, string, number)
     uid: '@azure/msal-common.ServerError.constructor'
     package: '@azure/msal-common'
     summary: ''
@@ -19,7 +19,7 @@ constructors:
     syntax:
       content: >-
         new ServerError(errorCode?: string, errorMessage?: string, subError?:
-        string, errorNo?: string)
+        string, errorNo?: string, status?: number)
       parameters:
         - id: errorCode
           type: string
@@ -32,6 +32,9 @@ constructors:
           description: ''
         - id: errorNo
           type: string
+          description: ''
+        - id: status
+          type: number
           description: ''
 properties:
   - name: errorNo
@@ -46,6 +49,18 @@ properties:
       return:
         description: ''
         type: string
+  - name: status
+    uid: '@azure/msal-common.ServerError.status'
+    package: '@azure/msal-common'
+    summary: Http status number;
+    fullName: status
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'status?: number'
+      return:
+        description: ''
+        type: number
 inheritedProperties:
   - name: correlationId
     uid: '@azure/msal-common.ServerError.correlationId'

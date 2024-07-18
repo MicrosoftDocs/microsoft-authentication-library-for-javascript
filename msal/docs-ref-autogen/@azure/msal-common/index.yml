@@ -125,8 +125,8 @@ typeAliases:
   - '@azure/msal-common.UrlToHttpRequestOptions'
 functions:
   - name: >-
-      buildAccountToCache(CacheManager, Authority, string, TokenClaims, (input:
-      string) => string, string, string, null | string,
+      buildAccountToCache(CacheManager, Authority, string, (input: string) =>
+      string, TokenClaims, string, string, null | string,
       AuthorizationCodePayload, string, Logger)
     uid: '@azure/msal-common.buildAccountToCache'
     package: '@azure/msal-common'
@@ -136,9 +136,9 @@ functions:
     syntax:
       content: >-
         function buildAccountToCache(cacheStorage: CacheManager, authority:
-        Authority, homeAccountId: string, idTokenClaims: TokenClaims,
-        base64Decode: (input: string) => string, clientInfo?: string,
-        environment?: string, claimsTenantId?: null | string, authCodePayload?:
+        Authority, homeAccountId: string, base64Decode: (input: string) =>
+        string, idTokenClaims?: TokenClaims, clientInfo?: string, environment?:
+        string, claimsTenantId?: null | string, authCodePayload?:
         AuthorizationCodePayload, nativeAccountId?: string, logger?: Logger):
         AccountEntity
       parameters:
@@ -151,11 +151,11 @@ functions:
         - id: homeAccountId
           type: string
           description: ''
-        - id: idTokenClaims
-          type: <xref uid="@azure/msal-common.TokenClaims" />
-          description: ''
         - id: base64Decode
           type: '(input: string) =&gt; string'
+          description: ''
+        - id: idTokenClaims
+          type: <xref uid="@azure/msal-common.TokenClaims" />
           description: ''
         - id: clientInfo
           type: string
@@ -232,23 +232,29 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.StaticAuthorityOptions" />
-  - name: buildTenantProfileFromIdTokenClaims(string, TokenClaims)
-    uid: '@azure/msal-common.buildTenantProfileFromIdTokenClaims'
+  - name: buildTenantProfile(string, string, string, TokenClaims)
+    uid: '@azure/msal-common.buildTenantProfile'
     package: '@azure/msal-common'
-    summary: ''
+    summary: Build tenant profile
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function buildTenantProfileFromIdTokenClaims(homeAccountId: string,
-        idTokenClaims: TokenClaims): TenantProfile
+        function buildTenantProfile(homeAccountId: string, localAccountId:
+        string, tenantId: string, idTokenClaims?: TokenClaims): TenantProfile
       parameters:
         - id: homeAccountId
           type: string
-          description: ''
+          description: Home account identifier for this account object
+        - id: localAccountId
+          type: string
+          description: Local account identifer for this account object
+        - id: tenantId
+          type: string
+          description: Full tenant or organizational id that this account belongs to
         - id: idTokenClaims
           type: <xref uid="@azure/msal-common.TokenClaims" />
-          description: ''
+          description: Claims from the ID token
       return:
         description: ''
         type: <xref uid="@azure/msal-common.TenantProfile" />

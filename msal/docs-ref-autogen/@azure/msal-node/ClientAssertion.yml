@@ -28,6 +28,36 @@ methods:
   - name: fromCertificate(string, string, string)
     uid: '@azure/msal-node.ClientAssertion.fromCertificate'
     package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: true
+    customDeprecatedMessage: >-
+      Use fromCertificateWithSha256Thumbprint instead, with a SHA-256 thumprint
+
+      Initialize the ClientAssertion class from the certificate passed by the
+      user
+    syntax:
+      content: >-
+        static function fromCertificate(thumbprint: string, privateKey: string,
+        publicCertificate?: string): ClientAssertion
+      parameters:
+        - id: thumbprint
+          type: string
+          description: identifier of a certificate
+        - id: privateKey
+          type: string
+          description: secret key
+        - id: publicCertificate
+          type: string
+          description: >-
+            electronic document provided to prove the ownership of the public
+            key
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-node.ClientAssertion" />
+  - name: fromCertificateWithSha256Thumbprint(string, string, string)
+    uid: '@azure/msal-node.ClientAssertion.fromCertificateWithSha256Thumbprint'
+    package: '@azure/msal-node'
     summary: >-
       Initialize the ClientAssertion class from the certificate passed by the
       user
@@ -35,8 +65,8 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        static function fromCertificate(thumbprint: string, privateKey: string,
-        publicCertificate?: string): ClientAssertion
+        static function fromCertificateWithSha256Thumbprint(thumbprint: string,
+        privateKey: string, publicCertificate?: string): ClientAssertion
       parameters:
         - id: thumbprint
           type: string

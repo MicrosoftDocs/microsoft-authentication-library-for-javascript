@@ -63,6 +63,7 @@ typeAliases:
   - '@azure/msal-browser.ExternalTokenResponse'
   - '@azure/msal-browser.IdTokenClaims'
   - '@azure/msal-browser.InProgressPerformanceEvent'
+  - '@azure/msal-browser.InitializeApplicationRequest'
   - '@azure/msal-browser.InteractionStatus'
   - '@azure/msal-browser.JsonWebTokenTypes'
   - '@azure/msal-browser.LoadTokenOptions'
