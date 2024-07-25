@@ -11,4 +11,5 @@ syntax: |
     cacheHits: number
     errors: string[]
     failedRequests: (string | number)[]
+    nativeBrokerErrorCode?: string
   }
