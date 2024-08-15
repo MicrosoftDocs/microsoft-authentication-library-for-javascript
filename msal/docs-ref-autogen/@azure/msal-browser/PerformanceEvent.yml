@@ -67,6 +67,7 @@ syntax: |
     queuedTimeMs?: number
     refreshTokenSize?: number
     requestId?: string
+    retryError?: string
     scenarioId?: string
     serverErrorNo?: string
     startPageVisibility?: string | null

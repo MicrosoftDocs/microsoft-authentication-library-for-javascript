@@ -277,6 +277,10 @@ fields:
     uid: '@azure/msal-common.PerformanceEvents.PopTokenGenerateKid'
     package: '@azure/msal-common'
     summary: ''
+  - name: PopupClientTokenHelper
+    uid: '@azure/msal-common.PerformanceEvents.PopupClientTokenHelper'
+    package: '@azure/msal-common'
+    summary: Helper function in PopupClient class (msal-browser).
   - name: RefreshTokenClientAcquireToken
     uid: '@azure/msal-common.PerformanceEvents.RefreshTokenClientAcquireToken'
     package: '@azure/msal-common'
