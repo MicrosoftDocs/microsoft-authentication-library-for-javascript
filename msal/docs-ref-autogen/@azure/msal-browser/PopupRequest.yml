@@ -71,6 +71,9 @@ summary: >-
 
   - popupWindowAttributes      - Optional popup window attributes. popupSize
   with height and width, and popupPosition with top and left can be set.
+
+  - popupWindowParent          - Optional window object to use as the parent
+  when opening popup windows. Uses global `window` if not given.
 fullName: PopupRequest
 remarks: ''
 isDeprecated: false
@@ -87,6 +90,7 @@ syntax: |
     >
   > & {
     popupWindowAttributes?: PopupWindowAttributes
+    popupWindowParent?: Window
     scopes: string[]
     tokenBodyParameters?: StringDict
   }
