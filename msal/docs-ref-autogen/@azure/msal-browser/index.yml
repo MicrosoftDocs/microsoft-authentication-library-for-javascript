@@ -17,6 +17,7 @@ classes:
   - '@azure/msal-browser.BrowserStorage'
   - '@azure/msal-browser.ClientAuthError'
   - '@azure/msal-browser.ClientConfigurationError'
+  - '@azure/msal-browser.EventHandler'
   - '@azure/msal-browser.EventMessageUtils'
   - '@azure/msal-browser.InteractionRequiredAuthError'
   - '@azure/msal-browser.Logger'

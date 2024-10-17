@@ -32,11 +32,6 @@ syntax: |
   type SilentFlowRequest = Partial<
     Omit<
       CommonSilentFlowRequest,
-      | "account"
-      | "scopes"
-      | "resourceRequestMethod"
-      | "resourceRequestUri"
-      | "requestedClaimsHash"
-      | "storeInCache"
+      "account" | "scopes" | "requestedClaimsHash" | "storeInCache"
     >
   > & { account: AccountInfo; scopes: string[] }

@@ -153,6 +153,9 @@
     - uid: '@azure/msal-browser.EventError'
       name: EventError
       items: []
+    - uid: '@azure/msal-browser.EventHandler'
+      name: EventHandler
+      items: []
     - uid: '@azure/msal-browser.EventMessage'
       name: EventMessage
       items: []

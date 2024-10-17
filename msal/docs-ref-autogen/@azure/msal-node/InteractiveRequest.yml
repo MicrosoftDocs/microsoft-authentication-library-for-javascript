@@ -27,18 +27,11 @@ fullName: InteractiveRequest
 remarks: ''
 isDeprecated: false
 syntax: |
-  type InteractiveRequest = Pick<
-    AuthorizationUrlRequest,
-    | "authority"
-    | "correlationId"
-    | "claims"
-    | "azureCloudOptions"
-    | "account"
-    | "extraQueryParameters"
-    | "tokenQueryParameters"
-    | "extraScopesToConsent"
-    | "loginHint"
-    | "prompt"
+  type InteractiveRequest = Partial<
+    Omit<
+      CommonAuthorizationUrlRequest,
+      "scopes" | "redirectUri" | "requestedClaimsHash" | "storeInCache"
+    >
   > & {
     errorTemplate?: string
     loopbackClient?: ILoopbackClient

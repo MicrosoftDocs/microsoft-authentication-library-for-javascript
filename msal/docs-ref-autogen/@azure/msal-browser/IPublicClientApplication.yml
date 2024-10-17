@@ -74,7 +74,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
-  - name: addEventCallback(EventCallbackFunction)
+  - name: addEventCallback(EventCallbackFunction, EventType[])
     uid: '@azure/msal-browser.IPublicClientApplication.addEventCallback'
     package: '@azure/msal-browser'
     summary: ''
@@ -82,11 +82,14 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function addEventCallback(callback: EventCallbackFunction): null |
-        string
+        function addEventCallback(callback: EventCallbackFunction, eventTypes?:
+        EventType[]): null | string
       parameters:
         - id: callback
           type: <xref uid="@azure/msal-browser.EventCallbackFunction" />
+          description: ''
+        - id: eventTypes
+          type: EventType[]
           description: ''
       return:
         description: ''

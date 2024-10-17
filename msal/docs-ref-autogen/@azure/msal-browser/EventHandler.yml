@@ -1,0 +1,85 @@
+### YamlMime:TSType
+name: EventHandler
+uid: '@azure/msal-browser.EventHandler'
+package: '@azure/msal-browser'
+summary: ''
+fullName: EventHandler
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: EventHandler(Logger)
+    uid: '@azure/msal-browser.EventHandler.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new EventHandler(logger?: Logger)'
+      parameters:
+        - id: logger
+          type: <xref uid="@azure/msal-browser.Logger" />
+          description: ''
+methods:
+  - name: addEventCallback(EventCallbackFunction, EventType[], string)
+    uid: '@azure/msal-browser.EventHandler.addEventCallback'
+    package: '@azure/msal-browser'
+    summary: Adds event callbacks to array
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addEventCallback(callback: EventCallbackFunction, eventTypes?:
+        EventType[], callbackId?: string): null | string
+      parameters:
+        - id: callback
+          type: <xref uid="@azure/msal-browser.EventCallbackFunction" />
+          description: callback to be invoked when an event is raised
+        - id: eventTypes
+          type: EventType[]
+          description: >-
+            list of events that this callback will be invoked for, if not
+            provided callback will be invoked for all events
+        - id: callbackId
+          type: string
+          description: >-
+            Identifier for the callback, used to locate and remove the callback
+            when no longer required
+      return:
+        description: ''
+        type: null | string
+  - name: emitEvent(EventType, InteractionType, EventPayload, EventError)
+    uid: '@azure/msal-browser.EventHandler.emitEvent'
+    package: '@azure/msal-browser'
+    summary: Emits events by calling callback with event message
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function emitEvent(eventType: EventType, interactionType?:
+        InteractionType, payload?: EventPayload, error?: EventError)
+      parameters:
+        - id: eventType
+          type: EventType
+          description: ''
+        - id: interactionType
+          type: <xref uid="@azure/msal-browser.InteractionType" />
+          description: ''
+        - id: payload
+          type: <xref uid="@azure/msal-browser.EventPayload" />
+          description: ''
+        - id: error
+          type: <xref uid="@azure/msal-browser.EventError" />
+          description: ''
+  - name: removeEventCallback(string)
+    uid: '@azure/msal-browser.EventHandler.removeEventCallback'
+    package: '@azure/msal-browser'
+    summary: Removes callback with provided id from callback array
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removeEventCallback(callbackId: string)'
+      parameters:
+        - id: callbackId
+          type: string
+          description: ''
