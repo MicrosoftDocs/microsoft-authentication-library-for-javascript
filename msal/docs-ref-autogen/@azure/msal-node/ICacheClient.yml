@@ -2,7 +2,7 @@
 name: ICacheClient
 uid: '@azure/msal-node.ICacheClient'
 package: '@azure/msal-node'
-summary: ''
+summary: Interface for the cache that defines a getter and setter
 fullName: ICacheClient
 remarks: ''
 isDeprecated: false
@@ -19,7 +19,7 @@ methods:
       parameters:
         - id: key
           type: string
-          description: string
+          description: key of item in the cache
       return:
         description: Promise<string>
         type: Promise&lt;string&gt;
@@ -34,10 +34,10 @@ methods:
       parameters:
         - id: key
           type: string
-          description: string
+          description: key of item in the cache
         - id: value
           type: string
-          description: string
+          description: value of item to be saved in the cache
       return:
         description: Promise<string>
         type: Promise&lt;string&gt;

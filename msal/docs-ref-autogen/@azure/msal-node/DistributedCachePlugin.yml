@@ -2,7 +2,9 @@
 name: DistributedCachePlugin
 uid: '@azure/msal-node.DistributedCachePlugin'
 package: '@azure/msal-node'
-summary: ''
+summary: >-
+  Cache plugin that serializes data to the cache and deserializes data from the
+  cache
 fullName: DistributedCachePlugin
 remarks: ''
 isDeprecated: false
@@ -29,7 +31,7 @@ methods:
   - name: afterCacheAccess(TokenCacheContext)
     uid: '@azure/msal-node.DistributedCachePlugin.afterCacheAccess'
     package: '@azure/msal-node'
-    summary: ''
+    summary: Serializes the cache after accessing it
     remarks: ''
     isDeprecated: false
     syntax:
@@ -39,14 +41,14 @@ methods:
       parameters:
         - id: cacheContext
           type: <xref uid="@azure/msal-node.TokenCacheContext" />
-          description: ''
+          description: TokenCacheContext
       return:
         description: ''
         type: Promise&lt;void&gt;
   - name: beforeCacheAccess(TokenCacheContext)
     uid: '@azure/msal-node.DistributedCachePlugin.beforeCacheAccess'
     package: '@azure/msal-node'
-    summary: ''
+    summary: Deserializes the cache before accessing it
     remarks: ''
     isDeprecated: false
     syntax:
@@ -56,7 +58,7 @@ methods:
       parameters:
         - id: cacheContext
           type: <xref uid="@azure/msal-node.TokenCacheContext" />
-          description: ''
+          description: TokenCacheContext
       return:
         description: ''
         type: Promise&lt;void&gt;

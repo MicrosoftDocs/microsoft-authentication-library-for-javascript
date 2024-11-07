@@ -23,9 +23,13 @@ syntax: |
     cacheOutcome?: number
     cacheRtCount?: number
     clientId: string
+    contentLengthHeader?: string
+    contentTypeHeader?: string
     context?: string
     correlationId: string
     durationMs?: number
+    embeddedClientId?: string
+    embeddedRedirectUri?: string
     endPageVisibility?: string | null
     errorCode?: string
     errorName?: string
@@ -37,6 +41,7 @@ syntax: |
     extensionInstalled?: boolean
     extensionVersion?: string
     fromCache?: boolean | null
+    httpStatus?: number
     httpVerToken?: string
     idTokenSize?: number
     incompleteSubMeasurements?: Map<string, SubMeasurement>

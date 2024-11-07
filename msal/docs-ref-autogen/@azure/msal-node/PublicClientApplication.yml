@@ -332,7 +332,7 @@ methods:
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.SilentFlowRequest" />
-          description: ''
+          description: developer provided SilentFlowRequest
       return:
         description: ''
         type: Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" />&gt;
@@ -360,7 +360,7 @@ methods:
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.SignOutRequest" />
-          description: ''
+          description: developer provided SignOutRequest
       return:
         description: ''
         type: Promise&lt;void&gt;

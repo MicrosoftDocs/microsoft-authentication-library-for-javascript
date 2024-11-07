@@ -3,9 +3,9 @@ uid: '@azure/msal-node'
 name: '@azure/msal-node'
 summary: ''
 type: package
+enums:
+  - '@azure/msal-node.LogLevel'
 classes:
-  - '@azure/msal-node.internals.Deserializer'
-  - '@azure/msal-node.internals.Serializer'
   - '@azure/msal-node.AuthError'
   - '@azure/msal-node.ClientApplication'
   - '@azure/msal-node.ClientAssertion'
@@ -26,8 +26,6 @@ classes:
   - '@azure/msal-node.TokenCache'
   - '@azure/msal-node.TokenCacheContext'
   - '@azure/msal-node.UsernamePasswordClient'
-enums:
-  - '@azure/msal-node.LogLevel'
 interfaces:
   - '@azure/msal-node.IAppTokenProvider'
   - '@azure/msal-node.ICacheClient'

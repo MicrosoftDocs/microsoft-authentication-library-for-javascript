@@ -655,10 +655,7 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function clear(): Promise<void>'
-      return:
-        description: ''
-        type: Promise&lt;void&gt;
+      content: function clear()
   - name: containsKey(string)
     uid: '@azure/msal-node.NodeStorage.containsKey'
     package: '@azure/msal-node'
@@ -826,7 +823,7 @@ methods:
       parameters:
         - id: accountKey
           type: string
-          description: ''
+          description: lookup key to fetch cache type AccountEntity
       return:
         description: ''
         type: null | <xref uid="@azure/msal-common.AccountEntity" />
@@ -999,7 +996,7 @@ methods:
       parameters:
         - id: accountKey
           type: string
-          description: ''
+          description: lookup key to fetch cache type AccountEntity
   - name: setAccessTokenCredential(AccessTokenEntity)
     uid: '@azure/msal-node.NodeStorage.setAccessTokenCredential'
     package: '@azure/msal-node'

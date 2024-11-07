@@ -559,6 +559,9 @@
     - uid: '@azure/msal-common.NativeSignOutRequest'
       name: NativeSignOutRequest
       items: []
+    - uid: '@azure/msal-common.NetworkError'
+      name: NetworkError
+      items: []
     - uid: '@azure/msal-common.NetworkRequestOptions'
       name: NetworkRequestOptions
       items: []
@@ -687,9 +690,6 @@
       items: []
     - uid: '@azure/msal-common.UrlString'
       name: UrlString
-      items: []
-    - uid: '@azure/msal-common.UrlToHttpRequestOptions'
-      name: UrlToHttpRequestOptions
       items: []
     - uid: '@azure/msal-common.UrlUtils'
       name: UrlUtils
@@ -821,16 +821,9 @@
     - uid: '@azure/msal-node.InteractiveRequest'
       name: InteractiveRequest
       items: []
-    - name: internals
-      items:
-        - name: Overview
-          uid: '@azure/msal-node.internals'
-        - uid: '@azure/msal-node.internals.Deserializer'
-          name: Deserializer
-          items: []
-        - uid: '@azure/msal-node.internals.Serializer'
-          name: Serializer
-          items: []
+    - uid: '@azure/msal-node.internals'
+      name: internals
+      items: []
     - uid: '@azure/msal-node.IPartitionManager'
       name: IPartitionManager
       items: []

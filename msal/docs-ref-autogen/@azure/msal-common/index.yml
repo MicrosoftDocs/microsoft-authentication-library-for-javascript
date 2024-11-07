@@ -15,6 +15,7 @@ classes:
   - '@azure/msal-common.ClientConfigurationError'
   - '@azure/msal-common.InteractionRequiredAuthError'
   - '@azure/msal-common.Logger'
+  - '@azure/msal-common.NetworkError'
   - '@azure/msal-common.PerformanceClient'
   - '@azure/msal-common.ProtocolUtils'
   - '@azure/msal-common.ScopeSet'
@@ -122,7 +123,6 @@ typeAliases:
   - '@azure/msal-common.ThrottlingEntity'
   - '@azure/msal-common.TokenClaims'
   - '@azure/msal-common.TokenKeys'
-  - '@azure/msal-common.UrlToHttpRequestOptions'
 functions:
   - name: >-
       buildAccountToCache(CacheManager, Authority, string, (input: string) =>
@@ -332,6 +332,29 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.InteractionRequiredAuthError" />
+  - name: createNetworkError(AuthError, number, Record<string, string>)
+    uid: '@azure/msal-common.createNetworkError'
+    package: '@azure/msal-common'
+    summary: Creates NetworkError object for a failed network request
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createNetworkError(error: AuthError, httpStatus?: number,
+        responseHeaders?: Record<string, string>): NetworkError
+      parameters:
+        - id: error
+          type: <xref uid="@azure/msal-common.AuthError" />
+          description: Error to be thrown back to the caller
+        - id: httpStatus
+          type: number
+          description: Status code of the network request
+        - id: responseHeaders
+          type: Record&lt;string, string&gt;
+          description: Response headers of the network request, when available
+      return:
+        description: NetworkError object
+        type: <xref uid="@azure/msal-common.NetworkError" />
   - name: formatAuthorityUri(string)
     uid: '@azure/msal-common.formatAuthorityUri'
     package: '@azure/msal-common'

@@ -61,6 +61,11 @@ summary: >-
 
   - popKid                  - Key ID to identify the public key for PoP token
   request
+
+  - embeddedClientId        - Embedded client id. When specified, broker client
+  id (brk_client_id) and redirect uri (brk_redirect_uri) params are set with
+  values from the config, overriding the corresponding extra parameters, if
+  present.
 fullName: BaseAuthRequest
 remarks: ''
 isDeprecated: false
@@ -71,6 +76,7 @@ syntax: |
     azureCloudOptions?: AzureCloudOptions
     claims?: string
     correlationId: string
+    embeddedClientId?: string
     maxAge?: number
     popKid?: string
     requestedClaimsHash?: string

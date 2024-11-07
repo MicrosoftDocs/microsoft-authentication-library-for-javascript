@@ -270,6 +270,12 @@ fields:
     uid: '@azure/msal-browser.PerformanceEvents.NativeMessageHandlerHandshake'
     package: '@azure/msal-browser'
     summary: ''
+  - name: NetworkClientSendPostRequestAsync
+    uid: '@azure/msal-browser.PerformanceEvents.NetworkClientSendPostRequestAsync'
+    package: '@azure/msal-browser'
+    summary: >-
+      Time spent sending/waiting for the response of a request to the token
+      endpoint
   - name: PopTokenGenerateCnf
     uid: '@azure/msal-browser.PerformanceEvents.PopTokenGenerateCnf'
     package: '@azure/msal-browser'
@@ -303,9 +309,7 @@ fields:
     uid: >-
       @azure/msal-browser.PerformanceEvents.RefreshTokenClientExecutePostToTokenEndpoint
     package: '@azure/msal-browser'
-    summary: >-
-      Time spent sending/waiting for the response of a request to the token
-      endpoint
+    summary: ''
   - name: RefreshTokenClientExecuteTokenRequest
     uid: >-
       @azure/msal-browser.PerformanceEvents.RefreshTokenClientExecuteTokenRequest
