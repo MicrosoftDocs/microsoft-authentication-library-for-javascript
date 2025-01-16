@@ -97,8 +97,8 @@ syntax: |
     extraQueryParameters?: StringDict
     extraScopesToConsent?: string[]
     loginHint?: string
-    nativeBroker?: boolean
     nonce?: string
+    platformBroker?: boolean
     prompt?: string
     redirectUri: string
     responseMode: ResponseMode

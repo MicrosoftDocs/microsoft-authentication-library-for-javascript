@@ -105,9 +105,6 @@
     - uid: '@azure/msal-browser.BrowserPerformanceMeasurement'
       name: BrowserPerformanceMeasurement
       items: []
-    - uid: '@azure/msal-browser.BrowserStorage'
-      name: BrowserStorage
-      items: []
     - uid: '@azure/msal-browser.BrowserSystemOptions'
       name: BrowserSystemOptions
       items: []
@@ -877,9 +874,6 @@
       items: []
     - uid: '@azure/msal-node.NodeAuthOptions'
       name: NodeAuthOptions
-      items: []
-    - uid: '@azure/msal-node.NodeStorage'
-      name: NodeStorage
       items: []
     - uid: '@azure/msal-node.NodeSystemOptions'
       name: NodeSystemOptions

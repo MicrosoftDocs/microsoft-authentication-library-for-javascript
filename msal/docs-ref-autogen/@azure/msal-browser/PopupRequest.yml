@@ -86,7 +86,7 @@ syntax: |
       | "codeChallenge"
       | "codeChallengeMethod"
       | "requestedClaimsHash"
-      | "nativeBroker"
+      | "platformBroker"
     >
   > & {
     popupWindowAttributes?: PopupWindowAttributes

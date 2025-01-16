@@ -146,6 +146,10 @@ fields:
     uid: '@azure/msal-browser.PerformanceEvents.AwaitConcurrentIframe'
     package: '@azure/msal-browser'
     summary: ''
+  - name: Base64Decode
+    uid: '@azure/msal-browser.PerformanceEvents.Base64Decode'
+    package: '@azure/msal-browser'
+    summary: ''
   - name: BaseClientCreateTokenRequestHeaders
     uid: '@azure/msal-browser.PerformanceEvents.BaseClientCreateTokenRequestHeaders'
     package: '@azure/msal-browser'
@@ -178,8 +182,16 @@ fields:
     summary: |-
       signJwt API in CryptoOpts class (msal-browser).
       Used to signed a pop token.
+  - name: Decrypt
+    uid: '@azure/msal-browser.PerformanceEvents.Decrypt'
+    package: '@azure/msal-browser'
+    summary: ''
   - name: DeserializeResponse
     uid: '@azure/msal-browser.PerformanceEvents.DeserializeResponse'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: Encrypt
+    uid: '@azure/msal-browser.PerformanceEvents.Encrypt'
     package: '@azure/msal-browser'
     summary: ''
   - name: FetchAccountIdWithNativeBroker
@@ -188,12 +200,20 @@ fields:
     summary: |-
       acquireToken APIs in msal-browser.
       Used to make an /authorize endpoint call with native brokering enabled.
+  - name: GenerateBaseKey
+    uid: '@azure/msal-browser.PerformanceEvents.GenerateBaseKey'
+    package: '@azure/msal-browser'
+    summary: ''
   - name: GenerateCodeChallengeFromVerifier
     uid: '@azure/msal-browser.PerformanceEvents.GenerateCodeChallengeFromVerifier'
     package: '@azure/msal-browser'
     summary: ''
   - name: GenerateCodeVerifier
     uid: '@azure/msal-browser.PerformanceEvents.GenerateCodeVerifier'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: GenerateHKDF
+    uid: '@azure/msal-browser.PerformanceEvents.GenerateHKDF'
     package: '@azure/msal-browser'
     summary: ''
   - name: GeneratePkceCodes
@@ -238,12 +258,20 @@ fields:
     uid: '@azure/msal-browser.PerformanceEvents.HandleServerTokenResponse'
     package: '@azure/msal-browser'
     summary: handleServerTokenResponse API in ResponseHandler (msal-common)
+  - name: ImportExistingCache
+    uid: '@azure/msal-browser.PerformanceEvents.ImportExistingCache'
+    package: '@azure/msal-browser'
+    summary: ''
   - name: InitializeBaseRequest
     uid: '@azure/msal-browser.PerformanceEvents.InitializeBaseRequest'
     package: '@azure/msal-browser'
     summary: >-
       Internal API for initializing base request in BaseInteractionClient
       (msal-browser)
+  - name: InitializeCache
+    uid: '@azure/msal-browser.PerformanceEvents.InitializeCache'
+    package: '@azure/msal-browser'
+    summary: ''
   - name: InitializeClientApplication
     uid: '@azure/msal-browser.PerformanceEvents.InitializeClientApplication'
     package: '@azure/msal-browser'
@@ -329,6 +357,10 @@ fields:
     summary: ''
   - name: RemoveHiddenIframe
     uid: '@azure/msal-browser.PerformanceEvents.RemoveHiddenIframe'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: SetUserData
+    uid: '@azure/msal-browser.PerformanceEvents.SetUserData'
     package: '@azure/msal-browser'
     summary: ''
   - name: Sha256Digest
@@ -430,6 +462,10 @@ fields:
     summary: ''
   - name: UpdateTokenEndpointAuthority
     uid: '@azure/msal-browser.PerformanceEvents.UpdateTokenEndpointAuthority'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: UrlEncodeArr
+    uid: '@azure/msal-browser.PerformanceEvents.UrlEncodeArr'
     package: '@azure/msal-browser'
     summary: ''
   - name: UsernamePasswordClientAcquireToken

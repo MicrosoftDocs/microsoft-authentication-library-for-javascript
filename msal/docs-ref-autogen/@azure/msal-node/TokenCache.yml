@@ -20,7 +20,7 @@ constructors:
         ICachePlugin)
       parameters:
         - id: storage
-          type: <xref uid="@azure/msal-node.NodeStorage" />
+          type: NodeStorage
           description: ''
         - id: logger
           type: <xref uid="@azure/msal-node.Logger" />

@@ -17,7 +17,8 @@ methods:
     syntax:
       content: >-
         function loadExternalTokens(request: SilentRequest, response:
-        ExternalTokenResponse, options: LoadTokenOptions): AuthenticationResult
+        ExternalTokenResponse, options: LoadTokenOptions):
+        Promise<AuthenticationResult>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-browser.SilentRequest" />
@@ -30,4 +31,4 @@ methods:
           description: ''
       return:
         description: '`AuthenticationResult` for the response that was loaded.'
-        type: <xref uid="@azure/msal-browser.AuthenticationResult" />
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;

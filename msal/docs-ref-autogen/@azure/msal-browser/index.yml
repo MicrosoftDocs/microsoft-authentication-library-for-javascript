@@ -14,7 +14,6 @@ classes:
   - '@azure/msal-browser.BrowserConfigurationAuthError'
   - '@azure/msal-browser.BrowserPerformanceClient'
   - '@azure/msal-browser.BrowserPerformanceMeasurement'
-  - '@azure/msal-browser.BrowserStorage'
   - '@azure/msal-browser.ClientAuthError'
   - '@azure/msal-browser.ClientConfigurationError'
   - '@azure/msal-browser.EventHandler'

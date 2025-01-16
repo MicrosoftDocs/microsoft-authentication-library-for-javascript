@@ -12,7 +12,7 @@ syntax: |
   type PerformanceEvent = {
     accessTokenSize?: number
     accountType?: "AAD" | "MSA" | "B2C"
-    allowNativeBroker?: boolean
+    allowPlatformBroker?: boolean
     appName?: string
     appVersion?: string
     authority: string

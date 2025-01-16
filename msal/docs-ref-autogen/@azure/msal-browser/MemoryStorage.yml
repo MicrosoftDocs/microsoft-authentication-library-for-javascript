@@ -59,6 +59,32 @@ methods:
       return:
         description: ''
         type: string[]
+  - name: getUserData(string)
+    uid: '@azure/msal-browser.MemoryStorage.getUserData'
+    package: '@azure/msal-browser'
+    summary: Getter for sensitive data that may contain PII.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getUserData(key: string): null | T'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: null | T
+  - name: initialize()
+    uid: '@azure/msal-browser.MemoryStorage.initialize'
+    package: '@azure/msal-browser'
+    summary: Async initializer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function initialize(): Promise<void>'
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: removeItem(string)
     uid: '@azure/msal-browser.MemoryStorage.removeItem'
     package: '@azure/msal-browser'
@@ -86,3 +112,21 @@ methods:
         - id: value
           type: T
           description: ''
+  - name: setUserData(string, T)
+    uid: '@azure/msal-browser.MemoryStorage.setUserData'
+    package: '@azure/msal-browser'
+    summary: Setter for sensitive data that may contain PII.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setUserData(key: string, value: T): Promise<void>'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: value
+          type: T
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;

@@ -89,7 +89,7 @@ syntax: |
       | "codeChallenge"
       | "codeChallengeMethod"
       | "requestedClaimsHash"
-      | "nativeBroker"
+      | "platformBroker"
     >
   > & {
     onRedirectNavigate?: (url: string) => boolean | void
