@@ -281,6 +281,10 @@ fields:
     summary: >-
       Internal API for initializing silent request in SilentCacheClient
       (msal-browser)
+  - name: LocalStorageUpdated
+    uid: '@azure/msal-common.PerformanceEvents.LocalStorageUpdated'
+    package: '@azure/msal-common'
+    summary: ''
   - name: NativeGenerateAuthResult
     uid: '@azure/msal-common.PerformanceEvents.NativeGenerateAuthResult'
     package: '@azure/msal-common'

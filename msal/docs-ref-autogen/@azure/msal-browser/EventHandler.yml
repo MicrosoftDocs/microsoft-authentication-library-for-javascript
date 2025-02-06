@@ -83,3 +83,19 @@ methods:
         - id: callbackId
           type: string
           description: ''
+  - name: subscribeCrossTab()
+    uid: '@azure/msal-browser.EventHandler.subscribeCrossTab'
+    package: '@azure/msal-browser'
+    summary: Listen for events broadcasted from other tabs/instances
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function subscribeCrossTab()
+  - name: unsubscribeCrossTab()
+    uid: '@azure/msal-browser.EventHandler.unsubscribeCrossTab'
+    package: '@azure/msal-browser'
+    summary: Unsubscribe from broadcast events
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function unsubscribeCrossTab()

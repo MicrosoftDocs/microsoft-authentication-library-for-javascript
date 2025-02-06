@@ -28,6 +28,19 @@ constructors:
         - id: cachePlugin
           type: <xref uid="@azure/msal-node.ICachePlugin" />
           description: ''
+properties:
+  - name: persistence
+    uid: '@azure/msal-node.TokenCache.persistence'
+    package: '@azure/msal-node'
+    summary: ''
+    fullName: persistence
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'persistence: ICachePlugin'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-node.ICachePlugin" />
 methods:
   - name: deserialize(string)
     uid: '@azure/msal-node.TokenCache.deserialize'
@@ -96,6 +109,17 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="@azure/msal-node.AccountInfo" />[]&gt;
+  - name: getCacheSnapshot()
+    uid: '@azure/msal-node.TokenCache.getCacheSnapshot'
+    package: '@azure/msal-node'
+    summary: Gets cache snapshot in CacheKVStore format
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getCacheSnapshot(): CacheKVStore'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-node.CacheKVStore" />
   - name: getKVStore()
     uid: '@azure/msal-node.TokenCache.getKVStore'
     package: '@azure/msal-node'
@@ -120,6 +144,17 @@ methods:
       return:
         description: ''
         type: boolean
+  - name: overwriteCache()
+    uid: '@azure/msal-node.TokenCache.overwriteCache'
+    package: '@azure/msal-node'
+    summary: Overwrites in-memory cache with persistent cache
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function overwriteCache(): Promise<void>'
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: removeAccount(AccountInfo)
     uid: '@azure/msal-node.TokenCache.removeAccount'
     package: '@azure/msal-node'
