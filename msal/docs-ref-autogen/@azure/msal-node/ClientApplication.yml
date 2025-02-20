@@ -90,7 +90,8 @@ methods:
 
       https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows#usernamepassword
     remarks: ''
-    isDeprecated: false
+    isDeprecated: true
+    customDeprecatedMessage: '- Use a more secure flow instead'
     syntax:
       content: >-
         function acquireTokenByUsernamePassword(request:

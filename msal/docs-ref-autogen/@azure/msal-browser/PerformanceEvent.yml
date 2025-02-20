@@ -89,5 +89,6 @@ syntax: |
     status: PerformanceEventStatus
     subErrorCode?: string
     success?: boolean | null
+    usePreGeneratedPkce?: boolean
     visibilityChangeCount?: number
   }
